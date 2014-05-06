@@ -6,8 +6,6 @@
       <th>Name</th>
       <th>Creationdate</th>
       <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -16,9 +14,12 @@
       <tr id="<%= dom_id(group) %>">
         <td><%= group.name %></td>
         <td><%= group.creationDate %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'List Dates', group_group_dates_path(group) %>
+          <%= link_to 'Show', group %>
+          <%= link_to 'Edit', edit_group_path(group) %>
+          <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
