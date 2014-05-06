@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424142244) do
+ActiveRecord::Schema.define(version: 20140506173559) do
+
+  create_table "group_dates", force: true do |t|
+    t.integer  "group_id"
+    t.string   "name"
+    t.date     "from_date"
+    t.date     "to_date"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "group_dates", ["group_id"], name: "index_group_dates_on_group_id"
 
   create_table "groups", force: true do |t|
     t.string   "name"
