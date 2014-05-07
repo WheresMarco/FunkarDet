@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Viewing group dates" do
-  let!(:group) { group = Group.create(name: "Testgroup", creationDate: "2012-02-01") }
+  let!(:group) { group = Group.create(name: "Testgroup", creation_date: "2012-02-01") }
 
   def visit_group(group)
     visit "/groups"
@@ -23,8 +23,8 @@ describe "Viewing group dates" do
   end
 
   it "displays date content when a group has dates" do
-    group.group_dates.create(name: "First of may", from_date: "2014-05-01", to_date: "2014-05-02", description: "A nice sample text.")
-    group.group_dates.create(name: "Last of day", from_date: "2014-12-31", to_date: "2015-01-01", description: "A new sample text.")
+    group.group_dates.create(name: "First of may", place: "This place", from_date: DateTime.now, to_date: DateTime.now, description: "A nice sample text.")
+    group.group_dates.create(name: "Last of day", place: "This place", from_date: DateTime.now, to_date: DateTime.now, description: "A new sample text.")
 
     visit_group(group)
 
