@@ -21,6 +21,28 @@ class GroupDatesController < ApplicationController
     end
   end
 
+  def edit
+    @group = Group.find(params[:group_id])
+    @group_date = @group.group_dates.find(params[:id])
+  end
+
+  def update
+    @group = Group.find(params[:group_id])
+    @group_date = @group.group_dates.find(params[:id])
+    
+    if @group_date.update_attributes(group_date_params)
+      flash[:success] = "Saved group date."
+      redirect_to group_group_dates_path
+    else
+      flash[:error] = "That grup date could not be saved."
+      render action: :edit
+    end
+  end
+
+  def url_options
+    { group_id: params[:group_id] }.merge(super)
+  end
+
   private
   def group_date_params
     params[:group_date].permit(:name, :place)
