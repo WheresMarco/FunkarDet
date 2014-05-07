@@ -13,7 +13,7 @@
     <% @groups.each do |group| %>
       <tr id="<%= dom_id(group) %>">
         <td><%= group.name %></td>
-        <td><%= group.creationDate %></td>
+        <td><%= group.creation_date %></td>
         <td>
           <%= link_to 'List Dates', group_group_dates_path(group) %>
           <%= link_to 'Show', group %>

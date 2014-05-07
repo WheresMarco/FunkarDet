@@ -11,23 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140506173559) do
+ActiveRecord::Schema.define(version: 20140507151341) do
 
   create_table "group_dates", force: true do |t|
     t.integer  "group_id"
     t.string   "name"
-    t.date     "from_date"
-    t.date     "to_date"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "from_date"
+    t.datetime "to_date"
+    t.string   "place"
   end
 
   add_index "group_dates", ["group_id"], name: "index_group_dates_on_group_id"
 
   create_table "groups", force: true do |t|
     t.string   "name"
-    t.date     "creationDate"
+    t.date     "creation_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

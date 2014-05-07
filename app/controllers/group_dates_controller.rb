@@ -23,6 +23,6 @@ class GroupDatesController < ApplicationController
 
   private
   def group_date_params
-    params[:group_date].permit(:name)
+    params[:group_date].permit(:name, :place)
   end
 end

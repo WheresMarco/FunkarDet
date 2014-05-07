@@ -11,8 +11,32 @@
     </div>
   <% end %>
 
-  <%= form.label :name %>
-  <%= form.text_field :name %>
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </p>
 
-  <%= form.submit "Save" %>
+  <p>
+    <%= form.label :place %>
+    <%= form.text_field :place %>
+  </p>
+
+  <p>
+    <%= form.label :from_date %>
+    <%= form.datetime_select :from_date %>
+  </p>
+
+  <p>
+    <%= form.label :to_date %>
+    <%= form.datetime_select :to_date %>
+  </p>
+
+  <p>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.submit "Save" %>
+  </p>
 <% end %>
