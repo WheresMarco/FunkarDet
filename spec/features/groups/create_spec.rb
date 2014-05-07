@@ -1,13 +1,6 @@
 require 'spec_helper'
 
 describe "Creating groups" do
-  def select_date(date, options = {})
-    field = options[:prefix].to_s + "_".to_s + options[:from].to_s
-    select date.strftime('%Y'), :from => "#{field}_1i" #year
-    select date.strftime('%B'), :from => "#{field}_2i" #month
-    select date.strftime('%-e'), :from => "#{field}_3i" #day
-  end
-
   def create_group(options={})
     options[:name] ||= "Testgroup"
     options[:creation_date] ||= Date.today

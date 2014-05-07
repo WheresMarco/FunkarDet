@@ -2,14 +2,7 @@ require 'spec_helper'
 
 describe "Viewing group dates" do
   let!(:group) { group = Group.create(name: "Testgroup", creation_date: "2012-02-01") }
-
-  def visit_group(group)
-    visit "/groups"
-    within "#group_#{group.id}" do
-      click_link "List Dates"
-    end
-  end
-
+  
   it "displays the name of the group" do
     visit_group(group)
     within("h1") do
