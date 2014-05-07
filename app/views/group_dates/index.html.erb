@@ -1,2 +1,8 @@
-<h1>GroupDates#index</h1>
+<h1><%= @group.name %></h1>
 <p>Find me in app/views/group_dates/index.html.erb</p>
+
+<ul class="group_dates">
+  <% @group.group_dates.each do |group_date| %>
+  <li><%= group_date.name %></li>
+  <% end %>
+</ul>
