@@ -1,6 +1,22 @@
 module GroupHelpers
+  def create_group(options={})
+    options[:name] ||= "Testgroup"
+    options[:creation_date] ||= Date.today
+
+    visit "/groups"
+    click_link "New Group"
+    expect(page).to have_content("New group")
+
+    fill_in "Name", with: options[:name]
+
+    select_date(options[:creation_date], prefix: "group", from: :creation_date)
+
+    click_button "Create Group"
+  end
+
   def update_group(options={})
     options[:name] ||= "Testgroup"
+    options[:creation_date] ||= Date.today
     group = options[:group]
 
     visit "/groups"
@@ -10,9 +26,7 @@ module GroupHelpers
 
     fill_in "Name", with: options[:name]
 
-    select "2012", from: "group[creation_date(1i)]"
-    select "February", from: "group[creation_date(2i)]"
-    select "22", from: "group[creation_date(3i)]"
+    select_date(options[:creation_date], prefix: "group", from: :creation_date)
 
     click_button "Update Group"
   end
