@@ -36,6 +36,16 @@ class GroupDatesController < ApplicationController
     end
   end
 
+  def destroy
+    @group_date = @group.group_dates.find(params[:id])
+    if @group_date.destroy
+      flash[:success] = "Group date was deleted."
+    else
+      flash[:error] = "Threre was a problem deleting that group date."
+    end
+    redirect_to group_group_dates_path
+  end
+
   def url_options
     { group_id: params[:group_id] }.merge(super)
   end
