@@ -4,7 +4,7 @@ module GroupHelpers
     group = options[:group]
 
     visit "/groups"
-    within "#group_#{group.id}" do
+    within dom_id_for(group) do
       click_link "Edit"
     end
 

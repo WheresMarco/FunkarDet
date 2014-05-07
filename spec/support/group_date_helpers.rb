@@ -1,7 +1,7 @@
 module GroupDateHelpers
   def visit_group(group)
     visit "/groups"
-    within "#group_#{group.id}" do
+    within dom_id_for(group) do
       click_link "List Dates"
     end
   end

@@ -17,6 +17,7 @@ RSpec.configure do |config|
   config.include GroupDateHelpers, type: :feature
   config.include GroupHelpers, type: :feature
   config.include Helpers, type: :feature
+  config.include RailsDomIdHelper, type: :feature
 
   # ## Mock Framework
   #
