@@ -1,15 +1,14 @@
 class GroupDatesController < ApplicationController
+  before_action :find_group
+
   def index
-    @group = Group.find(params[:group_id])
   end
 
   def new
-    @group = Group.find(params[:group_id])
     @group_date = @group.group_dates.new
   end
 
   def create
-    @group = Group.find(params[:group_id])
     @group_date = @group.group_dates.new(group_date_params)
 
     if @group_date.save
@@ -22,14 +21,12 @@ class GroupDatesController < ApplicationController
   end
 
   def edit
-    @group = Group.find(params[:group_id])
     @group_date = @group.group_dates.find(params[:id])
   end
 
   def update
-    @group = Group.find(params[:group_id])
     @group_date = @group.group_dates.find(params[:id])
-    
+
     if @group_date.update_attributes(group_date_params)
       flash[:success] = "Saved group date."
       redirect_to group_group_dates_path
@@ -44,6 +41,10 @@ class GroupDatesController < ApplicationController
   end
 
   private
+  def find_group
+    @group = Group.find(params[:group_id])
+  end
+
   def group_date_params
     params[:group_date].permit(:name, :place)
   end

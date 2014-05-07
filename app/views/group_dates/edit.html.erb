@@ -1,42 +1,4 @@
+<h1><%= @group.name %> - Editing Group Date</h1>
 <%= form_for [@group, @group_date] do |form| %>
-  <% if @group_date.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@group_date.errors.count, "error") %> prohibited this group date from being saved:</h2>
-
-      <ul>
-      <% @group_date.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </p>
-
-  <p>
-    <%= form.label :place %>
-    <%= form.text_field :place %>
-  </p>
-
-  <p>
-    <%= form.label :from_date %>
-    <%= form.datetime_select :from_date %>
-  </p>
-
-  <p>
-    <%= form.label :to_date %>
-    <%= form.datetime_select :to_date %>
-  </p>
-
-  <p>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </p>
-
-  <p>
-    <%= form.submit "Save" %>
-  </p>
+  <%= render partial: form %>
 <% end %>
