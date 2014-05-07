@@ -17,7 +17,7 @@ class GroupDatesController < ApplicationController
       redirect_to group_group_dates_path
     else
       flash[:error] = "Threre was a problem adding that group date."
-      render action :new
+      render action: :new
     end
   end
 

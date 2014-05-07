@@ -10,16 +10,42 @@ describe "Adding group dates" do
     end
   end
 
-  it "is successful with valid content" do
+  it "is successful with valid name" do
     visit_group(group)
     click_link "New Group Date"
     fill_in "Name", with: "Testdate"
     click_button "Save"
 
-    expect(page).to have_content("Added group date")
+    expect(page).to have_content("Added group date.")
+
     within("ul.group_dates") do
       expect(page).to have_content("Testdate")
     end
   end
 
+  it "displays an error with no name" do
+    visit_group(group)
+    click_link "New Group Date"
+    fill_in "Name", with: ""
+    click_button "Save"
+
+    within("div.flash") do
+      expect(page).to have_content("Threre was a problem adding that group date.")
+    end
+
+    expect(page).to have_content("Name can't be blank")
+  end
+
+  it "displays an error with a name less then 2 characters long" do
+    visit_group(group)
+    click_link "New Group Date"
+    fill_in "Name", with: "1"
+    click_button "Save"
+
+    within("div.flash") do
+      expect(page).to have_content("Threre was a problem adding that group date.")
+    end
+
+    expect(page).to have_content("Name is too short")
+  end
 end
