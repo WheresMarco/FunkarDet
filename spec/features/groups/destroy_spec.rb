@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Deleting groups" do
-  let!(:group) { group = Group.create(name: "Testgroup", creationDate: "2012-02-01") }
+  let!(:group) { group = Group.create(name: "Testgroup", creation_date: "2012-02-01") }
 
   it "is successful when clicking the destroy link" do
     visit "/groups"

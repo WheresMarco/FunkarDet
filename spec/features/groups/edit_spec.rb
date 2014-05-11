@@ -1,25 +1,7 @@
 require 'spec_helper'
 
 describe "Editing groups" do
-  let!(:group) { group = Group.create(name: "Testgroup", creationDate: "2012-02-01") }
-
-  def update_group(options={})
-    options[:name] ||= "Testgroup"
-    group = options[:group]
-
-    visit "/groups"
-    within "#group_#{group.id}" do
-      click_link "Edit"
-    end
-
-    fill_in "Name", with: options[:name]
-
-    select "2012", from: "group[creationDate(1i)]"
-    select "February", from: "group[creationDate(2i)]"
-    select "22", from: "group[creationDate(3i)]"
-
-    click_button "Update Group"
-  end
+  let!(:group) { group = Group.create(name: "Testgroup", creation_date: "2012-02-01") }
 
   it "updates a group successfully with correct information" do
     update_group group: group,

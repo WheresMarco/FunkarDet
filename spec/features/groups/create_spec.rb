@@ -1,22 +1,6 @@
 require 'spec_helper'
 
 describe "Creating groups" do
-  def create_group(options={})
-    options[:name] ||= "Testgroup"
-
-    visit "/groups"
-    click_link "New Group"
-    expect(page).to have_content("New group")
-
-    fill_in "Name", with: options[:name]
-
-    select "2013", from: "group[creationDate(1i)]"
-    select "February", from: "group[creationDate(2i)]"
-    select "26", from: "group[creationDate(3i)]"
-
-    click_button "Create Group"
-  end
-
   it "redirects to the group list index page on success" do
     create_group
     expect(page).to have_content("Testgroup")

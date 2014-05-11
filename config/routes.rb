@@ -1,5 +1,7 @@
 Funkardet::Application.routes.draw do
-  resources :groups
+  resources :groups do
+    resources :group_dates
+  end
   root 'groups#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
