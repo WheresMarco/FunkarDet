@@ -1,4 +1,6 @@
 Funkardet::Application.routes.draw do
+  resources :users
+
   resources :groups do
     resources :group_dates
   end
