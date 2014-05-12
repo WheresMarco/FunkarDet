@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140511183359) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "group_dates", force: true do |t|
     t.integer  "group_id"
     t.string   "name"
@@ -24,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140511183359) do
     t.string   "place"
   end
 
-  add_index "group_dates", ["group_id"], name: "index_group_dates_on_group_id"
+  add_index "group_dates", ["group_id"], name: "index_group_dates_on_group_id", using: :btree
 
   create_table "groups", force: true do |t|
     t.string   "name"
