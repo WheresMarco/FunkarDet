@@ -1,3 +1,3 @@
 == README
+
 [![Build Status](https://travis-ci.org/mh222zr/funkardet.svg?branch=master)](https://travis-ci.org/mh222zr/funkardet)
-[![Build](https://www.codeship.io/projects/ef5e2820-bbf1-0131-cbac-2e5923cffc57/status)](#)

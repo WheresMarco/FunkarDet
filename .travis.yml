@@ -1,3 +1,10 @@
 language: ruby
 rvm:
-  - 2.0.0-p353
+- 2.0.0-p353
+deploy:
+  provider: heroku
+  api_key:
+    secure: P5jNr+dE7ETm3fniPVQxTz2iXvRQPSDcMPaNMmFQ+J+JxaNU6xl+udcZzXf1JBUf4hfffHF8a8/IEr7rtnqluLTgQ7axcBj4FyoAXDE59K8n/S3rMJBLvOQhGxn9Xmo0DrL5uf1XM76F10o5oTnkoAKHGyMKxjL/RpiAB08V9kU=
+  app: funkardet
+  on:
+    repo: mh222zr/funkardet
