@@ -24,11 +24,11 @@ describe UsersController do
   # User. As you add validations to User, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) { {
-    "username" => "MyString" ,
+    "username" => "MyString",
     "email" => "email@example.com",
-    "password" => "password",
-    "password_confirmation" => "password"
-    } }
+    "password" => "password12345",
+    "password_confirmation" => "password12345"
+  } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -64,9 +64,14 @@ describe UsersController do
         assigns(:user).should be_persisted
       end
 
-      it "redirects to the created user" do
+      it "redirects to the group path" do
         post :create, {:user => valid_attributes}, valid_session
-        response.should redirect_to(User.last)
+        response.should redirect_to(groups_path)
+      end
+
+      it "sets the session user_id to the created user" do
+        post :create, {:user => valid_attributes}, valid_session
+        expect(session[:user_id]).to eq(User.find_by_username((valid_attributes["username"]).downcase).id)
       end
     end
 
