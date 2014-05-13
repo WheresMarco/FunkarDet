@@ -1,12 +1,9 @@
 require 'spec_helper'
 
 describe "Adding group dates" do
-  let!(:group) { group = Group.create(name: "Testgroup", creation_date: "2012-02-01") }
-  let(:user) { create(:user) }
-
-  before do
-    sign_in user, password: "treehouse1"
-  end
+  let(:user) { group.user }
+  let!(:group) { create(:group) }
+  before { sign_in user, password: 'treehouse1' }
 
   it "is successful with valid name" do
     visit_group(group)

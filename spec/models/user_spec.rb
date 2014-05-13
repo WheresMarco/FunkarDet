@@ -10,6 +10,10 @@ describe User do
     }
   }
 
+  context "reletionships" do
+    it { should have_many(:groups) }
+  end
+
   context "validations" do
     let(:user) { User.new(valid_attributes) }
 

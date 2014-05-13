@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe "Deleting groups" do
-  let(:user) { create(:user) }
-  let!(:group) { group = Group.create(name: "Testgroup", creation_date: "2012-02-01") }
+  let!(:group) { create(:group) }
 
   before do
-    sign_in user, password: "treehouse1"
+    sign_in group.user, password: "treehouse1"
   end
 
   it "is successful when clicking the destroy link" do
