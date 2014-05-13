@@ -1,12 +1,12 @@
-module GroupDateHelpers
-  def visit_group_dates(group)
+module GroupMemberHelpers
+  def visit_group_members(group)
     visit "/groups"
     within dom_id_for(group) do
-      click_link "List Dates"
+      click_link "List Members"
     end
   end
 
-  def create_group_date(options={})
+  def create_group_member(options={})
     options[:name] ||= "Testdate"
     options[:place] ||= "Placetest"
     options[:from_date] ||= DateTime.now

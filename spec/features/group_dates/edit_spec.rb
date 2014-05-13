@@ -9,7 +9,7 @@ describe "Editing group dates" do
   end
 
   it "is successful with valid name" do
-    visit_group(group)
+    visit_group_dates(group)
 
     within "#group_date_#{group_date.id}" do
       click_link "Edit"
@@ -25,7 +25,7 @@ describe "Editing group dates" do
   end
 
   it "is unsuccessful with no name" do
-    visit_group(group)
+    visit_group_dates(group)
 
     within "#group_date_#{group_date.id}" do
       click_link "Edit"
@@ -42,7 +42,7 @@ describe "Editing group dates" do
   end
 
   it "is unsuccessful with not enough name" do
-    visit_group(group)
+    visit_group_dates(group)
 
     within "#group_date_#{group_date.id}" do
       click_link "Edit"

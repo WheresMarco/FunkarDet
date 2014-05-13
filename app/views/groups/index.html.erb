@@ -16,6 +16,7 @@
         <td><%= group.creation_date %></td>
         <td>
           <%= link_to 'List Dates', group_group_dates_path(group) %>
+          <%= link_to 'List Members', group_group_members_path(group) %>
           <%= link_to 'Show', group %>
           <%= link_to 'Edit', edit_group_path(group) %>
           <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -6,7 +6,7 @@ describe "Adding group dates" do
   before { sign_in user, password: 'treehouse1' }
 
   it "is successful with valid name" do
-    visit_group(group)
+    visit_group_dates(group)
     create_group_date name: "Testdate"
 
     expect(page).to have_content("Added group date.")
@@ -17,7 +17,7 @@ describe "Adding group dates" do
   end
 
   it "displays an error with no name" do
-    visit_group(group)
+    visit_group_dates(group)
     create_group_date name: ""
 
     within("div.flash") do
@@ -28,7 +28,7 @@ describe "Adding group dates" do
   end
 
   it "displays an error with a name less then 2 characters long" do
-    visit_group(group)
+    visit_group_dates(group)
     create_group_date name: "1"
 
     within("div.flash") do
@@ -39,7 +39,7 @@ describe "Adding group dates" do
   end
 
   it "displays an error with no place" do
-    visit_group(group)
+    visit_group_dates(group)
     create_group_date place: ""
 
     within("div.flash") do
@@ -50,7 +50,7 @@ describe "Adding group dates" do
   end
 
   it "displays an error with no place less then 2 characters long" do
-    visit_group(group)
+    visit_group_dates(group)
     create_group_date place: ""
 
     within("div.flash") do

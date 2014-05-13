@@ -9,7 +9,7 @@ describe "Deleting group dates" do
   end
 
   it "is successful" do
-    visit_group(group)
+    visit_group_dates(group)
 
     within "#group_date_#{group_date.id}" do
       click_link "Delete"
