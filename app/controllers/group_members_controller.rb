@@ -21,6 +21,26 @@ class GroupMembersController < ApplicationController
     end
   end
 
+  def edit
+    @group_member = @group.group_members.find(params[:id])
+  end
+
+  def update
+    @group_member = @group.group_members.find(params[:id])
+
+    if @group_member.update_attributes(group_member_params)
+      flash[:success] = "Saved member."
+      redirect_to group_group_members_path(params[:group_id])
+    else
+      flash[:error] = "That member could not be saved."
+      render action: :edit
+    end
+  end
+
+  def url_options
+    { group_id: params[:group_id] }.merge(super)
+  end
+
   private
   def find_group
     @group = current_user.groups.find(params[:group_id])

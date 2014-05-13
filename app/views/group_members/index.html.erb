@@ -4,6 +4,7 @@
   <% @group.group_members.each do |group_member| %>
   <li id="<%= dom_id(group_member) %>">
     <%= group_member.name %>
+    <%= link_to "Edit", edit_group_group_member_path(group_member) %>
   </li>
   <% end %>
 </ul>
