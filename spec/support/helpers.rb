@@ -14,26 +14,4 @@ module Helpers
     select date.strftime('%B'), :from => "#{field}_2i" #month
     select date.strftime('%-e'), :from => "#{field}_3i" #day
   end
-
-  RSpec.configure do |config|
-    config.before(:suite) do
-      DatabaseCleaner.clean_with(:truncation)
-    end
-
-    config.before(:each) do
-      DatabaseCleaner.strategy = :transaction
-    end
-
-    config.before(:each, :js => true) do
-      DatabaseCleaner.strategy = :truncation
-    end
-
-    config.before(:each) do
-      DatabaseCleaner.start
-    end
-
-    config.after(:each) do
-      DatabaseCleaner.clean
-    end
-  end
 end
