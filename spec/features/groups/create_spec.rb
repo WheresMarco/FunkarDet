@@ -1,6 +1,12 @@
 require 'spec_helper'
 
 describe "Creating groups" do
+  let(:user) { create(:user) }
+
+  before do
+    sign_in user, password: "treehouse1"
+  end
+
   it "redirects to the group list index page on success" do
     create_group
     expect(page).to have_content("Testgroup")

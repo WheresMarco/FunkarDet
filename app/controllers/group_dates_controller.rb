@@ -1,4 +1,5 @@
 class GroupDatesController < ApplicationController
+  before_action :require_user
   before_action :find_group
 
   def index

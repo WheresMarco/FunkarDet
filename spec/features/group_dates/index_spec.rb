@@ -1,8 +1,13 @@
 require 'spec_helper'
 
 describe "Viewing group dates" do
+  let(:user) { create(:user) }
   let!(:group) { group = Group.create(name: "Testgroup", creation_date: "2012-02-01") }
-  
+
+  before do
+    sign_in user, password: "treehouse1"
+  end
+
   it "displays the name of the group" do
     visit_group(group)
     within("h1") do

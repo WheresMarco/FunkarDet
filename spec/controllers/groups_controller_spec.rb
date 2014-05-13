@@ -30,6 +30,10 @@ describe GroupsController do
   # GroupsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
+  before do
+    sign_in(build_stubbed(:user))
+  end
+
   describe "GET index" do
     it "assigns all groups as @groups" do
       group = Group.create! valid_attributes

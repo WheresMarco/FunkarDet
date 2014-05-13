@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  before_action :require_user
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   # GET /groups
