@@ -1,4 +1,5 @@
 class GroupDatesController < ApplicationController
+  before_action :require_user
   before_action :find_group
 
   def index
@@ -52,7 +53,7 @@ class GroupDatesController < ApplicationController
 
   private
   def find_group
-    @group = Group.find(params[:group_id])
+    @group = current_user.groups.find(params[:group_id])
   end
 
   def group_date_params

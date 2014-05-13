@@ -1,0 +1,4 @@
+<h1><%= @group.name %> - Editing Member</h1>
+<%= form_for [@group, @group_member] do |form| %>
+  <%= render partial: form %>
+<% end %>

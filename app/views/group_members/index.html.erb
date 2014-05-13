@@ -1,0 +1,16 @@
+<h1><%= @group.name %></h1>
+
+<ul class="group_members">
+  <% @group.group_members.each do |group_member| %>
+  <li id="<%= dom_id(group_member) %>">
+    <%= group_member.name %>
+    <%= link_to "Edit", edit_group_group_member_path(group_member) %>
+    <%= link_to "Delete", group_group_member_path(group_member), method: :delete,
+      data: { confirm: "Are you sure?" } %>
+  </li>
+  <% end %>
+</ul>
+
+<p>
+  <%= link_to "New Member", new_group_group_member_path %>
+</p>

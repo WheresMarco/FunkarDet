@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Group do
-  it { should have_many(:group_dates) }
+  context "relationships" do
+    it { should have_many(:group_dates) }
+    it { should have_many(:group_members) }
+    it { should belong_to(:user) }
+  end
 end

@@ -1,11 +1,15 @@
 require 'spec_helper'
 
 describe "Editing group dates" do
-  let!(:group) { group = Group.create(name: "Testgroup", creation_date: "2012-02-01") }
   let!(:group_date) { group.group_dates.create(name: "Last of day", place: "This place", from_date: DateTime.now, to_date: DateTime.now, description: "A new sample text.") }
+  let!(:group) { create(:group) }
+
+  before do
+    sign_in group.user, password: "treehouse1"
+  end
 
   it "is successful with valid name" do
-    visit_group(group)
+    visit_group_dates(group)
 
     within "#group_date_#{group_date.id}" do
       click_link "Edit"
@@ -21,7 +25,7 @@ describe "Editing group dates" do
   end
 
   it "is unsuccessful with no name" do
-    visit_group(group)
+    visit_group_dates(group)
 
     within "#group_date_#{group_date.id}" do
       click_link "Edit"
@@ -38,7 +42,7 @@ describe "Editing group dates" do
   end
 
   it "is unsuccessful with not enough name" do
-    visit_group(group)
+    visit_group_dates(group)
 
     within "#group_date_#{group_date.id}" do
       click_link "Edit"
