@@ -37,6 +37,18 @@ class GroupMembersController < ApplicationController
     end
   end
 
+  def destroy
+    @group_member = @group.group_members.find(params[:id])
+
+    if @group_member.destroy
+      flash[:success] = "Member was deleted."
+    else
+      flash[:error] = "Threre was a problem deleting that member."
+    end
+    
+    redirect_to group_group_members_path(params[:group_id])
+  end
+
   def url_options
     { group_id: params[:group_id] }.merge(super)
   end
