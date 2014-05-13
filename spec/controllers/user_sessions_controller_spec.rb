@@ -15,8 +15,8 @@ describe UserSessionsController do
   end
 
   describe "POST 'create'" do
-    context "with correct credentials" do
-      let!(:user) { User.create(username: "Jason", email: "jason@teamtreehouse.com", password: "treehouse1", password_confirmation: "treehouse1") }
+    context "with correct credentials as an organizer" do
+      let!(:user) { User.create(username: "Jason", email: "jason@teamtreehouse.com", organizer: true, password: "treehouse1", password_confirmation: "treehouse1") }
 
       it "redirects to the group list path" do
         post :create, username: "Jason", password: "treehouse1"

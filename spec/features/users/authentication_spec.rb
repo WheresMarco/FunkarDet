@@ -1,8 +1,8 @@
 require "spec_helper"
 
 describe "Logging in" do
-  it "logs the user in and goes to the group list" do
-    User.create(username: "Jason", email: "jason@teamtreehouse.com", password: "treehouse1", password_confirmation: "treehouse1")
+  it "logs the user in as an organizer and goes to the group list" do
+    User.create(username: "Jason", email: "jason@teamtreehouse.com", organizer: true, password: "treehouse1", password_confirmation: "treehouse1")
 
     visit new_user_session_path
     fill_in "Username", with: "Jason"
