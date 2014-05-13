@@ -30,6 +30,8 @@ class UserSessionsController < ApplicationController
 
   def select_user_post
     session[:group_member_id] = params[:group_member]
-    redirect_to groups_path
+    group_member = GroupMember.find_by_id(session[:group_member_id])
+
+    redirect_to group_path(group_member.group_id)
   end
 end
