@@ -8,6 +8,8 @@ describe "Deleting groups" do
   end
 
   it "is successful when clicking the destroy link" do
+    number_of_groups = Group.count
+
     visit "/groups"
 
     within "#group_#{group.id}" do
@@ -15,6 +17,6 @@ describe "Deleting groups" do
     end
 
     expect(page).to_not have_content(group.name)
-    expect(Group.count).to eq(0)
+    expect(Group.count).to eq(number_of_groups - 1)
   end
 end

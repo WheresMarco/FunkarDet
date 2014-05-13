@@ -1,0 +1,24 @@
+<% if @group_member.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@group_member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+    <ul>
+    <% @group_member.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<p>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</p>
+
+<p>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+</p>
+<p>
+  <%= form.submit "Save" %>
+</p>

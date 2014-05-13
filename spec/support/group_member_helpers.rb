@@ -7,21 +7,13 @@ module GroupMemberHelpers
   end
 
   def create_group_member(options={})
-    options[:name] ||= "Testdate"
-    options[:place] ||= "Placetest"
-    options[:from_date] ||= DateTime.now
-    options[:to_date] ||= DateTime.now
-    options[:description] ||= "A sample text"
+    options[:name] ||= "Testmember"
+    options[:email] ||= "test@example.com"
 
-    click_link "New Group Date"
+    click_link "New Member"
 
     fill_in "Name", with: options[:name]
-    fill_in "Place", with: options[:place]
-
-    select_date_and_time(options[:from_date], prefix: "group_date", from: :from_date)
-    select_date_and_time(options[:to_date], prefix: "group_date", from: :to_date)
-
-    fill_in "Description", with: options[:description]
+    fill_in "Email", with: options[:email]
 
     click_button "Save"
   end

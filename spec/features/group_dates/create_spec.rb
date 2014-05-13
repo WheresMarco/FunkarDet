@@ -51,12 +51,12 @@ describe "Adding group dates" do
 
   it "displays an error with no place less then 2 characters long" do
     visit_group_dates(group)
-    create_group_date place: ""
+    create_group_date place: "1"
 
     within("div.flash") do
       expect(page).to have_content("Threre was a problem adding that group date.")
     end
 
-    expect(page).to have_content("Place can't be blank")
+    expect(page).to have_content("Place is too short")
   end
 end
