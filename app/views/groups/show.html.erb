@@ -1,14 +1,28 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-</p>
+<h1><%= @group.name %></h1>
 
 <p>
   <strong>Creationdate:</strong>
   <%= @group.creation_date %>
 </p>
 
+<h3>Group Dates</h3>
+<ul class="group_dates">
+  <% @group.group_dates.each do |group_date| %>
+  <li id="<%= dom_id(group_date) %>">
+    <%= group_date.name %>
+  </li>
+  <% end %>
+</ul>
+
+<h3>Group Members</h3>
+<ul class="group_members">
+  <% @group.group_members.each do |group_member| %>
+  <li id="<%= dom_id(group_member) %>">
+    <%= group_member.name %>
+  </li>
+  <% end %>
+</ul>
+
+<hr>
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
