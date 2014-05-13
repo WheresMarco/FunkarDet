@@ -15,6 +15,10 @@
   <% end %>
 
 <%= link_to "Sign Up", new_user_path %>
+<%= link_to "Sign In", login_path %>
+<%= link_to "Log out", logout_path %>
+
+<%= session[:group_member_id] %>
 
 <%= yield %>
 

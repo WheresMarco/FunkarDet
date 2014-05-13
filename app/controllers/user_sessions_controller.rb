@@ -7,8 +7,15 @@ class UserSessionsController < ApplicationController
 
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      flash[:success] = "Thanks for logging in!"
-      redirect_to groups_path
+
+      # If the user is an organizer, redirect to index.
+      # Else make the user select a member from group_members
+      if user.organizer
+        flash[:success] = "Thanks for logging in!"
+        redirect_to groups_path
+      else
+        redirect_to select_user_path
+      end
     else
       flash[:error] = "There was a problem logging in. Please check your username and password."
       render action: 'new'
@@ -19,5 +26,10 @@ class UserSessionsController < ApplicationController
     session[:user_id] = nil
     reset_session
     redirect_to root_path, notice: "You have been logged out."
+  end
+
+  def select_user_post
+    session[:group_member_id] = params[:group_member]
+    redirect_to groups_path
   end
 end
