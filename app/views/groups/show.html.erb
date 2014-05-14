@@ -26,6 +26,7 @@
 
 <% if @current_user.organizer %>
   <hr>
-  <%= link_to 'Edit', edit_group_path(@group) %> |
-  <%= link_to 'Back', groups_path %>
+  <%= link_to "New Group Date", new_group_group_date_path(@group) %>
+  <%= link_to "New Member", new_group_group_member_path(@group) %>
+  <%= link_to 'Edit Group', edit_group_path(@group) %>
 <% end %>

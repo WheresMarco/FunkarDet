@@ -8,10 +8,8 @@ class GroupsController < ApplicationController
   def index
     @groups = current_user.groups
 
-    # Redirect to group page if not a group organizer
-    if session[:group_member_id] && !current_user.organizer
-      redirect_to group_path(set_group_member.group_id)
-    end
+    # Redirect to group page
+    redirect_to group_path(set_group_member.group_id)
   end
 
   # GET /groups/1
