@@ -1,7 +1,7 @@
 <h1>Choose user</h1>
 <%= form_tag select_user_post_path do %>
   <%= label_tag :group_member, "Username" %>
-  <%= select("group_member", "", GroupMember.all.collect {|p| [ p.name, p.id ] }) %>
+  <%= select("group_member", "", GroupMember.where(group_id: @groups.id).order(:name).collect {|p| [ p.name, p.id ] }) %>
 
   <%= submit_tag "Log In" %>
 <% end %>
