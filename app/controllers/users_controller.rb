@@ -15,11 +15,17 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     params[:user][:organizer] = true
+    params[:group][:email] = "none@email.com"
     @user = User.new(user_params)
+    @group_user = User.new(group_user_params)
 
     respond_to do |format|
-      if @user.save
+      if @user.save && @group_user.save
         session[:user_id] = @user.id
+
+        @group = GroupsUsers.find_by_user_id(@user.id)
+        @group_member = GroupsUsers.new(group_id: @group.group_id, user_id: @group_user.id)
+        @group_member.save
 
         format.html { redirect_to groups_path, success: 'Thanks for signing up!' }
         format.json { render action: 'show', status: :created, location: @user }
@@ -63,5 +69,9 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:username, :email, :organizer, :password, :password_confirmation, :groups_attributes => [:name, :creation_date])
+    end
+    
+    def group_user_params
+      params.require(:group).permit(:username, :email, :organizer, :password, :password_confirmation)
     end
 end
