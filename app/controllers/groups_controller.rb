@@ -8,8 +8,6 @@ class GroupsController < ApplicationController
   def index
     @groups = current_user.groups
 
-    #redirect_to group_path(set_group_member.session[:user_id])
-
     # Redirect to group page - dossen't work
     if !current_user.organizer
       if session[:group_member_id]

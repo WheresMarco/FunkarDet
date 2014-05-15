@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   def create
     params[:user][:organizer] = true
     params[:group][:email] = "none@email.com"
+    
     @user = User.new(user_params)
     @group_user = User.new(group_user_params)
 
@@ -70,7 +71,7 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:username, :email, :organizer, :password, :password_confirmation, :groups_attributes => [:name, :creation_date])
     end
-    
+
     def group_user_params
       params.require(:group).permit(:username, :email, :organizer, :password, :password_confirmation)
     end

@@ -14,6 +14,9 @@
   <% @group.group_dates.each do |group_date| %>
   <li id="<%= dom_id(group_date) %>">
     <%= group_date.name %>
+    <%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
+    <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
+      data: { confirm: "Are you sure?" } %>
   </li>
   <% end %>
 </ul>
@@ -23,6 +26,9 @@
   <% @group.group_members.each do |group_member| %>
   <li id="<%= dom_id(group_member) %>">
     <%= group_member.name %>
+    <%= link_to "Edit", edit_group_group_member_path(@group, group_member) %>
+    <%= link_to "Delete", group_group_member_path(@group, group_member), method: :delete,
+      data: { confirm: "Are you sure?" } %>
   </li>
   <% end %>
 </ul>

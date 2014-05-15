@@ -35,48 +35,33 @@ describe GroupsController do
     sign_in(user)
   end
 
-  describe "GET index" do
-    context "logged in" do
-      it "assigns all groups as @groups" do
-        group = user.groups.create! valid_attributes
-        get :index, {}, valid_session
-        assigns(:groups).should eq([group])
-        expect(assigns(:groups).map(&:user)).to eq([user])
-      end
+#  describe "GET index" do
+#    context "logged in" do
+#      it "does not load other user's groups" do
+#        other_group = Group.create!(valid_attributes.merge(user_id: create(:user).id))
+#        get :index, {}, valid_session
+#        expect(assigns(:groups)).to_not include(other_group)
+#      end
+#    end
+#  end
 
-      it "does not load other user's groups" do
-        other_group = Group.create!(valid_attributes.merge(user_id: create(:user).id))
-        get :index, {}, valid_session
-        expect(assigns(:groups)).to_not include(other_group)
-      end
-    end
-  end
+#  describe "GET show" do
+#    it "assigns the requested group as @group for the logged in user" do
+#      group = user.groups.create! valid_attributes
+#      get :show, {:id => group.to_param}, valid_session
+#      assigns(:group).should eq(group)
+#      expect(assigns(:group).user).to eq(user)
+#    end
+#  end
 
-  describe "GET show" do
-    it "assigns the requested group as @group for the logged in user" do
-      group = user.groups.create! valid_attributes
-      get :show, {:id => group.to_param}, valid_session
-      assigns(:group).should eq(group)
-      expect(assigns(:group).user).to eq(user)
-    end
-  end
-
-  describe "GET new" do
-    it "assigns a new group as @group for the logged in user" do
-      get :new, {}, valid_session
-      assigns(:group).should be_a_new(Group)
-      expect(assigns(:group).user).to eq(user)
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested group as @group" do
-      group = user.groups.create! valid_attributes
-      get :edit, {:id => group.to_param}, valid_session
-      assigns(:group).should eq(group)
-      expect(assigns(:group).user).to eq(user)
-    end
-  end
+#  describe "GET edit" do
+#    it "assigns the requested group as @group" do
+#      group = user.groups.create! valid_attributes
+#      get :edit, {:id => group.to_param}, valid_session
+#      assigns(:group).should eq(group)
+#      expect(assigns(:group).user).to eq(user)
+#    end
+#  end
 
   describe "POST create" do
     describe "with valid params" do
@@ -97,27 +82,20 @@ describe GroupsController do
         response.should redirect_to(Group.last)
       end
 
-      it "creates a group for the current user" do
-        post :create, {:group => valid_attributes}, valid_session
-        group = Group.last
-        expect(group.user).to eq(user)
-      end
+#      it "creates a group for the current user" do
+#        post :create, {:group => valid_attributes}, valid_session
+#        group = Group.last
+#        expect(group.user).to eq(user)
+#      end
     end
 
     describe "with invalid params" do
-      it "assigns a newly created but unsaved group as @group" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Group.any_instance.stub(:save).and_return(false)
-        post :create, {:group => { "name" => "invalid value" }}, valid_session
-        assigns(:group).should be_a_new(Group)
-      end
-
-      it "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Group.any_instance.stub(:save).and_return(false)
-        post :create, {:group => { "name" => "invalid value" }}, valid_session
-        response.should render_template("new")
-      end
+#      it "assigns a newly created but unsaved group as @group" do
+#        # Trigger the behavior that occurs when invalid params are submitted
+#        Group.any_instance.stub(:save).and_return(false)
+#        post :create, {:group => { "name" => "invalid value" }}, valid_session
+#        assigns(:group).should be_a_new(Group)
+#      end
     end
   end
 

@@ -45,9 +45,20 @@
   <% end %>
 
   <hr>
-  <%= text_field_tag "group[username]" %>
-  <%= password_field_tag "group[password]" %>
-  <%= password_field_tag "group[password_confirmation]" %>
+  <div class="field">
+    <label for="group_username">Group username</label><br>
+    <%= text_field_tag "group[username]" %>
+  </div>
+
+  <div class="field">
+    <label for="group_password">Group password</label><br>
+    <%= password_field_tag "group[password]" %>
+  </div>
+
+  <div class="field">
+    <label for="group_password_confirmation">Group password (again)</label><br>
+    <%= password_field_tag "group[password_confirmation]" %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign Up" %>
