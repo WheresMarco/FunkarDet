@@ -1,5 +1,8 @@
 <h1><%= @group.name %></h1>
+
+<% if !@current_user.organizer %>
 <%= @group_member.name %>
+<% end %>
 
 <p>
   <strong>Creationdate:</strong>

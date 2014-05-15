@@ -29,8 +29,7 @@ class UserSessionsController < ApplicationController
   end
 
   def select_user
-    user = User.find_by_id(session[:user_id])
-    @groups = Group.find_by_user_id(user.id)
+    @groups_users = GroupsUsers.find_by_user_id(session[:user_id])
   end
 
   def select_user_post

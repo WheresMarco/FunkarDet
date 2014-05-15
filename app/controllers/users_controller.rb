@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @user.groups.build
   end
 
   # GET /users/1/edit
@@ -13,11 +14,13 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    params[:user][:organizer] = true
     @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
+
         format.html { redirect_to groups_path, success: 'Thanks for signing up!' }
         format.json { render action: 'show', status: :created, location: @user }
       else
@@ -59,6 +62,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :email, :password, :password_confirmation)
+      params.require(:user).permit(:username, :email, :organizer, :password, :password_confirmation, :groups_attributes => [:name, :creation_date])
     end
 end
