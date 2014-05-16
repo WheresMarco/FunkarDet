@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
+.header {
+  margin-bottom: 30px;
+}

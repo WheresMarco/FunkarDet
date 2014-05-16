@@ -1,13 +1,8 @@
-<h1><%= @group.name %></h1>
+<h1><%= @group.name %> <small>Creation date: <%= @group.creation_date %></small></h1>
 
 <% if !@current_user.organizer %>
-<%= @group_member.name %>
+  <%= @group_member.name %>
 <% end %>
-
-<p>
-  <strong>Creationdate:</strong>
-  <%= @group.creation_date %>
-</p>
 
 <h3>Group Dates</h3>
 <ul class="group_dates">
