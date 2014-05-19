@@ -5,20 +5,25 @@
 <% end %>
 
 <h3>Group Dates</h3>
-<!--<ul class="group_dates">-->
 <div class="row">
   <% @group.group_dates.each do |group_date| %>
-    <div class="col-md-3 group-date">
-      <!--<li id="<%= dom_id(group_date) %>">-->
+    <div class="col-md-3 group-date" id="<%= dom_id(group_date) %>">
       <h4><%= group_date.name %> <small><%= group_date.from_date %></small></h4>
       <p><%= group_date.description %></p>
-      <%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
-      <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
-        data: { confirm: "Are you sure?" } %>
+
+      <div class="meta">
+        <% if !@current_user.organizer %>
+          <a href="#">Ja</a><a href="#">Kanske</a><a href="#">Nej</a>
+        <% end %>
+
+        <div class="pull-right">
+          <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
+        data: { confirm: "Are you sure?" } %><%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
-<!--</ul>-->
 
 <h3>Group Members</h3>
 <ul class="group_members">
