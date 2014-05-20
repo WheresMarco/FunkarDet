@@ -1,12 +1,32 @@
-<h1>Log In</h1>
-<%= form_tag user_sessions_path do %>
-  <%= label_tag :username, "Username" %>
-  <%= text_field_tag :username, params[:username] %>
-  <br />
+<div class="col-md-5">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Log In</h3>
+    </div>
+    <div class="panel-body">
+      <%= form_tag user_sessions_path do %>
+        <%= label_tag :username, "Username" %>
+        <%= text_field_tag :username, params[:username] %>
+        <br />
 
-  <%= label_tag :password, "Password" %>
-  <%= password_field_tag :password %>
-  <br />
+        <%= label_tag :password, "Password" %>
+        <%= password_field_tag :password %>
+        <br />
 
-  <%= submit_tag "Log In" %>
-<% end %>
+        <%= submit_tag "Log In" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-7">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Welcome text</h3>
+    </div>
+    <div class="panel-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum felis nec risus vestibulum, ut dignissim massa ultricies. Nulla felis turpis, convallis ac porttitor in, rhoncus sed odio. </p>
+      <p>Fusce sit amet diam et lacus porta accumsan eget at velit. Vivamus rhoncus ornare ornare. Proin sit amet eros ut metus consequat hendrerit ac nec libero. Integer accumsan eu elit id elementum. Aliquam quis purus sed mi venenatis convallis. Etiam eleifend enim id dapibus ultrices. Duis quis magna molestie, aliquam metus et, aliquet velit.</p>
+    </div>
+  </div>
+</div>

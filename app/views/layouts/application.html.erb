@@ -19,9 +19,9 @@
             <span class="icon-bar"></span>
           </button>
           <% if @current_user %>
-            <a class="navbar-brand" href="#"><%= @group.name %></a>
+            <a class="navbar-brand" href="/"><%= @group.name %></a>
           <% else %>
-            <a class="navbar-brand" href="#">Funkar det?</a>
+            <a class="navbar-brand" href="/">Funkar det?</a>
           <% end %>
         </div>
         <div class="collapse navbar-collapse">
@@ -30,7 +30,9 @@
               <% if !@current_user.organizer %>
                 <li><a href="#">Logged in as <%= @group_member.name %></a></li>
               <% else %>
-                <li><a href="#">Logged in as <%= @current_user.username %></a></li>
+                <li><%= link_to "New Group Date", new_group_group_date_path(@group) %></li>
+                <li><%= link_to "New Member", new_group_group_member_path(@group) %></li>
+                <li><%= link_to 'Edit Group', edit_group_path(@group) %></li>
               <% end %>
               <li><%= link_to "Log out", logout_path %></li>
             <% else %>
@@ -52,9 +54,8 @@
       <% end %>
 
       <div class="row">
-        <div class="col-md-12">
-          <%= yield %>
-        </div>
+        <br />
+        <%= yield %>
       </div>
 </body>
 </html>
