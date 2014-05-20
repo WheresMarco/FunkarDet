@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515205126) do
+ActiveRecord::Schema.define(version: 20140520104021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "group_date_attendances", id: false, force: true do |t|
+    t.integer "group_date_id"
+    t.integer "user_id"
+    t.integer "answer"
+  end
 
   create_table "group_dates", force: true do |t|
     t.integer  "group_id"

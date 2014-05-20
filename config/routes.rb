@@ -8,10 +8,12 @@ Funkardet::Application.routes.draw do
   resources :user_sessions, only: [:new, :create]
 
   resources :groups do
-    resources :group_dates
+    resources :group_dates do
+      post :attend_date
+    end
     resources :group_members
   end
-  
+
   root 'groups#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

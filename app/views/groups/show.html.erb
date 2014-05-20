@@ -13,18 +13,15 @@
 
       <div class="meta">
         <% if !@current_user.organizer %>
-          <a href="#">Ja</a><a href="#">Kanske</a><a href="#">Nej</a>
+          <%= link_to 'Ja', group_group_date_attend_date_path(@group, group_date, :answer => 1), :method => :post %>
+          <%= link_to 'Kanske', group_group_date_attend_date_path(@group, group_date, :answer => 2), :method => :post %>
+          <%= link_to 'Nej', group_group_date_attend_date_path(@group, group_date, :answer => 3), :method => :post %>
         <% else %>
           <div class="pull-right">
             <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
           data: { confirm: "Are you sure?" } %><%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
           </div>
         <% end %>
-
-        <div class="pull-right">
-          <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
-        data: { confirm: "Are you sure?" } %><%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
-        </div>
       </div>
     </div>
   <% end %>
@@ -35,9 +32,6 @@
   <% @group.group_members.each do |group_member| %>
   <li id="<%= dom_id(group_member) %>">
     <%= group_member.name %>
-    <%= link_to "Edit", edit_group_group_member_path(@group, group_member) %>
-    <%= link_to "Delete", group_group_member_path(@group, group_member), method: :delete,
-      data: { confirm: "Are you sure?" } %>
     <% if @current_user.organizer %>
       <%= link_to "Edit", edit_group_group_member_path(@group, group_member) %>
       <%= link_to "Delete", group_group_member_path(@group, group_member), method: :delete,

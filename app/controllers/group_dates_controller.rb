@@ -47,6 +47,18 @@ class GroupDatesController < ApplicationController
     redirect_to "/"
   end
 
+  def attend_date
+    @group_date_attend = GroupDateAttendance.new(group_date_id: params[:group_date_id], user_id: current_user.id, answer: params[:answer])
+
+    if @group_date_attend.save
+      flash[:success] = "Saved answer."
+      redirect_to groups_path
+    else
+      flash[:error] = "Threre was a problem saving your answer."
+      redirect_to groups_path
+    end
+  end
+
   def url_options
     { group_id: params[:group_id] }.merge(super)
   end
