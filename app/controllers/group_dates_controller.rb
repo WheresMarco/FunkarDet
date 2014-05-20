@@ -44,7 +44,7 @@ class GroupDatesController < ApplicationController
     else
       flash[:error] = "Threre was a problem deleting that group date."
     end
-    redirect_to group_path
+    redirect_to "/"
   end
 
   def url_options
