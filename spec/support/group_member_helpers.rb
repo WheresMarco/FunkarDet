@@ -1,9 +1,6 @@
 module GroupMemberHelpers
   def visit_group_members(group)
     visit "/groups"
-    within dom_id_for(group) do
-      click_link "List Members"
-    end
   end
 
   def create_group_member(options={})

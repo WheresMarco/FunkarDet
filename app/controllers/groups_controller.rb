@@ -1,11 +1,23 @@
 class GroupsController < ApplicationController
   before_action :require_user
   before_action :set_group, only: [:show, :edit, :update, :destroy]
+  before_action :set_group_member, only: [:show, :edit, :update, :destroy]
 
   # GET /groups
   # GET /groups.json
   def index
     @groups = current_user.groups
+
+    # Redirect to group page - dossen't work
+    if !current_user.organizer
+      if session[:group_member_id]
+        redirect_to group_path(set_group_member.group_id)
+      else
+        redirect_to select_user_path
+      end
+    else
+      redirect_to group_path(set_group_user.group_id)
+    end
   end
 
   # GET /groups/1
@@ -66,6 +78,14 @@ class GroupsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_group
       @group = current_user.groups.find(params[:id])
+    end
+
+    def set_group_member
+      @group_member ||= GroupMember.find_by_id(session[:group_member_id]) if session[:group_member_id]
+    end
+
+    def set_group_user
+      @group_user = GroupsUsers.find_by_user_id(session[:user_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

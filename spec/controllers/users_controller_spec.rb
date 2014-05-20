@@ -27,6 +27,14 @@ describe UsersController do
     "username" => "MyString",
     "email" => "email@example.com",
     "password" => "password12345",
+    "password_confirmation" => "password12345",
+    "groups_attributes"=>{"0"=>{"name"=>"Test",
+    "creation_date"=>"test"}}
+  } }
+
+  let(:valid_group_attributes) { {
+    "username" => "MyString2",
+    "password" => "password12345",
     "password_confirmation" => "password12345"
   } }
 
@@ -54,23 +62,23 @@ describe UsersController do
     describe "with valid params" do
       it "creates a new User" do
         expect {
-          post :create, {:user => valid_attributes}, valid_session
-        }.to change(User, :count).by(1)
+          post :create, {:user => valid_attributes, :group => valid_group_attributes}, valid_session
+        }.to change(User, :count).by(2)
       end
 
       it "assigns a newly created user as @user" do
-        post :create, {:user => valid_attributes}, valid_session
+        post :create, {:user => valid_attributes, :group => valid_group_attributes}, valid_session
         assigns(:user).should be_a(User)
         assigns(:user).should be_persisted
       end
 
       it "redirects to the group path" do
-        post :create, {:user => valid_attributes}, valid_session
+        post :create, {:user => valid_attributes, :group => valid_group_attributes}, valid_session
         response.should redirect_to(groups_path)
       end
 
       it "sets the session user_id to the created user" do
-        post :create, {:user => valid_attributes}, valid_session
+        post :create, {:user => valid_attributes, :group => valid_group_attributes}, valid_session
         expect(session[:user_id]).to eq(User.find_by_username((valid_attributes["username"]).downcase).id)
       end
     end
@@ -79,14 +87,14 @@ describe UsersController do
       it "assigns a newly created but unsaved user as @user" do
         # Trigger the behavior that occurs when invalid params are submitted
         User.any_instance.stub(:save).and_return(false)
-        post :create, {:user => { "username" => "invalid value" }}, valid_session
+        post :create, {:user => { "username" => "invalid value" }, :group => valid_group_attributes}, valid_session
         assigns(:user).should be_a_new(User)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         User.any_instance.stub(:save).and_return(false)
-        post :create, {:user => { "username" => "invalid value" }}, valid_session
+        post :create, {:user => { "username" => "invalid value" }, :group => valid_group_attributes}, valid_session
         response.should render_template("new")
       end
     end

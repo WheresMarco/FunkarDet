@@ -28,6 +28,10 @@ class UserSessionsController < ApplicationController
     redirect_to root_path, notice: "You have been logged out."
   end
 
+  def select_user
+    @groups_users = GroupsUsers.find_by_user_id(session[:user_id])
+  end
+
   def select_user_post
     session[:group_member_id] = params[:group_member]
     group_member = GroupMember.find_by_id(session[:group_member_id])

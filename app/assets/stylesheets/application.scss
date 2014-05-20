@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700");
+
+body {
+  font: 150%/1.5 "PT Sans", serif;
+  line-height:1.2;
+  background-color: #EBE7DE;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 50px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.alert {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.navbar {
+  background-color: #04ADFD;
+
+  a {
+    color: #fff;
+
+    &:hover, &:focus {
+      background-color: #1396F6 !important;
+    }
+  }
+}
+
+.group-date {
+  position: relative;
+  background-color: #FBFAF8;
+  height: 200px;
+  box-shadow:0 1px 2px #E3DFD6;
+  border-radius:3px;
+  margin-left: 15px;
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  .meta {
+    position: absolute;
+    bottom: 0;
+    background-color: #F3F2EE;
+    height: 40px;
+    width: 100%;
+    margin-left: -15px;
+
+    a {
+      display: inline-block;
+      color: #C6BBA5;
+      font-weight: bold;
+      line-height: 40px;
+      border-left: 1px solid #E3DFD6;
+      padding: 0 10px;
+
+      &:hover {
+        background-color: #EBEBE7;
+        text-decoration: none;
+      }
+    }
+  }
+}

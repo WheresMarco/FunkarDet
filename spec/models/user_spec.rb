@@ -11,7 +11,7 @@ describe User do
   }
 
   context "reletionships" do
-    it { should have_many(:groups) }
+    it { should have_and_belong_to_many(:groups) }
   end
 
   context "validations" do
@@ -31,15 +31,6 @@ describe User do
 
     it "requires an email" do
       expect(user).to validate_presence_of(:email)
-    end
-
-    it "requires a unique email" do
-      expect(user).to validate_uniqueness_of(:email)
-    end
-
-    it "requires a unique email (case insensitive)" do
-      user.email = "MARCO@WHERESMAR.CO"
-      expect(user).to validate_uniqueness_of(:email)
     end
 
     it "requires the email adress to look like an email" do

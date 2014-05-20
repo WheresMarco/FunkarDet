@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Editing members" do
-  let!(:group_member) { group.group_members.create(name: "Kalle", email: "kalle@kula.se") }
+  let!(:group_member) { group.group_members.create(name: "Sture Stork", email: "sture@stork.se") }
   let!(:group) { create(:group) }
 
   before do
@@ -38,7 +38,7 @@ describe "Editing members" do
     expect(page).to have_content("Name can't be blank")
     group_member.reload
 
-    expect(group_member.name).to eq("Kalle")
+    expect(group_member.name).to eq("Sture Stork")
   end
 
   it "is unsuccessful with not enough name" do
@@ -55,6 +55,6 @@ describe "Editing members" do
     expect(page).to have_content("Name is too short")
     group_member.reload
 
-    expect(group_member.name).to eq("Kalle")
+    expect(group_member.name).to eq("Sture Stork")
   end
 end

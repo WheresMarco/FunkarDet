@@ -30,7 +30,7 @@ class GroupDatesController < ApplicationController
 
     if @group_date.update_attributes(group_date_params)
       flash[:success] = "Saved group date."
-      redirect_to group_group_dates_path
+      redirect_to groups_path
     else
       flash[:error] = "That grup date could not be saved."
       render action: :edit
@@ -44,7 +44,7 @@ class GroupDatesController < ApplicationController
     else
       flash[:error] = "Threre was a problem deleting that group date."
     end
-    redirect_to group_group_dates_path
+    redirect_to "/"
   end
 
   def url_options
@@ -57,6 +57,6 @@ class GroupDatesController < ApplicationController
   end
 
   def group_date_params
-    params[:group_date].permit(:name, :place)
+    params[:group_date].permit(:name, :description, :from_date, :to_date, :place)
   end
 end

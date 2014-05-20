@@ -14,7 +14,7 @@ class GroupMembersController < ApplicationController
 
     if @group_member.save
       flash[:success] = "Added member."
-      redirect_to group_group_members_path(params[:group_id])
+      redirect_to group_path(params[:group_id])
     else
       flash[:error] = "Threre was a problem adding that member."
       render action: :new
@@ -30,7 +30,7 @@ class GroupMembersController < ApplicationController
 
     if @group_member.update_attributes(group_member_params)
       flash[:success] = "Saved member."
-      redirect_to group_group_members_path(params[:group_id])
+      redirect_to group_path(params[:group_id])
     else
       flash[:error] = "That member could not be saved."
       render action: :edit
@@ -45,7 +45,7 @@ class GroupMembersController < ApplicationController
     else
       flash[:error] = "Threre was a problem deleting that member."
     end
-    
+
     redirect_to group_group_members_path(params[:group_id])
   end
 
