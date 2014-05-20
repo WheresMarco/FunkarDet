@@ -1,24 +1,19 @@
-<h1><%= @group.name %> <small>Creation date: <%= @group.creation_date %></small></h1>
-
-<% if !@current_user.organizer %>
-  <%= @group_member.name %>
-<% end %>
-
-<h3>Group Dates</h3>
+<h3>Hi! You have <strong>3</strong> unanswered dates</h3>
 <div class="row">
   <% @group.group_dates.each do |group_date| %>
     <% if !@current_user.organizer %>
       <% if !GroupDateAttendance.exists?(:group_date_id => group_date.id, :group_member_id => @group_member.id) %>
     <% end %>
-      <div class="col-md-3 group-date" id="<%= dom_id(group_date) %>">
-        <h4><%= group_date.name %> <small><%= group_date.from_date %></small></h4>
+
+      <div class="col-md-3 col-sm-4 group-date" id="<%= dom_id(group_date) %>">
+        <h4><%= group_date.name %> <small><%= group_date.from_date.strftime("%d/%m - %H:%M:%S") %></small></h4>
         <p><%= group_date.description %></p>
 
         <div class="meta">
           <% if !@current_user.organizer %>
-            <%= link_to 'Ja', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post %>
-            <%= link_to 'Kanske', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post %>
-            <%= link_to 'Nej', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post %>
+            <%= link_to 'Yes', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post, class: "meta-yes" %>
+            <%= link_to 'Maybe', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post, class: "meta-maybe" %>
+            <%= link_to 'No', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post, class: "meta-no" %>
           <% else %>
             <div class="pull-right">
               <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
@@ -34,7 +29,7 @@
 </div>
 
 <% if !@current_user.organizer %>
-  <h3>Answered Group Dates</h3>
+  <h3>Answered dates</h3>
   <table class="table">
     <thead>
       <tr>
@@ -52,9 +47,9 @@
             <td><%= group_date.place %></td>
             <td><strong><%= group_date.name %></strong> <%= group_date.description %></td>
             <td>
-              <%= link_to 'Ja', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post %>
-              <%= link_to 'Kanske', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post %>
-              <%= link_to 'Nej', group_group_date_attend_date_path(@group, group_date,  @group_member, :answer => 3), :method => :post %>
+              <%= link_to 'Yes', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post %>
+              <%= link_to 'Maybe', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post %>
+              <%= link_to 'No', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post %>
             </td>
           </tr>
         <% end %>

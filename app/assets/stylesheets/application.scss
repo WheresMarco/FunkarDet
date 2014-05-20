@@ -12,12 +12,34 @@
  *= require_self
  */
 
+/* Mixins */
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+/* Colors */
+$background: #F2F2F2;
+$topbar: #3A315C;
+
+/* Main */
 @import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700");
 
 body {
   font: 150%/1.5 "PT Sans", serif;
   line-height:1.2;
-  background-color: #EBE7DE;
+  background-color: $background;
   -webkit-font-smoothing: antialiased;
   padding-top: 50px;
 }
@@ -32,47 +54,83 @@ body {
 }
 
 .navbar {
-  background-color: #04ADFD;
+  background-color: $topbar;
 
   a {
     color: #fff;
 
     &:hover, &:focus {
-      background-color: #1396F6 !important;
+      background-color: #2F284A !important;
     }
+  }
+
+  .icon-bar {
+    background-color: #ffffff;
   }
 }
 
 .group-date {
   position: relative;
-  background-color: #FBFAF8;
-  height: 200px;
+  background-color: #fff;
+  min-height: 200px;
   box-shadow:0 1px 2px #E3DFD6;
   border-radius:3px;
   margin-left: 15px;
+
+  @media(max-width: 767px){
+    padding-top: 5px;
+    margin: 0 15px;
+  }
 
   h4 {
     font-size: 2rem;
   }
 
   .meta {
+    @include flexbox();
+
     position: absolute;
     bottom: 0;
-    background-color: #F3F2EE;
+    background-color: #EFEDEE;
     height: 40px;
     width: 100%;
     margin-left: -15px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    .meta-yes {
+      background-color: #3AD599;
+      color: #fff;
+      border-bottom-right-radius: 0px;
+    }
+
+    .meta-maybe {
+      background-color: #FEDB3C;
+      color: #fff;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+
+    .meta-no {
+      background-color: #EA486A;
+      color: #fff;
+      border-bottom-left-radius: 0px;
+    }
 
     a {
+      @include flex(1);
+
+      text-align: center;
       display: inline-block;
-      color: #C6BBA5;
+      color: #999999;
       font-weight: bold;
       line-height: 40px;
-      border-left: 1px solid #E3DFD6;
       padding: 0 10px;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
 
       &:hover {
-        background-color: #EBEBE7;
+        opacity: 0.8;
         text-decoration: none;
       }
     }

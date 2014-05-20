@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Funkar det?</title>
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
-  
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -18,14 +18,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Funkar det?</a>
+          <% if @current_user %>
+            <a class="navbar-brand" href="#"><%= @group.name %></a>
+          <% else %>
+            <a class="navbar-brand" href="#">Funkar det?</a>
+          <% end %>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Index", root_path %></li>
-            <li><%= link_to "Sign Up", new_user_path %></li>
-            <li><%= link_to "Sign In", login_path %></li>
-            <li><%= link_to "Log out", logout_path %></li>
+            <% if @current_user %>
+              <% if !@current_user.organizer %>
+                <li><a href="#">Logged in as <%= @group_member.name %></a></li>
+              <% else %>
+                <li><a href="#">Logged in as <%= @current_user.username %></a></li>
+              <% end %>
+              <li><%= link_to "Log out", logout_path %></li>
+            <% else %>
+              <li><%= link_to "Sign Up", new_user_path %></li>
+              <li><%= link_to "Sign In", login_path %></li>
+            <% end %>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
