@@ -1,59 +1,75 @@
 <% if !@current_user.organizer %>
-<div class="col-md-12">
-  <h3>Hi! You have <strong>3</strong> unanswered dates</h3>
-</div>
-    <% @group.group_dates.each do |group_date| %>
-        <% if !GroupDateAttendance.exists?(:group_date_id => group_date.id, :group_member_id => @group_member.id) %>
-
-        <div class="col-md-3 col-sm-4 group-date" id="<%= dom_id(group_date) %>">
-          <h4><%= group_date.name %> <small><%= group_date.from_date.strftime("%d/%m - %H:%M:%S") %></small></h4>
-          <p><%= group_date.description %></p>
-
-          <div class="meta">
-            <% if !@current_user.organizer %>
-              <%= link_to 'Yes', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post, class: "meta-yes" %>
-              <%= link_to 'Maybe', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post, class: "meta-maybe" %>
-              <%= link_to 'No', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post, class: "meta-no" %>
-            <% else %>
-              <div class="pull-right">
-                <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
-              data: { confirm: "Are you sure?" } %><%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
+  <% @group_dates_unanswerd = @group.group_dates.joins('LEFT JOIN group_date_attendances ON group_date_attendances.group_date_id = group_dates.id AND group_date_attendances.group_member_id = ' + @group_member.id.to_s).where('group_date_attendances.answer IS NULL') %>
+    <% @number_of_group_dates_unanswerd = @group_dates_unanswerd.count
+      if (@number_of_group_dates_unanswerd >= 1) %>
+      <div class="col-md-12">
+        <h3>Hi! You have <strong><%= @number_of_group_dates_unanswerd %></strong> unanswered <%= "date".pluralize(@number_of_group_dates_unanswerd) %></h3>
+      </div>
     <% end %>
 
-<div class="col-md-12">
-  <h3>Answered dates</h3>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Place</th>
-        <th>Description</th>
-        <th>Answer</th>
-        </tr>
-    </thead>
-    <tbody>
-      <% @group.group_dates.each do |group_date| %>
-        <% if GroupDateAttendance.exists?(:group_date_id => group_date.id, :group_member_id => @group_member.id) %>
+    <% @group_dates_unanswerd.each do |group_date| %>
+      <div class="col-md-3 col-sm-4 group-date" id="<%= dom_id(group_date) %>">
+        <h4><%= group_date.name %> <small><%= group_date.from_date.strftime("%d/%m - %H:%M:%S") %></small></h4>
+        <p><%= group_date.description %></p>
+
+        <div class="meta">
+          <% if !@current_user.organizer %>
+            <%= link_to 'Yes', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post, class: "meta-yes" %>
+            <%= link_to 'Maybe', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post, class: "meta-maybe" %>
+            <%= link_to 'No', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post, class: "meta-no" %>
+          <% else %>
+            <div class="pull-right">
+              <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
+                  data: { confirm: "Are you sure?" } %><%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+  <% end %>
+
+  <% @group_dates_answered = @group.group_dates.joins('INNER JOIN group_date_attendances ON group_date_attendances.group_date_id = group_dates.id AND group_date_attendances.group_member_id = ' + @group_member.id.to_s)
+    if (@group_dates_answered.count >= 1) %>
+    <div class="col-md-12">
+      <h3>Answered dates</h3>
+      <table class="table">
+        <thead>
           <tr>
-            <td><%= group_date.from_date %></td>
-            <td><%= group_date.place %></td>
-            <td><strong><%= group_date.name %></strong> <%= group_date.description %></td>
-            <td>
-              <%= link_to 'Yes', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post %>
-              <%= link_to 'Maybe', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post %>
-              <%= link_to 'No', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post %>
-            </td>
-          </tr>
-        <% end %>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+            <th>Date</th>
+            <th>Place</th>
+            <th>Description</th>
+            <th>Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+          <% @group_dates_answered.each do |group_date| %>
+              <tr>
+                <td><%= group_date.from_date %></td>
+                <td><%= group_date.place %></td>
+
+                <td><strong><%= group_date.name %></strong> <%= group_date.description %></td>
+                <td>
+                  <% group_date.group_date_attendances.each do |answer| %>
+                    <% case answer.answer
+                      when 1 %>
+                        Yes
+                      <% when 2 %>
+                        Meybe
+                      <% when 3 %>
+                        No
+                    <% end %>
+                  <% end %>
+
+                  <br />
+                  <%= link_to 'Yes', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post %>
+                  <%= link_to 'Maybe', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post %>
+                  <%= link_to 'No', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post %>
+                </td>
+              </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
 <% end %>
 
 <% if @current_user.organizer %>
