@@ -1,7 +1,5 @@
 <% if !@current_user.organizer %>
-  <% @group_dates_unanswerd = @group.group_dates.joins('LEFT JOIN group_date_attendances ON group_date_attendances.group_date_id = group_dates.id AND group_date_attendances.group_member_id = ' + @group_member.id.to_s).where('group_date_attendances.answer IS NULL') %>
-    <% @number_of_group_dates_unanswerd = @group_dates_unanswerd.count
-      if (@number_of_group_dates_unanswerd >= 1) %>
+  <% if (@number_of_group_dates_unanswerd >= 1) %>
       <div class="col-md-12">
         <h3>Hi! You have <strong><%= @number_of_group_dates_unanswerd %></strong> unanswered <%= "date".pluralize(@number_of_group_dates_unanswerd) %></h3>
       </div>
@@ -27,8 +25,7 @@
       </div>
   <% end %>
 
-  <% @group_dates_answered = @group.group_dates.joins('INNER JOIN group_date_attendances ON group_date_attendances.group_date_id = group_dates.id AND group_date_attendances.group_member_id = ' + @group_member.id.to_s)
-    if (@group_dates_answered.count >= 1) %>
+  <% if (@group_dates_answered.count >= 1) %>
     <div class="col-md-12">
       <h3>Answered dates</h3>
       <table class="table">
@@ -73,6 +70,25 @@
 <% end %>
 
 <% if @current_user.organizer %>
+    <% @group_dates_organizer.each do |group_date| %>
+      <div class="col-md-3 col-sm-4 group-date" id="<%= dom_id(group_date) %>">
+        <h4><%= group_date.name %> <small><%= group_date.from_date.strftime("%d/%m - %H:%M:%S") %></small></h4>
+        <p><%= group_date.description %></p>
+
+
+        <% group_date.group_date_attendances.each do |answer| %>
+
+        <% end %>
+
+        <div class="meta">
+          <div class="pull-right">
+            <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
+               data: { confirm: "Are you sure?" } %><%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+<br style="clear: both;" />
   <h3>Group Members</h3>
   <ul class="group_members">
     <% @group.group_members.each do |group_member| %>

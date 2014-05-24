@@ -61,7 +61,7 @@ class GroupDatesController < ApplicationController
     else
       @group_date_attend = GroupDateAttendance.find_by(group_date_id: params[:group_date_id], group_member_id: params[:format])
 
-      if @group_date_attend.update_attributes(answer: params[:answer])
+      if @group_date_attend.update(answer: params[:answer])
         flash[:success] = "Saved answer."
         redirect_to groups_path
       else
