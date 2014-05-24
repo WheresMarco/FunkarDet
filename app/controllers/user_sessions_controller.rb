@@ -1,5 +1,17 @@
 class UserSessionsController < ApplicationController
   def new
+    # Redirect to group page - dossen't work
+    if session[:user_id]
+      if !current_user.organizer
+        if session[:group_member_id]
+          redirect_to groups_path
+        else
+          redirect_to select_user_path
+        end
+      else
+        redirect_to groups_path
+      end
+    end
   end
 
   def create

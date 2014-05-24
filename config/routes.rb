@@ -14,7 +14,7 @@ Funkardet::Application.routes.draw do
     resources :group_members
   end
 
-  root 'groups#index'
+  root 'user_sessions#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
