@@ -10,8 +10,8 @@ describe "Signing up" do
 
     fill_in "Username", with: "Marco"
     fill_in "Email", with: "marco@wheresmar.co"
-    fill_in "* Password", with: "treehouse1234"
-    fill_in "* Password confirmation", with: "treehouse1234"
+    fill_in "Password", with: "treehouse1234"
+    fill_in "Password confirmation", with: "treehouse1234"
 
     fill_in "Groupname", with: "Marco"
     #fill_in "Creation date", with: ""

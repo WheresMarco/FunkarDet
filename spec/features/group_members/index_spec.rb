@@ -9,7 +9,7 @@ describe "Visiting group members" do
 
   it "displays the name of the group" do
     visit_group_members(group)
-    within("h1") do
+    within(".navbar-brand") do
       expect(page).to have_content(group.name)
     end
   end
