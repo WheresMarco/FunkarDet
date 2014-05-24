@@ -1,45 +1,105 @@
-<h1><%= @group.name %> <small>Creation date: <%= @group.creation_date %></small></h1>
-
 <% if !@current_user.organizer %>
-  <%= @group_member.name %>
-<% end %>
+  <% if (@number_of_group_dates_unanswerd >= 1) %>
+      <div class="col-md-12">
+        <h3>Hi! You have <strong><%= @number_of_group_dates_unanswerd %></strong> unanswered <%= "date".pluralize(@number_of_group_dates_unanswerd) %></h3>
+      </div>
+    <% end %>
 
-<h3>Group Dates</h3>
-<div class="row">
-  <% @group.group_dates.each do |group_date| %>
-    <div class="col-md-3 group-date" id="<%= dom_id(group_date) %>">
-      <h4><%= group_date.name %> <small><%= group_date.from_date %></small></h4>
-      <p><%= group_date.description %></p>
+    <% @group_dates_unanswerd.each do |group_date| %>
+      <div class="col-md-3 col-sm-4 group-date" id="<%= dom_id(group_date) %>">
+        <h4><%= group_date.name %> <small><%= group_date.from_date.strftime("%d/%m - %H:%M:%S") %></small></h4>
+        <p><%= group_date.description %></p>
 
-      <div class="meta">
-        <% if !@current_user.organizer %>
-          <a href="#">Ja</a><a href="#">Kanske</a><a href="#">Nej</a>
-        <% end %>
-
-        <div class="pull-right">
-          <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
-        data: { confirm: "Are you sure?" } %><%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
+        <div class="meta">
+          <% if !@current_user.organizer %>
+            <%= link_to 'Yes', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post, class: "meta-yes" %>
+            <%= link_to 'Maybe', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post, class: "meta-maybe" %>
+            <%= link_to 'No', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post, class: "meta-no" %>
+          <% else %>
+            <div class="pull-right">
+              <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
+                  data: { confirm: "Are you sure?" } %><%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
+            </div>
+          <% end %>
         </div>
       </div>
+  <% end %>
+
+  <% if (@group_dates_answered.count >= 1) %>
+    <div class="col-md-12">
+      <h3>Answered dates</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Place</th>
+            <th>Description</th>
+            <th>Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+          <% @group_dates_answered.each do |group_date| %>
+              <tr>
+                <td><%= group_date.from_date %></td>
+                <td><%= group_date.place %></td>
+
+                <td><strong><%= group_date.name %></strong> <%= group_date.description %></td>
+                <td>
+                  <% group_date.group_date_attendances.each do |answer| %>
+                    <% case answer.answer
+                      when 1 %>
+                        Yes
+                      <% when 2 %>
+                        Meybe
+                      <% when 3 %>
+                        No
+                    <% end %>
+                  <% end %>
+
+                  <br />
+                  <%= link_to 'Yes', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post %>
+                  <%= link_to 'Maybe', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post %>
+                  <%= link_to 'No', group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post %>
+                </td>
+              </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   <% end %>
-</div>
-
-<h3>Group Members</h3>
-<ul class="group_members">
-  <% @group.group_members.each do |group_member| %>
-  <li id="<%= dom_id(group_member) %>">
-    <%= group_member.name %>
-    <%= link_to "Edit", edit_group_group_member_path(@group, group_member) %>
-    <%= link_to "Delete", group_group_member_path(@group, group_member), method: :delete,
-      data: { confirm: "Are you sure?" } %>
-  </li>
-  <% end %>
-</ul>
+<% end %>
 
 <% if @current_user.organizer %>
-  <hr>
-  <%= link_to "New Group Date", new_group_group_date_path(@group) %>
-  <%= link_to "New Member", new_group_group_member_path(@group) %>
-  <%= link_to 'Edit Group', edit_group_path(@group) %>
+    <% @group_dates_organizer.each do |group_date| %>
+      <div class="col-md-3 col-sm-4 group-date" id="<%= dom_id(group_date) %>">
+        <h4><%= group_date.name %> <small><%= group_date.from_date.strftime("%d/%m - %H:%M:%S") %></small></h4>
+        <p><%= group_date.description %></p>
+
+
+        <% group_date.group_date_attendances.each do |answer| %>
+
+        <% end %>
+
+        <div class="meta">
+          <div class="pull-right">
+            <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
+               data: { confirm: "Are you sure?" } %><%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+<br style="clear: both;" />
+  <h3>Group Members</h3>
+  <ul class="group_members">
+    <% @group.group_members.each do |group_member| %>
+    <li id="<%= dom_id(group_member) %>">
+      <%= group_member.name %>
+      <% if @current_user.organizer %>
+        <%= link_to "Edit", edit_group_group_member_path(@group, group_member) %>
+        <%= link_to "Delete", group_group_member_path(@group, group_member), method: :delete,
+          data: { confirm: "Are you sure?" } %>
+      <% end %>
+    </li>
+    <% end %>
+  </ul>
 <% end %>

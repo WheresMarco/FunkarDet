@@ -9,7 +9,7 @@ describe "Viewing group dates" do
 
   it "displays the name of the group" do
     visit_group_dates(group)
-    within("h1") do
+    within(".navbar-brand") do
       expect(page).to have_content(group.name)
     end
   end

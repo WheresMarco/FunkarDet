@@ -47,6 +47,30 @@ class GroupDatesController < ApplicationController
     redirect_to "/"
   end
 
+  def attend_date
+    if !GroupDateAttendance.exists?(:group_date_id => params[:group_date_id], :group_member_id => params[:format])
+      @group_date_attend = GroupDateAttendance.new(group_date_id: params[:group_date_id], group_member_id: params[:format], answer: params[:answer])
+
+      if @group_date_attend.save
+        flash[:success] = "Saved answer."
+        redirect_to groups_path
+      else
+        flash[:error] = "Threre was a problem saving your answer."
+        redirect_to groups_path
+      end
+    else
+      @group_date_attend = GroupDateAttendance.find_by(group_date_id: params[:group_date_id], group_member_id: params[:format])
+
+      if @group_date_attend.update(answer: params[:answer])
+        flash[:success] = "Saved answer."
+        redirect_to groups_path
+      else
+        flash[:error] = "Threre was a problem saving your answer."
+        redirect_to groups_path
+      end
+    end
+  end
+
   def url_options
     { group_id: params[:group_id] }.merge(super)
   end
@@ -54,6 +78,10 @@ class GroupDatesController < ApplicationController
   private
   def find_group
     @group = current_user.groups.find(params[:group_id])
+  end
+
+  def set_group_member
+    @group_member ||= GroupMember.find_by_id(session[:group_member_id]) if session[:group_member_id]
   end
 
   def group_date_params

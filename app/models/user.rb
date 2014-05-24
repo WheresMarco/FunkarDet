@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
   has_and_belongs_to_many :groups
+  has_many :group_date_attendances
   accepts_nested_attributes_for :groups
 
   validates :username, presence: true,
