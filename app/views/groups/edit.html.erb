@@ -1,6 +1,16 @@
-<h1>Editing group</h1>
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Editing group</h3>
+    </div>
+    <div class="panel-body">
+      <%= bootstrap_form_for [@group] do |form| %>
+        <%= form.text_field :name %>
+        <%= form.text_field :creation_date %>
 
-<%= render 'form' %>
+        <%= form.submit "Save" %>
 
-<%= link_to 'Show', @group %> |
-<%= link_to 'Back', groups_path %>
+      <% end %>
+    </div>
+  </div>
+</div>

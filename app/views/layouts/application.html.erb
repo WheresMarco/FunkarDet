@@ -30,9 +30,9 @@
               <% if !@current_user.organizer %>
                 <li><a href="#">Logged in as <%= @group_member.name %></a></li>
               <% else %>
-                <li><%= link_to "New Group Date", new_group_group_date_path(@group) %></li>
-                <li><%= link_to "New Member", new_group_group_member_path(@group) %></li>
-                <li><%= link_to 'Edit Group', edit_group_path(@group) %></li>
+                <li><%= link_to "New date", new_group_group_date_path(@group) %></li>
+                <li><%= link_to "New member", new_group_group_member_path(@group) %></li>
+                <li><%= link_to 'Edit group', edit_group_path(@group) %></li>
               <% end %>
               <li><%= link_to "Log out", logout_path %></li>
             <% else %>
