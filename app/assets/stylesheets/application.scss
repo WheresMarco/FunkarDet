@@ -77,6 +77,7 @@ body {
   box-shadow:0 1px 2px #E3DFD6;
   border-radius:3px;
   margin-left: 15px;
+  margin-bottom: 15px;
 
   @media(max-width: 767px){
     padding-top: 5px;
@@ -105,18 +106,27 @@ body {
       border-bottom-right-radius: 0px;
     }
 
-    .meta-maybe {
+    .meta-maybe, .meta-edit {
       background-color: #FEDB3C;
       color: #fff;
       border-bottom-right-radius: 0px;
       border-bottom-left-radius: 0px;
     }
 
-    .meta-no {
+      .meta-edit {
+        border-bottom-right-radius: 3px;
+      }
+
+    .meta-no, .meta-delete {
       background-color: #EA486A;
       color: #fff;
       border-bottom-left-radius: 0px;
     }
+
+      .meta-delete {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 0px;
+      }
 
     a {
       @include flex(1);

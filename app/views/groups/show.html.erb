@@ -81,26 +81,36 @@
         <% end %>
 
         <div class="meta">
-          <div class="pull-right">
-            <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
-               data: { confirm: "Are you sure?" } %><%= link_to "Edit", edit_group_group_date_path(@group, group_date) %>
-          </div>
+          <%= link_to "Delete", group_group_date_path(@group, group_date), method: :delete,
+            data: { confirm: "Are you sure?" }, class: "meta-delete" %>
+          <%= link_to "Edit", edit_group_group_date_path(@group, group_date), class: "meta-edit" %>
         </div>
       </div>
   <% end %>
-  
-<br style="clear: both;" />
-  <h3>Group Members</h3>
-  <ul class="group_members">
-    <% @group.group_members.each do |group_member| %>
-    <li id="<%= dom_id(group_member) %>">
-      <%= group_member.name %>
-      <% if @current_user.organizer %>
-        <%= link_to "Edit", edit_group_group_member_path(@group, group_member) %>
-        <%= link_to "Delete", group_group_member_path(@group, group_member), method: :delete,
-          data: { confirm: "Are you sure?" } %>
-      <% end %>
-    </li>
-    <% end %>
-  </ul>
+
+  <div class="col-md-12">
+    <h3>Members</h3>
+    <table class="table group-members">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>E-mail</th>
+          <th></th>
+          </tr>
+      </thead>
+      <tbody>
+        <% @group.group_members.each do |group_member| %>
+          <tr id="<%= dom_id(group_member) %>">
+            <td><%= group_member.name %></td>
+            <td><%= group_member.email %></td>
+            <td>
+              <%= link_to "Edit", edit_group_group_member_path(@group, group_member) %>
+              <%= link_to "Delete", group_group_member_path(@group, group_member), method: :delete,
+              data: { confirm: "Are you sure?" } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 <% end %>
