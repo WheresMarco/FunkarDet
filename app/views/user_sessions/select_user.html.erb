@@ -1,7 +1,15 @@
-<h1>Choose user</h1>
-<%= form_tag select_user_post_path do %>
-  <%= label_tag :group_member, "Username" %>
-  <%= select("group_member", "", GroupMember.where(group_id: @groups_users.group_id).order(:name).collect {|p| [ p.name, p.id ] }) %>
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%=t 'select-user.title' %></h3>
+    </div>
+    <div class="panel-body">
+      <%= bootstrap_form_tag url: select_user_post_path do |f| %>
+        <%= f.label :group_member, t('select-user.username') %>
+        <%= select("group_member", "", GroupMember.where(group_id: @groups_users.group_id).order(:name).collect {|p| [ p.name, p.id ] }) %>
 
-  <%= submit_tag "Log In" %>
-<% end %>
+        <%= f.submit t('select-user.submit') %>
+      <% end %>
+    </div>
+  </div>
+</div>

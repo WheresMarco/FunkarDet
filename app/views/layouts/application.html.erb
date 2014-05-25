@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Funkar det?</title>
+  <title><%=t 'layout.meta.title' %></title>
   <meta name="viewport" content="width=device-width, user-scalable=no" />
 
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -13,31 +13,31 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only"><%=t 'layout.header.toggle-nav' %></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
           <% if @current_user %>
-            <a class="navbar-brand" href="/"><%= @group.name %></a>
+            <%= link_to @group.name, root_path, class: "navbar-brand" %>
           <% else %>
-            <a class="navbar-brand" href="/">Funkar det?</a>
+            <%= link_to t('layout.header.title'), root_path, class: "navbar-brand" %>
           <% end %>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <% if @current_user %>
               <% if !@current_user.organizer %>
-                <li><a href="#">Logged in as <%= @group_member.name %></a></li>
+                <li><a href="#"><%=t 'layout.navigation.logged-in-as' %> <%= @group_member.name %></a></li>
               <% else %>
-                <li><%= link_to "New date", new_group_group_date_path(@group) %></li>
-                <li><%= link_to "New member", new_group_group_member_path(@group) %></li>
-                <li><%= link_to 'Edit group', edit_group_path(@group) %></li>
+                <li><%= link_to t('layout.navigation.new-date'), new_group_group_date_path(@group) %></li>
+                <li><%= link_to t('layout.navigation.new-member'), new_group_group_member_path(@group) %></li>
+                <li><%= link_to t('layout.navigation.edit-group'), edit_group_path(@group) %></li>
               <% end %>
-              <li><%= link_to "Log out", logout_path %></li>
+              <li><%= link_to t('layout.navigation.log-out'), logout_path %></li>
             <% else %>
-              <li><%= link_to "Sign Up", new_user_path %></li>
-              <li><%= link_to "Sign In", login_path %></li>
+              <li><%= link_to t('layout.navigation.sign-up'), new_user_path %></li>
+              <li><%= link_to t('layout.navigation.sign-in'), login_path %></li>
             <% end %>
           </ul>
         </div><!--/.nav-collapse -->
@@ -46,16 +46,16 @@
   </div>
 
   <div class="container">
-      <% flash.each do |type, message| %>
-        <div class="alert flash alert-info <%= type %>" role="alert">
-          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-          <%= message %>
-        </div>
-      <% end %>
-
-      <div class="row">
-        <br />
-        <%= yield %>
+    <% flash.each do |type, message| %>
+      <div class="alert flash alert-info <%= type %>" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only"><%=t 'flash.close' %></span></button>
+        <%= message %>
       </div>
+    <% end %>
+
+    <div class="row">
+      <br />
+      <%= yield %>
+    </div>
 </body>
 </html>
