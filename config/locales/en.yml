@@ -3,12 +3,12 @@ en:
     close: "Close"
     logged-in-required: "You must be logged in to access that page."
     group:
-      added-date: "Added group date."
-      added-date-error: "Threre was a problem adding that group date."
-      saved-date: "Saved group date."
-      saved-date-error: "That grup date could not be saved."
-      delete-date: "Group date was deleted."
-      delete-date-error: "Threre was a problem deleting that group date."
+      added-date: "Added date."
+      added-date-error: "Threre was a problem adding that date."
+      saved-date: "Saved date."
+      saved-date-error: "That date could not be saved."
+      delete-date: "Date was deleted."
+      delete-date-error: "Threre was a problem deleting that date."
       attending-date: "Saved answer."
       attending-date-error: "Threre was a problem saving your answer."
 
