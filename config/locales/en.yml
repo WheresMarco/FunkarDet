@@ -97,6 +97,7 @@ en:
 
     organizer:
       answerd:
+        attending: "Attending"
         delete: "Delete"
         delete-text: "Are you sure?"
         edit: "Edit"

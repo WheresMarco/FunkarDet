@@ -11,9 +11,9 @@
         <p><%= group_date.description %></p>
 
         <div class="meta">
-          <%= link_to t('group.user.unanswerd.confirm'), group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post, class: "meta-yes" %>
-          <%= link_to t('group.user.unanswerd.maybe'), group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post, class: "meta-maybe" %>
-          <%= link_to t('group.user.unanswerd.decline'), group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post, class: "meta-no" %>
+          <%= link_to t('group.user.unanswerd.confirm'), group_group_date_attend_date_path('', @group, group_date, @group_member, :answer => 1), :method => :post, class: "meta-yes" %>
+          <%= link_to t('group.user.unanswerd.maybe'), group_group_date_attend_date_path('', @group, group_date, @group_member, :answer => 2), :method => :post, class: "meta-maybe" %>
+          <%= link_to t('group.user.unanswerd.decline'), group_group_date_attend_date_path('', @group, group_date, @group_member, :answer => 3), :method => :post, class: "meta-no" %>
         </div>
       </div>
   <% end %>
@@ -50,9 +50,9 @@
                   <% end %>
 
                   <br />
-                  <%= link_to t('group.user.answerd.confirm'), group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 1), :method => :post %>
-                  <%= link_to t('group.user.answerd.maybe'), group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 2), :method => :post %>
-                  <%= link_to t('group.user.answerd.decline'), group_group_date_attend_date_path(@group, group_date, @group_member, :answer => 3), :method => :post %>
+                  <%= link_to t('group.user.answerd.confirm'), group_group_date_attend_date_path('', @group, group_date, @group_member, :answer => 1), :method => :post %>
+                  <%= link_to t('group.user.answerd.maybe'), group_group_date_attend_date_path('', @group, group_date, @group_member, :answer => 2), :method => :post %>
+                  <%= link_to t('group.user.answerd.decline'), group_group_date_attend_date_path('', @group, group_date, @group_member, :answer => 3), :method => :post %>
                 </td>
               </tr>
           <% end %>
@@ -68,10 +68,13 @@
         <h4><%= group_date.name %> <small><%= group_date.from_date.strftime("%d/%m - %H:%M:%S") %></small></h4>
         <p><%= group_date.description %></p>
 
-
-        <% group_date.group_date_attendances.each do |answer| %>
-
-        <% end %>
+        <h5><%=t 'group.organizer.answerd.attending' %></h5>
+        <ul>
+          <% group_date.group_date_attendances.each do |answer| %>
+            <% @group_member = GroupMember.find_by_id(answer.group_member_id) %>
+            <li><%= @group_member.name %></li>
+          <% end %>
+        </ul>
 
         <div class="meta">
           <%= link_to t('group.organizer.answerd.delete'), group_group_date_path(@group, group_date), method: :delete,
