@@ -13,10 +13,10 @@ class GroupMembersController < ApplicationController
     @group_member = @group.group_members.new(group_member_params)
 
     if @group_member.save
-      flash[:success] = "Added member."
+      flash[:success] = t('flash.member.added-member')
       redirect_to group_path(params[:group_id])
     else
-      flash[:error] = "Threre was a problem adding that member."
+      flash[:error] = t('flash.member.added-member-error')
       render action: :new
     end
   end
@@ -29,10 +29,10 @@ class GroupMembersController < ApplicationController
     @group_member = @group.group_members.find(params[:id])
 
     if @group_member.update_attributes(group_member_params)
-      flash[:success] = "Saved member."
+      flash[:success] = t('flash.member.saved-member')
       redirect_to group_path(params[:group_id])
     else
-      flash[:error] = "That member could not be saved."
+      flash[:error] = t('flash.member.saved-member-error')
       render action: :edit
     end
   end
@@ -41,9 +41,9 @@ class GroupMembersController < ApplicationController
     @group_member = @group.group_members.find(params[:id])
 
     if @group_member.destroy
-      flash[:success] = "Member was deleted."
+      flash[:success] = t('flash.member.delete-member')
     else
-      flash[:error] = "Threre was a problem deleting that member."
+      flash[:error] = t('flash.member.delete-member-error')
     end
 
     redirect_to group_group_members_path(params[:group_id])

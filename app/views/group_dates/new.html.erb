@@ -1,17 +1,17 @@
 <div class="col-md-12">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">New date</h3>
+      <h3 class="panel-title"><%=t 'new-date.new-box.title' %></h3>
     </div>
     <div class="panel-body">
       <%= bootstrap_form_for [@group, @group_date] do |form| %>
-        <%= form.text_field :name %>
-        <%= form.text_field :place %>
-        <%= form.datetime_select :from_date %>
-        <%= form.datetime_select :to_date %>
-        <%= form.text_area :description %>
+        <%= form.text_field :name, label: t('new-date.new-box.name') %>
+        <%= form.text_field :place, label: t('new-date.new-box.place') %>
+        <%= form.datetime_select :from_date, label: t('new-date.new-box.from-date') %>
+        <%= form.datetime_select :to_date, label: t('new-date.new-box.to-date') %>
+        <%= form.text_area :description, label: t('new-date.new-box.description') %>
 
-        <%= form.submit "Save" %>
+        <%= form.submit t('new-date.new-box.submit') %>
       <% end %>
     </div>
   </div>

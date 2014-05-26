@@ -1,27 +1,29 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   flash:
     close: "Close"
+    logged-in-required: "You must be logged in to access that page."
+    group:
+      added-date: "Added group date."
+      added-date-error: "Threre was a problem adding that group date."
+      saved-date: "Saved group date."
+      saved-date-error: "That grup date could not be saved."
+      delete-date: "Group date was deleted."
+      delete-date-error: "Threre was a problem deleting that group date."
+      attending-date: "Saved answer."
+      attending-date-error: "Threre was a problem saving your answer."
+
+    member:
+      added-member: "Added member."
+      added-member-error: "Threre was a problem adding that member."
+      saved-member: "Saved member."
+      saved-member-error: "That member could not be saved."
+      delete-member: "Member was deleted."
+      delete-member-error: "Threre was a problem deleting that member."
+
+    login:
+      logged-in: "Thanks for logging in!"
+      logged-in-error: "There was a problem logging in. Please check your username and password."
+      logout: "You have been logged out."
 
   layout:
     meta:
@@ -40,6 +42,24 @@ en:
       sign-up: "Sign Up"
       sign-in: "Sign In"
 
+  signup:
+    signup-box:
+      title: "Register for Funkar det"
+      username: "Username"
+      email: "Email"
+      password: "Password"
+      password-confirmation: "Password Confirmation"
+      groupname: "Groupname"
+      group-username: "Group username"
+      group-password: "Group password"
+      group-password-confirmation: "Group password (again)"
+      submit: "Sign up"
+
+    help-box:
+      title: "Help text"
+      text:
+        html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum felis nec risus vestibulum, ut dignissim massa ultricies. Nulla felis turpis, convallis ac porttitor in, rhoncus sed odio. </p><p>Fusce sit amet diam et lacus porta accumsan eget at velit. Vivamus rhoncus ornare ornare. Proin sit amet eros ut metus consequat hendrerit ac nec libero. Integer accumsan eu elit id elementum. Aliquam quis purus sed mi venenatis convallis. Etiam eleifend enim id dapibus ultrices. Duis quis magna molestie, aliquam metus et, aliquet velit.</p>"
+
   login:
     login-box:
       title: "Log in"
@@ -56,3 +76,74 @@ en:
     title: "Choose user"
     username: "Username"
     submit: "Log In"
+
+  group:
+    user:
+      unanswerd:
+        title:
+          html: "Hi! You have <strong>%{number_of_group_dates_unanswerd}</strong> unanswered %{date_text}"
+        confirm: "Yes"
+        maybe: "Maybe"
+        decline: "No"
+      answerd:
+        title: "Answered dates"
+        date: "Date"
+        place: "Place"
+        description: "Description"
+        answer: "Answer"
+        confirm: "Yes"
+        maybe: "Maybe"
+        decline: "No"
+
+    organizer:
+      answerd:
+        delete: "Delete"
+        delete-text: "Are you sure?"
+        edit: "Edit"
+      members:
+        title: "Members"
+        name: "Name"
+        email: "Email"
+        edit: "Edit"
+        delete: "Delete"
+        delete-text: "Are you sure?"
+
+  edit-group:
+    edit-box:
+      title: "Editing group"
+      name: "Groupname"
+      submit: "Save"
+
+  new-date:
+    new-box:
+      title: "New date"
+      name: "Name"
+      place: "Place"
+      from-date: "From date"
+      to-date: "To date"
+      description: "Description"
+      submit: "Add date"
+
+  edit-date:
+    edit-box:
+      title: "Edit date"
+      name: "Name"
+      place: "Place"
+      from-date: "From date"
+      to-date: "To date"
+      description: "Description"
+      submit: "Save date"
+
+  new-member:
+    new-box:
+      title: "New member"
+      name: "Name"
+      email: "Email"
+      submit: "Add member"
+
+  edit-member:
+    edit-box:
+      title: "Editing member"
+      name: "Name"
+      email: "Email"
+      submit: "Save member"
