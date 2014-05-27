@@ -71,6 +71,7 @@ en:
       title: "Welcome text"
       text:
         html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum felis nec risus vestibulum, ut dignissim massa ultricies. Nulla felis turpis, convallis ac porttitor in, rhoncus sed odio. </p><p>Fusce sit amet diam et lacus porta accumsan eget at velit. Vivamus rhoncus ornare ornare. Proin sit amet eros ut metus consequat hendrerit ac nec libero. Integer accumsan eu elit id elementum. Aliquam quis purus sed mi venenatis convallis. Etiam eleifend enim id dapibus ultrices. Duis quis magna molestie, aliquam metus et, aliquet velit.</p>"
+      action: "Create a group!"
 
   select-user:
     title: "Choose user"

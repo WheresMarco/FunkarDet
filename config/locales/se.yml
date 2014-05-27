@@ -46,10 +46,10 @@ sv:
     signup-box:
       title: "Registrera för Funkar det"
       username: "Användarnamn"
-      email: "E-postadress"
-      password: "Lösenord"
-      password-confirmation: "Lösenord (igen)"
-      groupname: "Gruppnam"
+      email: "E-post"
+      password: "Välj Lösenord"
+      password-confirmation: "Bekräfta Lösenord"
+      groupname: "Gruppnamn"
       group-username: "Gemensamt login"
       group-password: "Gemensamt lösenord"
       group-password-confirmation: "Gemensamt lösenord (igen)"
@@ -68,9 +68,10 @@ sv:
       submit: "Logga in"
 
     welcome-box:
-      title: "Välkomsttext"
+      title: "Så mycket enklare för alla"
       text:
-        html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum felis nec risus vestibulum, ut dignissim massa ultricies. Nulla felis turpis, convallis ac porttitor in, rhoncus sed odio. </p><p>Fusce sit amet diam et lacus porta accumsan eget at velit. Vivamus rhoncus ornare ornare. Proin sit amet eros ut metus consequat hendrerit ac nec libero. Integer accumsan eu elit id elementum. Aliquam quis purus sed mi venenatis convallis. Etiam eleifend enim id dapibus ultrices. Duis quis magna molestie, aliquam metus et, aliquet velit.</p>"
+        html: "<p>Funkar det förenklar din planering! - för stora som små grupper, oavsett aktivitetstyp. Funkar det är ett enkelt, prisvärt och lättanvänt kalenderverktyg för små och medelstora grupper. </p><p>På Funkar det kan medlemmarna få en överblick över kommande aktiviteter, och se vilka som tackat ja eller nej till att närvara. Rapporteringen sker smidigt via internet.</p><p>Så vad väntar du på? Bli medlem idag och förenkla tillvaron för din grupp!</p>"
+      action: "Skapa en grupp!"
 
   select-user:
     title: "Välj användare"
