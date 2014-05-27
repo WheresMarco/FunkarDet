@@ -74,8 +74,10 @@ en:
 
   select-user:
     title: "Choose user"
-    username: "Username"
-    submit: "Log In"
+    username: "Log in as"
+    submit: "Continue"
+    help-text:
+      html: "<strong>Not in the list?</strong> Contact the organizer for the group so that you can be added"
 
   group:
     user:
@@ -86,7 +88,7 @@ en:
         maybe: "Maybe"
         decline: "No"
       answerd:
-        title: "Answered dates"
+        title: "Your answered dates"
         date: "Date"
         place: "Place"
         description: "Description"

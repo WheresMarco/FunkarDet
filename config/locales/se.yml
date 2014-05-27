@@ -74,8 +74,10 @@ sv:
 
   select-user:
     title: "Välj användare"
-    username: "Namn"
-    submit: "Logga in"
+    username: "Logga in som"
+    submit: "Fortsätt"
+    help-text:
+      html: "<strong>Finns du inte med i listan?</strong> Registrerade användare, t.ex. ägare, kan bara logga in med sitt eget användarnamn (e-postadress) och lösenord."
 
   group:
     user:
@@ -86,7 +88,7 @@ sv:
         maybe: "Kanske"
         decline: "Nej"
       answerd:
-        title: "Svarade datum"
+        title: "Dina svarade datum"
         date: "Datum"
         place: "Plats"
         description: "Beskrivning"

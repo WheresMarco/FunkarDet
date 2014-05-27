@@ -1,9 +1,8 @@
 <% if !@current_user.organizer %>
   <% if (@number_of_group_dates_unanswerd >= 1) %>
-      <div class="col-md-12">
-        <h3><%=t 'group.user.unanswerd.title.html', number_of_group_dates_unanswerd: @number_of_group_dates_unanswerd, date_text: "date".pluralize(@number_of_group_dates_unanswerd) %>
-      </div>
-    <% end %>
+    <div class="col-md-12">
+      <h3><%=t 'group.user.unanswerd.title.html', number_of_group_dates_unanswerd: @number_of_group_dates_unanswerd, date_text: "date".pluralize(@number_of_group_dates_unanswerd) %></h3>
+    </div>
 
     <% @group_dates_unanswerd.each do |group_date| %>
       <div class="col-md-3 col-sm-4 group-date" id="<%= dom_id(group_date) %>">
@@ -16,48 +15,54 @@
           <%= link_to t('group.user.unanswerd.decline'), group_group_date_attend_date_path('', @group, group_date, @group_member, :answer => 3), :method => :post, class: "meta-no" %>
         </div>
       </div>
+    <% end %>
   <% end %>
+
+  <br style="clear: both;" />
 
   <% if (@group_dates_answered.count >= 1) %>
     <div class="col-md-12">
-      <h3><%=t 'group.user.answerd.title' %></h3>
-      <table class="table">
-        <thead>
-          <tr>
-            <th><%=t 'group.user.answerd.date' %></th>
-            <th><%=t 'group.user.answerd.place' %></th>
-            <th><%=t 'group.user.answerd.description' %></th>
-            <th><%=t 'group.user.answerd.answer' %></th>
-            </tr>
-        </thead>
-        <tbody>
-          <% @group_dates_answered.each do |group_date| %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%=t 'group.user.answerd.title' %></h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped table-hover">
+            <thead>
               <tr>
-                <td><%= group_date.from_date %></td>
-                <td><%= group_date.place %></td>
+                <th><%=t 'group.user.answerd.date' %></th>
+                <th><%=t 'group.user.answerd.place' %></th>
+                <th><%=t 'group.user.answerd.description' %></th>
+                <th><%=t 'group.user.answerd.answer' %></th>
+                </tr>
+            </thead>
+            <tbody>
+              <% @group_dates_answered.each do |group_date| %>
+                  <tr>
+                    <td><%= group_date.from_date.strftime("%d/%m - %H:%M:%S") %></td>
+                    <td><%= group_date.place %></td>
 
-                <td><strong><%= group_date.name %></strong> <%= group_date.description %></td>
-                <td>
-                  <% group_date.group_date_attendances.each do |answer| %>
-                    <% case answer.answer
-                      when 1 %>
-                        <%=t 'group.user.answerd.confirm' %>
-                      <% when 2 %>
-                        <%=t 'group.user.answerd.maybe' %>
-                      <% when 3 %>
-                        <%=t 'group.user.answerd.decline' %>
-                    <% end %>
-                  <% end %>
-
-                  <br />
-                  <%= link_to t('group.user.answerd.confirm'), group_group_date_attend_date_path('', @group, group_date, @group_member, :answer => 1), :method => :post %>
-                  <%= link_to t('group.user.answerd.maybe'), group_group_date_attend_date_path('', @group, group_date, @group_member, :answer => 2), :method => :post %>
-                  <%= link_to t('group.user.answerd.decline'), group_group_date_attend_date_path('', @group, group_date, @group_member, :answer => 3), :method => :post %>
-                </td>
-              </tr>
-          <% end %>
-        </tbody>
-      </table>
+                    <td><strong><%= group_date.name %></strong> <%= group_date.description %></td>
+                    <td>
+                      <select class="form-control">
+                      <% group_date.group_date_attendances.each do |answer| %>
+                        <% case answer.answer
+                          when 1 %>
+                            <option><%=t 'group.user.answerd.confirm' %></option>
+                          <% when 2 %>
+                            <option><%=t 'group.user.answerd.maybe' %></option>
+                          <% when 3 %>
+                            <option><%=t 'group.user.answerd.decline' %></option>
+                        <% end %>
+                      <% end %>
+                      </select>
+                    </td>
+                  </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   <% end %>
 <% end %>
@@ -84,29 +89,39 @@
       </div>
   <% end %>
 
+  <br style="clear: both;" />
+
   <div class="col-md-12">
-    <h3><%=t 'group.organizer.members.title' %></h3>
-    <table class="table group-members">
-      <thead>
-        <tr>
-          <th><%=t 'group.organizer.members.name' %></th>
-          <th><%=t 'group.organizer.members.email' %></th>
-          <th></th>
-          </tr>
-      </thead>
-      <tbody>
-        <% @group.group_members.each do |group_member| %>
-          <tr id="<%= dom_id(group_member) %>">
-            <td><%= group_member.name %></td>
-            <td><%= group_member.email %></td>
-            <td>
-              <%= link_to t('group.organizer.members.edit'), edit_group_group_member_path(@group, group_member) %>
-              <%= link_to t('group.organizer.members.delete'), group_group_member_path(@group, group_member), method: :delete,
-              data: { confirm: t('group.organizer.members.delete-text') } %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%=t 'group.organizer.members.title' %></h3>
+      </div>
+      <div class="panel-body">
+        <table class="table group-members">
+          <thead>
+            <tr>
+              <th><%=t 'group.organizer.members.name' %></th>
+              <th><%=t 'group.organizer.members.email' %></th>
+              <th></th>
+              </tr>
+          </thead>
+          <tbody>
+            <% @group.group_members.each do |group_member| %>
+              <tr id="<%= dom_id(group_member) %>">
+                <td><%= group_member.name %></td>
+                <td><%= group_member.email %></td>
+                <td>
+                  <span class="pull-right">
+                    <%= link_to t('group.organizer.members.edit'), edit_group_group_member_path(@group, group_member) %>
+                    <%= link_to t('group.organizer.members.delete'), group_group_member_path(@group, group_member), method: :delete,
+                        data: { confirm: t('group.organizer.members.delete-text') } %>
+                  </span>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 <% end %>
