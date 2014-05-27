@@ -18,7 +18,7 @@ describe "Editing group dates" do
     fill_in "Name", with: "New Name"
     click_button "Save"
 
-    expect(page).to have_content("Saved group date.")
+    expect(page).to have_content("Saved date.")
     group_date.reload
 
     expect(group_date.name).to eq("New Name")
@@ -35,7 +35,7 @@ describe "Editing group dates" do
     click_button "Save"
 
     expect(page).to_not have_content("Saved group date.")
-    expect(page).to have_content("Name can't be blank")
+    expect(page).to have_content("can't be blank")
     group_date.reload
 
     expect(group_date.name).to eq("Last of day")
@@ -52,7 +52,7 @@ describe "Editing group dates" do
     click_button "Save"
 
     expect(page).to_not have_content("Saved group date.")
-    expect(page).to have_content("Name is too short")
+    expect(page).to have_content("is too short")
     group_date.reload
 
     expect(group_date.name).to eq("Last of day")

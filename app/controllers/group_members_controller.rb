@@ -46,7 +46,7 @@ class GroupMembersController < ApplicationController
       flash[:error] = t('flash.member.delete-member-error')
     end
 
-    redirect_to group_group_members_path(params[:group_id])
+    redirect_to group_path(params[:group_id])
   end
 
   def url_options

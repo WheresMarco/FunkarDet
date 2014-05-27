@@ -24,9 +24,9 @@ describe "Visiting group members" do
 
     visit_group_members(group)
 
-    expect(page.all("ul.group_members li").size).to eq(1)
+    expect(page.all(".group-members").size).to eq(1)
 
-    within "ul.group_members" do
+    within ".group-members" do
       expect(page).to have_content("Sture Stork")
     end
   end

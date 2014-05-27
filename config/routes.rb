@@ -1,5 +1,5 @@
 Funkardet::Application.routes.draw do
-  scope "(:locale)", locale: /en|sv/ do
+  #scope "(:locale)", locale: /en|sv/ do
     get "/login" => "user_sessions#new", as: :login
     get "/logout" => "user_sessions#destroy", as: :logout
     get "/login/select_user" => "user_sessions#select_user", as: :select_user
@@ -16,5 +16,5 @@ Funkardet::Application.routes.draw do
     end
 
     root 'user_sessions#new'
-  end
+  #end
 end

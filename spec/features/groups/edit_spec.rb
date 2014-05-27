@@ -20,12 +20,12 @@ describe "Editing groups" do
   it "displays an error with no name" do
       update_group group: group,
                    name: ""
-      expect(page).to have_content("error")
+      expect(page).to have_content("be blank")
   end
 
   it "displays an error with too short a name" do
       update_group group: group,
                    name: "Hi"
-      expect(page).to have_content("error")
+      expect(page).to have_content("is too short")
   end
 end

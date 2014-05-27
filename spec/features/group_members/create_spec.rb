@@ -11,9 +11,7 @@ require 'spec_helper'
 
       expect(page).to have_content("Added member.")
 
-      within("ul.group_members") do
-        expect(page).to have_content("Test")
-      end
+      expect(page).to have_content("Test")
     end
 
     it "displays an error with no name" do
@@ -24,7 +22,7 @@ require 'spec_helper'
         expect(page).to have_content("Threre was a problem adding that member.")
       end
 
-      expect(page).to have_content("Name can't be blank")
+      expect(page).to have_content("can't be blank")
     end
 
     it "displays an error with a name less then 2 characters long" do
@@ -35,7 +33,7 @@ require 'spec_helper'
         expect(page).to have_content("Threre was a problem adding that member.")
       end
 
-      expect(page).to have_content("Name is too short")
+      expect(page).to have_content("is too short")
     end
 
     it "displays an error with no email" do
@@ -46,7 +44,7 @@ require 'spec_helper'
         expect(page).to have_content("Threre was a problem adding that member.")
       end
 
-      expect(page).to have_content("Email can't be blank")
+      expect(page).to have_content("can't be blank")
     end
 
     it "displays an error with no place less then 2 characters long" do
@@ -57,6 +55,6 @@ require 'spec_helper'
         expect(page).to have_content("Threre was a problem adding that member.")
       end
 
-      expect(page).to have_content("Email is invalid")
+      expect(page).to have_content("is invalid")
     end
 end

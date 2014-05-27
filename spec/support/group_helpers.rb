@@ -5,12 +5,10 @@ module GroupHelpers
     group = options[:group]
 
     visit "/groups"
-    click_link "Edit Group"
+    click_link "Edit group"
 
-    fill_in "Name", with: options[:name]
+    fill_in "Groupname", with: options[:name]
 
-    select_date(options[:creation_date], prefix: "group", from: :creation_date)
-
-    click_button "Update Group"
+    click_button "Save"
   end
 end

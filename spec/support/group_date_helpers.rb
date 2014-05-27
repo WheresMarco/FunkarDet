@@ -10,7 +10,7 @@ module GroupDateHelpers
     options[:to_date] ||= DateTime.now
     options[:description] ||= "A sample text"
 
-    click_link "New Group Date"
+    click_link "New date"
 
     fill_in "Name", with: options[:name]
     fill_in "Place", with: options[:place]
@@ -20,6 +20,6 @@ module GroupDateHelpers
 
     fill_in "Description", with: options[:description]
 
-    click_button "Save"
+    click_button "Add date"
   end
 end
