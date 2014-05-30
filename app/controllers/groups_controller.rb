@@ -28,7 +28,7 @@ class GroupsController < ApplicationController
       @number_of_group_dates_unanswerd = @group_dates_unanswerd.count
       @group_dates_answered = @group.group_dates.joins('INNER JOIN group_date_attendances ON group_date_attendances.group_date_id = group_dates.id AND group_date_attendances.group_member_id = ' + @group_member.id.to_s)
     else
-      @group_dates_organizer = @group.group_dates.joins('LEFT JOIN group_date_attendances ON group_date_attendances.group_date_id = group_dates.id LEFT JOIN group_members ON group_date_attendances.group_member_id = group_members.id').group('group_dates.id')
+      @group_dates_organizer = @group.group_dates.joins('LEFT JOIN group_date_attendances ON group_date_attendances.group_date_id = group_dates.id').group('group_dates.id')
     end
   end
 

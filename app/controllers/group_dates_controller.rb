@@ -13,10 +13,10 @@ class GroupDatesController < ApplicationController
     @group_date = @group.group_dates.new(group_date_params)
 
     if @group_date.save
-      flash[:success] = "Added group date."
-      redirect_to group_group_dates_path
+      flash[:success] = t('flash.group.added-date')
+      redirect_to groups_path
     else
-      flash[:error] = "Threre was a problem adding that group date."
+      flash[:error] = t('flash.group.added-date-error')
       render action: :new
     end
   end
@@ -29,10 +29,10 @@ class GroupDatesController < ApplicationController
     @group_date = @group.group_dates.find(params[:id])
 
     if @group_date.update_attributes(group_date_params)
-      flash[:success] = "Saved group date."
+      flash[:success] = t('flash.group.saved-date')
       redirect_to groups_path
     else
-      flash[:error] = "That grup date could not be saved."
+      flash[:error] = t('flash.group.saved-date-error')
       render action: :edit
     end
   end
@@ -40,9 +40,9 @@ class GroupDatesController < ApplicationController
   def destroy
     @group_date = @group.group_dates.find(params[:id])
     if @group_date.destroy
-      flash[:success] = "Group date was deleted."
+      flash[:success] = t('flash.group.delete-date')
     else
-      flash[:error] = "Threre was a problem deleting that group date."
+      flash[:error] = t('flash.group.delete-date-error')
     end
     redirect_to "/"
   end
@@ -52,20 +52,20 @@ class GroupDatesController < ApplicationController
       @group_date_attend = GroupDateAttendance.new(group_date_id: params[:group_date_id], group_member_id: params[:format], answer: params[:answer])
 
       if @group_date_attend.save
-        flash[:success] = "Saved answer."
+        flash[:success] = t('flash.group.attending-date')
         redirect_to groups_path
       else
-        flash[:error] = "Threre was a problem saving your answer."
+        flash[:error] = t('flash.group.attending-date-error')
         redirect_to groups_path
       end
     else
       @group_date_attend = GroupDateAttendance.find_by(group_date_id: params[:group_date_id], group_member_id: params[:format])
 
-      if @group_date_attend.update(answer: params[:answer])
-        flash[:success] = "Saved answer."
+      if @group_date_attend.update_attributes(answer: params[:answer])
+        flash[:success] = t('flash.group.attending-date')
         redirect_to groups_path
       else
-        flash[:error] = "Threre was a problem saving your answer."
+        flash[:error] = t('flash.group.attending-date-error')
         redirect_to groups_path
       end
     end

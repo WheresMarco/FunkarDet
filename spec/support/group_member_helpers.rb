@@ -7,11 +7,11 @@ module GroupMemberHelpers
     options[:name] ||= "Testmember"
     options[:email] ||= "test@example.com"
 
-    click_link "New Member"
+    click_link "New member"
 
     fill_in "Name", with: options[:name]
     fill_in "Email", with: options[:email]
 
-    click_button "Save"
+    click_button "Add member"
   end
 end

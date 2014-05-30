@@ -1,4 +1,15 @@
-<h1><%= @group.name %> - Editing Member</h1>
-<%= form_for [@group, @group_member] do |form| %>
-  <%= render partial: form %>
-<% end %>
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%=t 'edit-member.edit-box.title' %></h3>
+    </div>
+    <div class="panel-body">
+      <%= bootstrap_form_for [@group, @group_member] do |form| %>
+        <%= form.text_field :name, label: t('edit-member.edit-box.name') %>
+        <%= form.text_field :email, label: t('edit-member.edit-box.email') %>
+
+        <%= form.submit t('edit-member.edit-box.submit') %>
+      <% end %>
+    </div>
+  </div>
+</div>

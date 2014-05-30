@@ -35,7 +35,7 @@ describe "Editing members" do
     click_button "Save"
 
     expect(page).to_not have_content("Saved group date.")
-    expect(page).to have_content("Name can't be blank")
+    expect(page).to have_content("can't be blank")
     group_member.reload
 
     expect(group_member.name).to eq("Sture Stork")
@@ -51,8 +51,8 @@ describe "Editing members" do
     fill_in "Name", with: "1"
     click_button "Save"
 
-    expect(page).to_not have_content("Saved group date.")
-    expect(page).to have_content("Name is too short")
+    expect(page).to_not have_content("Saved member.")
+    expect(page).to have_content("is too short")
     group_member.reload
 
     expect(group_member.name).to eq("Sture Stork")

@@ -1,32 +1,29 @@
 <div class="col-md-5">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Log In</h3>
+      <h3 class="panel-title"><%=t 'login.login-box.title' %></h3>
     </div>
     <div class="panel-body">
-      <%= form_tag user_sessions_path do %>
-        <%= label_tag :username, "Username" %>
-        <%= text_field_tag :username, params[:username] %>
-        <br />
+      <%= bootstrap_form_tag url: user_sessions_path do |f| %>
+        <%= f.text_field :username, label: t('login.login-box.username') %>
+        <%= f.password_field :password, label: t('login.login-box.password') %>
 
-        <%= label_tag :password, "Password" %>
-        <%= password_field_tag :password %>
-        <br />
-
-        <%= submit_tag "Log In" %>
+        <%= f.submit t('login.login-box.submit') %>
       <% end %>
     </div>
   </div>
 </div>
 
 <div class="col-md-7">
-  <div class="panel panel-default">
+  <div class="panel panel-default welcome-box">
     <div class="panel-heading">
-      <h3 class="panel-title">Welcome text</h3>
+      <h3 class="panel-title"><%=t 'login.welcome-box.title' %></h3>
     </div>
     <div class="panel-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum felis nec risus vestibulum, ut dignissim massa ultricies. Nulla felis turpis, convallis ac porttitor in, rhoncus sed odio. </p>
-      <p>Fusce sit amet diam et lacus porta accumsan eget at velit. Vivamus rhoncus ornare ornare. Proin sit amet eros ut metus consequat hendrerit ac nec libero. Integer accumsan eu elit id elementum. Aliquam quis purus sed mi venenatis convallis. Etiam eleifend enim id dapibus ultrices. Duis quis magna molestie, aliquam metus et, aliquet velit.</p>
+      <span class="glyphicon glyphicon-calendar"></span>
+
+      <%=t 'login.welcome-box.text.html' %>
+      <%= link_to t('login.welcome-box.action'), new_user_path, class: "btn btn-success" %>
     </div>
   </div>
 </div>

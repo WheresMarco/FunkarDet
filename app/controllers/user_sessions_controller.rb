@@ -1,5 +1,17 @@
 class UserSessionsController < ApplicationController
   def new
+    # Redirect to group page - dossen't work
+    if session[:user_id]
+      if !current_user.organizer
+        if session[:group_member_id]
+          redirect_to groups_path
+        else
+          redirect_to select_user_path
+        end
+      else
+        redirect_to groups_path
+      end
+    end
   end
 
   def create
@@ -11,13 +23,13 @@ class UserSessionsController < ApplicationController
       # If the user is an organizer, redirect to index.
       # Else make the user select a member from group_members
       if user.organizer
-        flash[:success] = "Thanks for logging in!"
+        flash[:success] = t('flash.login.logged-in')
         redirect_to groups_path
       else
         redirect_to select_user_path
       end
     else
-      flash[:error] = "There was a problem logging in. Please check your username and password."
+      flash[:error] = t('flash.login.logged-in-error')
       render action: 'new'
     end
   end
@@ -25,7 +37,7 @@ class UserSessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     reset_session
-    redirect_to root_path, notice: "You have been logged out."
+    redirect_to root_path, notice: t('flash.login.logout')
   end
 
   def select_user

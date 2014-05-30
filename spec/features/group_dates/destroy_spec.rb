@@ -15,7 +15,7 @@ describe "Deleting group dates" do
       click_link "Delete"
     end
 
-    expect(page).to have_content("Group date was deleted.")
+    expect(page).to have_content("Date was deleted.")
     #expect(GroupDate.count).to eq(0)
   end
 end

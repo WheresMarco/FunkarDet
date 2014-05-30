@@ -11,7 +11,7 @@ module AuthenticationHelpers
       visit "/login"
       fill_in "Username", with: user.first.username
       fill_in "Password", with: options[:password]
-      click_button "Log In"
+      click_button "Log in"
     end
   end
 end
