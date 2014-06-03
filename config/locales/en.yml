@@ -84,7 +84,7 @@ en:
     user:
       unanswerd:
         title:
-          html: "Hi! You have <strong>%{number_of_group_dates_unanswerd}</strong> unanswered %{date_text}"
+          html: "Hi! You have <strong>%{number_of_group_dates_unanswerd}</strong> unanswered dates"
         confirm: "Yes"
         maybe: "Maybe"
         decline: "No"

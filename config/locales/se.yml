@@ -84,7 +84,7 @@ sv:
     user:
       unanswerd:
         title:
-          html: "Hej! Du har <strong>%{number_of_group_dates_unanswerd}</strong> osparade %{date_text}"
+          html: "Hej! Du har <strong>%{number_of_group_dates_unanswerd}</strong> osparade datum"        
         confirm: "Ja"
         maybe: "Kanske"
         decline: "Nej"
