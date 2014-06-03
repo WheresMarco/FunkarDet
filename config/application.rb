@@ -19,6 +19,7 @@ module Funkardet
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :sv
     config.i18n.default_locale = :sv
+    I18n.enforce_available_locales = false
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   end
 end
