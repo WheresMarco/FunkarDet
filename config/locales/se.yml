@@ -84,7 +84,7 @@ sv:
     user:
       unanswerd:
         title:
-          html: "Hej! Du har <strong>%{number_of_group_dates_unanswerd}</strong> osparade datum"        
+          html: "Hej! Du har <strong>%{number_of_group_dates_unanswerd}</strong> osparade datum"
         confirm: "Ja"
         maybe: "Kanske"
         decline: "Nej"
@@ -151,6 +151,9 @@ sv:
       name: "Namn"
       email: "E-postadress"
       submit: "Spara medlem"
+
+  footer:
+    text: "* Applikationen är under uppbyggad och Funkar det tar inget ansvar för förlorad data."
 
   date:
     abbr_day_names:
