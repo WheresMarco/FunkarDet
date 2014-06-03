@@ -9,9 +9,9 @@ module AuthenticationHelpers
   module Feature
     def sign_in(user, options={})
       visit "/login"
-      fill_in "Username", with: user.first.username
-      fill_in "Password", with: options[:password]
-      click_button "Log in"
+      fill_in I18n.t('login.login-box.username'), with: user.first.username
+      fill_in I18n.t('login.login-box.password'), with: options[:password]
+      click_button I18n.t('login.login-box.submit')
     end
   end
 end
