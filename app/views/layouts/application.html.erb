@@ -58,8 +58,20 @@
     </div>
 
     <div class="footer">
-      <p><%=t 'footer.text' %></p>
+      <p class="footer-change-lang">
+        <% if I18n.locale == I18n.default_locale %>
+          <%= link_to t('layout.footer.change-lang'), :locale=>'sv'%>
+
+        <% else %>
+          <%= link_to t('layout.footer.change-lang'), :locale=>'en'%>
+        <%end%>
+      </p>
+      <p><%=t 'layout.footer.text' %></p>
     </div>
   </div>
+
+  <script type="text/javascript">
+    $('.btn').popover()
+  </script>
 </body>
 </html>

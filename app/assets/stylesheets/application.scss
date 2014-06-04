@@ -185,6 +185,20 @@ body {
   }
 }
 
+.group-members {
+  .glyphicon {
+    margin-left: 5px;
+  }
+}
+
+#answerd-table-answer {
+  width: 100px;
+}
+
 .footer {
   color: #CCCCCC;
+
+  .footer-change-lang {
+    float: right;
+  }
 }

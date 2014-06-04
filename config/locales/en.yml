@@ -42,6 +42,10 @@ en:
       sign-up: "Sign Up"
       sign-in: "Sign In"
 
+    footer:
+      change-lang: "Change language to Swedish"
+      text: "* The application is under development and Funkar det takes no responsibility for data loss."
+
   signup:
     signup-box:
       title: "Register for Funkar det"
@@ -151,6 +155,3 @@ en:
       name: "Name"
       email: "Email"
       submit: "Save member"
-
-  footer:
-    text: "* The application is under development and Funkar det takes no responsibility for data loss."

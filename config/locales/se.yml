@@ -42,6 +42,10 @@ sv:
       sign-up: "Registrera"
       sign-in: "Logga in"
 
+    footer:
+      change-lang: "Byt språk till Engelska"
+      text: "* Applikationen är under uppbyggad och Funkar det tar inget ansvar för förlorad data."
+
   signup:
     signup-box:
       title: "Registrera för Funkar det"
@@ -151,9 +155,6 @@ sv:
       name: "Namn"
       email: "E-postadress"
       submit: "Spara medlem"
-
-  footer:
-    text: "* Applikationen är under uppbyggad och Funkar det tar inget ansvar för förlorad data."
 
   date:
     abbr_day_names:
