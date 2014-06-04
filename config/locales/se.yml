@@ -123,8 +123,8 @@ sv:
       title: "Nytt datum"
       name: "Namn"
       place: "Plats"
-      from-date: "Från"
-      to-date: "Till"
+      from-date: "Från-datum"
+      to-date: "Till-datum"
       description: "Beskrivning"
       submit: "Lägg till datum"
 

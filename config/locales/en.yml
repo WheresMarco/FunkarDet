@@ -151,3 +151,6 @@ en:
       name: "Name"
       email: "Email"
       submit: "Save member"
+
+  footer:
+    text: "* The application is under development and Funkar det takes no responsibility for data loss."
