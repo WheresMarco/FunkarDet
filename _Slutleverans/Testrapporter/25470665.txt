@@ -1,0 +1,269 @@
+Using worker: worker-linux-7-1.bb.travis-ci.org:travis-linux-5
+
+travis_fold:start:git.1$ git clone --depth=50 --branch=vecka-5 git://github.com/mh222zr/funkardet.git mh222zr/funkardet
+Cloning into 'mh222zr/funkardet'...
+remote: Counting objects: 886, done.[K
+remote: Compressing objects:   0% (1/409)   [Kremote: Compressing objects:   1% (5/409)   [Kremote: Compressing objects:   2% (9/409)   [Kremote: Compressing objects:   3% (13/409)   [Kremote: Compressing objects:   4% (17/409)   [Kremote: Compressing objects:   5% (21/409)   [Kremote: Compressing objects:   6% (25/409)   [Kremote: Compressing objects:   7% (29/409)   [Kremote: Compressing objects:   8% (33/409)   [Kremote: Compressing objects:   9% (37/409)   [Kremote: Compressing objects:  10% (41/409)   [Kremote: Compressing objects:  11% (45/409)   [Kremote: Compressing objects:  12% (50/409)   [Kremote: Compressing objects:  13% (54/409)   [Kremote: Compressing objects:  14% (58/409)   [Kremote: Compressing objects:  15% (62/409)   [Kremote: Compressing objects:  16% (66/409)   [Kremote: Compressing objects:  17% (70/409)   [Kremote: Compressing objects:  18% (74/409)   [Kremote: Compressing objects:  19% (78/409)   [Kremote: Compressing objects:  20% (82/409)   [Kremote: Compressing objects:  21% (86/409)   [Kremote: Compressing objects:  22% (90/409)   [Kremote: Compressing objects:  23% (95/409)   [Kremote: Compressing objects:  24% (99/409)   [Kremote: Compressing objects:  25% (103/409)   [Kremote: Compressing objects:  26% (107/409)   [Kremote: Compressing objects:  27% (111/409)   [Kremote: Compressing objects:  28% (115/409)   [Kremote: Compressing objects:  29% (119/409)   [Kremote: Compressing objects:  30% (123/409)   [Kremote: Compressing objects:  31% (127/409)   [Kremote: Compressing objects:  32% (131/409)   [Kremote: Compressing objects:  33% (135/409)   [Kremote: Compressing objects:  34% (140/409)   [Kremote: Compressing objects:  35% (144/409)   [Kremote: Compressing objects:  36% (148/409)   [Kremote: Compressing objects:  37% (152/409)   [Kremote: Compressing objects:  38% (156/409)   [Kremote: Compressing objects:  39% (160/409)   [Kremote: Compressing objects:  40% (164/409)   [Kremote: Compressing objects:  41% (168/409)   [Kremote: Compressing objects:  42% (172/409)   [Kremote: Compressing objects:  43% (176/409)   [Kremote: Compressing objects:  44% (180/409)   [Kremote: Compressing objects:  45% (185/409)   [Kremote: Compressing objects:  46% (189/409)   [Kremote: Compressing objects:  47% (193/409)   [Kremote: Compressing objects:  48% (197/409)   [Kremote: Compressing objects:  49% (201/409)   [Kremote: Compressing objects:  50% (205/409)   [Kremote: Compressing objects:  51% (209/409)   [Kremote: Compressing objects:  52% (213/409)   [Kremote: Compressing objects:  53% (217/409)   [Kremote: Compressing objects:  54% (221/409)   [Kremote: Compressing objects:  55% (225/409)   [Kremote: Compressing objects:  56% (230/409)   [Kremote: Compressing objects:  57% (234/409)   [Kremote: Compressing objects:  58% (238/409)   [Kremote: Compressing objects:  59% (242/409)   [Kremote: Compressing objects:  60% (246/409)   [Kremote: Compressing objects:  61% (250/409)   [Kremote: Compressing objects:  62% (254/409)   [Kremote: Compressing objects:  63% (258/409)   [Kremote: Compressing objects:  64% (262/409)   [Kremote: Compressing objects:  65% (266/409)   [Kremote: Compressing objects:  66% (270/409)   [Kremote: Compressing objects:  67% (275/409)   [Kremote: Compressing objects:  68% (279/409)   [Kremote: Compressing objects:  69% (283/409)   [Kremote: Compressing objects:  70% (287/409)   [Kremote: Compressing objects:  71% (291/409)   [Kremote: Compressing objects:  72% (295/409)   [Kremote: Compressing objects:  73% (299/409)   [Kremote: Compressing objects:  74% (303/409)   [Kremote: Compressing objects:  75% (307/409)   [Kremote: Compressing objects:  76% (311/409)   [Kremote: Compressing objects:  77% (315/409)   [Kremote: Compressing objects:  78% (320/409)   [Kremote: Compressing objects:  79% (324/409)   [Kremote: Compressing objects:  80% (328/409)   [Kremote: Compressing objects:  81% (332/409)   [Kremote: Compressing objects:  82% (336/409)   [Kremote: Compressing objects:  83% (340/409)   [Kremote: Compressing objects:  84% (344/409)   [Kremote: Compressing objects:  85% (348/409)   [Kremote: Compressing objects:  86% (352/409)   [Kremote: Compressing objects:  87% (356/409)   [Kremote: Compressing objects:  88% (360/409)   [Kremote: Compressing objects:  89% (365/409)   [Kremote: Compressing objects:  90% (369/409)   [Kremote: Compressing objects:  91% (373/409)   [Kremote: Compressing objects:  92% (377/409)   [Kremote: Compressing objects:  93% (381/409)   [Kremote: Compressing objects:  94% (385/409)   [Kremote: Compressing objects:  95% (389/409)   [Kremote: Compressing objects:  96% (393/409)   [Kremote: Compressing objects:  97% (397/409)   [Kremote: Compressing objects:  98% (401/409)   [Kremote: Compressing objects:  99% (405/409)   [Kremote: Compressing objects: 100% (409/409)   [Kremote: Compressing objects: 100% (409/409), done.[K
+Receiving objects:   0% (1/886)   Receiving objects:   1% (9/886)   Receiving objects:   2% (18/886)   Receiving objects:   3% (27/886)   Receiving objects:   4% (36/886)   Receiving objects:   5% (45/886)   Receiving objects:   6% (54/886)   Receiving objects:   7% (63/886)   Receiving objects:   8% (71/886)   Receiving objects:   9% (80/886)   Receiving objects:  10% (89/886)   Receiving objects:  11% (98/886)   Receiving objects:  12% (107/886)   Receiving objects:  13% (116/886)   Receiving objects:  14% (125/886)   Receiving objects:  15% (133/886)   Receiving objects:  16% (142/886)   Receiving objects:  17% (151/886)   Receiving objects:  18% (160/886)   Receiving objects:  19% (169/886)   Receiving objects:  20% (178/886)   Receiving objects:  21% (187/886)   Receiving objects:  22% (195/886)   Receiving objects:  23% (204/886)   Receiving objects:  24% (213/886)   Receiving objects:  25% (222/886)   Receiving objects:  26% (231/886)   Receiving objects:  27% (240/886)   Receiving objects:  28% (249/886)   Receiving objects:  29% (257/886)   Receiving objects:  30% (266/886)   Receiving objects:  31% (275/886)   Receiving objects:  32% (284/886)   Receiving objects:  33% (293/886)   Receiving objects:  34% (302/886)   Receiving objects:  35% (311/886)   Receiving objects:  36% (319/886)   Receiving objects:  37% (328/886)   Receiving objects:  38% (337/886)   Receiving objects:  39% (346/886)   Receiving objects:  40% (355/886)   Receiving objects:  41% (364/886)   Receiving objects:  42% (373/886)   Receiving objects:  43% (381/886)   Receiving objects:  44% (390/886)   Receiving objects:  45% (399/886)   Receiving objects:  46% (408/886)   Receiving objects:  47% (417/886)   Receiving objects:  48% (426/886)   Receiving objects:  49% (435/886)   Receiving objects:  50% (443/886)   Receiving objects:  51% (452/886)   Receiving objects:  52% (461/886)   Receiving objects:  53% (470/886)   Receiving objects:  54% (479/886)   Receiving objects:  55% (488/886)   Receiving objects:  56% (497/886)   Receiving objects:  57% (506/886)   Receiving objects:  58% (514/886)   Receiving objects:  59% (523/886)   Receiving objects:  60% (532/886)   Receiving objects:  61% (541/886)   Receiving objects:  62% (550/886)   Receiving objects:  63% (559/886)   remote: Total 886 (delta 486), reused 775 (delta 422)[K
+Receiving objects:  64% (568/886)   Receiving objects:  65% (576/886)   Receiving objects:  66% (585/886)   Receiving objects:  67% (594/886)   Receiving objects:  68% (603/886)   Receiving objects:  69% (612/886)   Receiving objects:  70% (621/886)   Receiving objects:  71% (630/886)   Receiving objects:  72% (638/886)   Receiving objects:  73% (647/886)   Receiving objects:  74% (656/886)   Receiving objects:  75% (665/886)   Receiving objects:  76% (674/886)   Receiving objects:  77% (683/886)   Receiving objects:  78% (692/886)   Receiving objects:  79% (700/886)   Receiving objects:  80% (709/886)   Receiving objects:  81% (718/886)   Receiving objects:  82% (727/886)   Receiving objects:  83% (736/886)   Receiving objects:  84% (745/886)   Receiving objects:  85% (754/886)   Receiving objects:  86% (762/886)   Receiving objects:  87% (771/886)   Receiving objects:  88% (780/886)   Receiving objects:  89% (789/886)   Receiving objects:  90% (798/886)   Receiving objects:  91% (807/886)   Receiving objects:  92% (816/886)   Receiving objects:  93% (824/886)   Receiving objects:  94% (833/886)   Receiving objects:  95% (842/886)   Receiving objects:  96% (851/886)   Receiving objects:  97% (860/886)   Receiving objects:  98% (869/886)   Receiving objects:  99% (878/886)   Receiving objects: 100% (886/886)   Receiving objects: 100% (886/886), 127.63 KiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/486)   Resolving deltas:   2% (10/486)   Resolving deltas:   4% (22/486)   Resolving deltas:   6% (30/486)   Resolving deltas:  11% (58/486)   Resolving deltas:  12% (59/486)   Resolving deltas:  14% (72/486)   Resolving deltas:  19% (93/486)   Resolving deltas:  21% (106/486)   Resolving deltas:  22% (110/486)   Resolving deltas:  23% (115/486)   Resolving deltas:  24% (117/486)   Resolving deltas:  25% (122/486)   Resolving deltas:  26% (128/486)   Resolving deltas:  27% (135/486)   Resolving deltas:  28% (137/486)   Resolving deltas:  29% (141/486)   Resolving deltas:  38% (189/486)   Resolving deltas:  39% (191/486)   Resolving deltas:  40% (195/486)   Resolving deltas:  41% (203/486)   Resolving deltas:  43% (209/486)   Resolving deltas:  44% (218/486)   Resolving deltas:  45% (220/486)   Resolving deltas:  46% (228/486)   Resolving deltas:  47% (231/486)   Resolving deltas:  48% (236/486)   Resolving deltas:  49% (239/486)   Resolving deltas:  50% (246/486)   Resolving deltas:  51% (250/486)   Resolving deltas:  52% (253/486)   Resolving deltas:  53% (259/486)   Resolving deltas:  54% (267/486)   Resolving deltas:  56% (274/486)   Resolving deltas:  57% (280/486)   Resolving deltas:  61% (297/486)   Resolving deltas:  63% (309/486)   Resolving deltas:  64% (314/486)   Resolving deltas:  66% (321/486)   Resolving deltas:  67% (327/486)   Resolving deltas:  68% (333/486)   Resolving deltas:  70% (342/486)   Resolving deltas:  71% (346/486)   Resolving deltas:  72% (350/486)   Resolving deltas:  75% (367/486)   Resolving deltas:  76% (371/486)   Resolving deltas:  77% (376/486)   Resolving deltas:  78% (382/486)   Resolving deltas:  79% (384/486)   Resolving deltas:  81% (398/486)   Resolving deltas:  82% (401/486)   Resolving deltas:  83% (408/486)   Resolving deltas:  85% (415/486)   Resolving deltas:  86% (422/486)   Resolving deltas:  87% (424/486)   Resolving deltas:  88% (428/486)   Resolving deltas:  89% (434/486)   Resolving deltas:  90% (439/486)   Resolving deltas:  91% (444/486)   Resolving deltas:  92% (448/486)   Resolving deltas:  93% (452/486)   Resolving deltas:  94% (457/486)   Resolving deltas:  95% (462/486)   Resolving deltas:  97% (472/486)   Resolving deltas:  98% (477/486)   Resolving deltas:  99% (483/486)   Resolving deltas: 100% (486/486)   Resolving deltas: 100% (486/486), done.
+Checking connectivity... done.
+travis_fold:end:git.1$ cd mh222zr/funkardet
+travis_fold:start:git.3$ git checkout -qf 7f0d041d9a266d08b973c56d6453b5d35f1ee05c
+travis_fold:end:git.3travis_fold:start:rvm.1$ rvm use 2.0.0-p353 --install --binary --fuzzy
+[33mruby-2.0.0-p353 is not installed - installing.[0m
+[32mSearching for binary rubies, this might take some time.[0m
+[32mFound remote file https://rvm.io/binaries/ubuntu/12.04/x86_64/ruby-2.0.0-p353.tar.bz2[0m
+[32mChecking requirements for ubuntu.[0m
+[32mRequirements installation successful.[0m
+[32mruby-2.0.0-p353 - #configure[0m
+[32mruby-2.0.0-p353 - #download[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 62 19.5M   62 12.2M    0     0  24.0M      0 --:--:-- --:--:-- --:--:-- 24.4M100 19.5M  100 19.5M    0     0  25.5M      0 --:--:-- --:--:-- --:--:-- 25.8M
+[32mruby-2.0.0-p353 - #validate archive[0m
+[32mruby-2.0.0-p353 - #extract[0m
+[32mruby-2.0.0-p353 - #validate binary[0m
+[32mruby-2.0.0-p353 - #setup[0m
+[32mruby-2.0.0-p353 - #making binaries executable[0m|/-\|/-\|.-\|/-\.
+[32mruby-2.0.0-p353 - #downloading rubygems-2.2.2[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  404k  100  404k    0     0  2373k      0 --:--:-- --:--:-- --:--:-- 2696k
+[32mruby-2.0.0-p353 - #extracting rubygems-2.2.2[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.
+[32mruby-2.0.0-p353 - #removing old rubygems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-.
+[32mruby-2.0.0-p353 - #installing rubygems-2.2.2[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|..
+[32mruby-2.0.0-p353 - #gemset created /home/travis/.rvm/gems/ruby-2.0.0-p353@global[0m
+[32mruby-2.0.0-p353 - #importing gemset /home/travis/.rvm/gemsets/global.gems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|.
+[32mruby-2.0.0-p353 - #generating global wrappers[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-..
+[32mruby-2.0.0-p353 - #uninstalling gem rubygems-bundler-1.4.2[0m|.
+[32mruby-2.0.0-p353 - #gemset created /home/travis/.rvm/gems/ruby-2.0.0-p353[0m
+[32mruby-2.0.0-p353 - #importing gemset /home/travis/.rvm/gemsets/default.gems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+[32mruby-2.0.0-p353 - #generating default wrappers[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|.
+[32mUsing /home/travis/.rvm/gems/ruby-2.0.0-p353[0m
+travis_fold:end:rvm.1$ export BUNDLE_GEMFILE=$PWD/Gemfile
+$ ruby --version
+ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-linux]
+$ rvm --version
+
+rvm 1.25.25 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+
+$ gem --version
+2.2.2
+$ bundle --version
+Bundler version 1.6.2
+travis_fold:start:install$ bundle install --deployment
+Fetching gem metadata from https://rubygems.org/.........
+Fetching additional metadata from https://rubygems.org/..
+Installing rake 10.3.1
+Installing i18n 0.6.9
+Installing minitest 4.7.5
+Installing multi_json 1.10.0
+Installing thread_safe 0.3.3
+Installing tzinfo 0.3.39
+Installing activesupport 4.0.2
+Installing builder 3.1.4
+Installing erubis 2.7.0
+Installing rack 1.5.2
+Installing rack-test 0.6.2
+Installing actionpack 4.0.2
+Installing mime-types 1.25.1
+Installing polyglot 0.3.4
+Installing treetop 1.4.15
+Installing mail 2.5.4
+Installing actionmailer 4.0.2
+Installing activemodel 4.0.2
+Installing activerecord-deprecated_finders 1.0.3
+Installing arel 4.0.2
+Installing activerecord 4.0.2
+Installing bcrypt 3.1.7
+Installing bcrypt-ruby 3.1.5
+Installing mini_portile 0.5.3
+Installing nokogiri 1.6.1
+Installing xpath 2.0.0
+Installing capybara 2.1.0
+Installing coffee-script-source 1.7.0
+Installing execjs 2.0.2
+Installing coffee-script 2.2.0
+Installing thor 0.19.1
+Installing railties 4.0.2
+Installing coffee-rails 4.0.1
+Installing diff-lcs 1.2.5
+Installing factory_girl 4.4.0
+Installing factory_girl_rails 4.4.1
+Installing hike 1.2.3
+Installing jbuilder 1.5.3
+Installing jquery-rails 3.1.0
+Installing json 1.8.1
+Installing pg 0.17.1
+Using bundler 1.6.2
+Installing tilt 1.4.1
+Installing sprockets 2.11.0
+Installing sprockets-rails 2.0.1
+Installing rails 4.0.2
+Installing rails_serve_static_assets 0.0.2
+Installing rails_stdout_logging 0.0.3
+Installing rails_12factor 0.0.2
+Installing rdoc 4.1.1
+Installing rspec-core 2.14.8
+Installing rspec-expectations 2.14.5
+Installing rspec-mocks 2.14.6
+Installing rspec-rails 2.14.2
+Installing sass 3.2.19
+Installing sass-rails 4.0.3
+Installing sdoc 0.4.0
+Installing shoulda-matchers 2.6.1
+Installing turbolinks 2.2.2
+Installing uglifier 2.5.0
+Your bundle is complete!
+It was installed into ./vendor/bundle
+Post-install message from bcrypt-ruby:
+
+#######################################################
+
+The bcrypt-ruby gem has changed its name to just bcrypt.  Instead of
+installing `bcrypt-ruby`, you should install `bcrypt`.  Please update your
+dependencies accordingly.
+
+#######################################################
+
+Post-install message from capybara:
+IMPORTANT! Some of the defaults have changed in Capybara 2.1. If you're experiencing failures,
+please revert to the old behaviour by setting:
+
+    Capybara.configure do |config|
+      config.match = :one
+      config.exact_options = true
+      config.ignore_hidden_elements = true
+      config.visible_text_only = true
+    end
+
+If you're migrating from Capybara 1.x, try:
+
+    Capybara.configure do |config|
+      config.match = :prefer_exact
+      config.ignore_hidden_elements = false
+    end
+
+Details here: http://www.elabs.se/blog/60-introducing-capybara-2-1
+
+Post-install message from rdoc:
+Depending on your version of ruby, you may need to install ruby rdoc/ri data:
+
+<= 1.8.6 : unsupported
+ = 1.8.7 : gem install rdoc-data; rdoc-data --install
+ = 1.9.1 : gem install rdoc-data; rdoc-data --install
+>= 1.9.2 : nothing to do! Yay!
+travis_fold:end:install$ bundle exec rake
+/home/travis/.rvm/rubies/ruby-2.0.0-p353/bin/ruby -S rspec ./spec/controllers/group_dates_controller_spec.rb ./spec/controllers/group_members_controller_spec.rb ./spec/controllers/groups_controller_spec.rb ./spec/controllers/user_sessions_controller_spec.rb ./spec/controllers/users_controller_spec.rb ./spec/features/group_dates/create_spec.rb ./spec/features/group_dates/destroy_spec.rb ./spec/features/group_dates/edit_spec.rb ./spec/features/group_dates/index_spec.rb ./spec/features/group_members/create_spec.rb ./spec/features/group_members/destroy_spec.rb ./spec/features/group_members/edit_spec.rb ./spec/features/group_members/index_spec.rb ./spec/features/groups/edit_spec.rb ./spec/features/groups/index_spec.rb ./spec/features/users/authentication_spec.rb ./spec/features/users/registration_spec.rb ./spec/helpers/group_dates_helper_spec.rb ./spec/helpers/group_members_helper_spec.rb ./spec/helpers/groups_helper_spec.rb ./spec/helpers/user_sessions_helper_spec.rb ./spec/helpers/users_helper_spec.rb ./spec/models/group_date_spec.rb ./spec/models/group_members_spec.rb ./spec/models/group_spec.rb ./spec/models/user_spec.rb ./spec/routing/groups_routing_spec.rb ./spec/routing/users_routing_spec.rb ./spec/views/group_dates/index.html.erb_spec.rb ./spec/views/group_members/index.html.erb_spec.rb ./spec/views/groups/edit.html.erb_spec.rb ./spec/views/groups/show.html.erb_spec.rb ./spec/views/user_sessions/new.html.erb_spec.rb ./spec/views/users/edit.html.erb_spec.rb ./spec/views/users/new.html.erb_spec.rb ./spec/views/users/show.html.erb_spec.rb
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Failures:
+
+  1) Adding group dates displays an error with no place less then 2 characters long
+     [31mFailure/Error:[0m [31mwithin("div.flash") do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "div.flash"[0m
+[36m     # ./spec/features/group_members/create_spec.rb:56:in `block (2 levels) in <top (required)>'[0m
+
+  2) Adding group dates displays an error with a name less then 2 characters long
+     [31mFailure/Error:[0m [31mwithin("div.flash") do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "div.flash"[0m
+[36m     # ./spec/features/group_members/create_spec.rb:34:in `block (2 levels) in <top (required)>'[0m
+
+  3) Adding group dates displays an error with no email
+     [31mFailure/Error:[0m [31mwithin("div.flash") do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "div.flash"[0m
+[36m     # ./spec/features/group_members/create_spec.rb:45:in `block (2 levels) in <top (required)>'[0m
+
+  4) Adding group dates displays an error with no name
+     [31mFailure/Error:[0m [31mwithin("div.flash") do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "div.flash"[0m
+[36m     # ./spec/features/group_members/create_spec.rb:23:in `block (2 levels) in <top (required)>'[0m
+
+  5) Viewing group dates displays date content when a group has dates
+     [31mFailure/Error:[0m [31mexpect(page.all("ul.group_dates li").size).to eq(2)[0m
+       [31m[0m
+       [31mexpected: 2[0m
+       [31m     got: 0[0m
+       [31m[0m
+       [31m(compared using ==)[0m
+[36m     # ./spec/features/group_dates/index_spec.rb:28:in `block (2 levels) in <top (required)>'[0m
+
+  6) Editing group dates is successful with valid name
+     [31mFailure/Error:[0m [31mwithin "#group_date_#{group_date.id}" do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "#group_date_3"[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:14:in `block (2 levels) in <top (required)>'[0m
+
+  7) Editing group dates is unsuccessful with no name
+     [31mFailure/Error:[0m [31mwithin "#group_date_#{group_date.id}" do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "#group_date_4"[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:30:in `block (2 levels) in <top (required)>'[0m
+
+  8) Editing group dates is unsuccessful with not enough name
+     [31mFailure/Error:[0m [31mwithin "#group_date_#{group_date.id}" do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "#group_date_5"[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:47:in `block (2 levels) in <top (required)>'[0m
+
+  9) Deleting group dates is successful
+     [31mFailure/Error:[0m [31mwithin "#group_date_#{group_date.id}" do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "#group_date_6"[0m
+[36m     # ./spec/features/group_dates/destroy_spec.rb:14:in `block (2 levels) in <top (required)>'[0m
+
+  10) Adding group dates displays an error with no place less then 2 characters long
+     [31mFailure/Error:[0m [31mwithin("div.flash") do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "div.flash"[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:56:in `block (2 levels) in <top (required)>'[0m
+
+  11) Adding group dates displays an error with a name less then 2 characters long
+     [31mFailure/Error:[0m [31mwithin("div.flash") do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "div.flash"[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:34:in `block (2 levels) in <top (required)>'[0m
+
+  12) Adding group dates displays an error with no place
+     [31mFailure/Error:[0m [31mwithin("div.flash") do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "div.flash"[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:45:in `block (2 levels) in <top (required)>'[0m
+
+  13) Adding group dates displays an error with no name
+     [31mFailure/Error:[0m [31mwithin("div.flash") do[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find css "div.flash"[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:23:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 8.96 seconds
+[31m101 examples, 13 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/features/group_members/create_spec.rb:52[0m [36m# Adding group dates displays an error with no place less then 2 characters long[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:30[0m [36m# Adding group dates displays an error with a name less then 2 characters long[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:41[0m [36m# Adding group dates displays an error with no email[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:19[0m [36m# Adding group dates displays an error with no name[0m
+[31mrspec ./spec/features/group_dates/index_spec.rb:22[0m [36m# Viewing group dates displays date content when a group has dates[0m
+[31mrspec ./spec/features/group_dates/edit_spec.rb:11[0m [36m# Editing group dates is successful with valid name[0m
+[31mrspec ./spec/features/group_dates/edit_spec.rb:27[0m [36m# Editing group dates is unsuccessful with no name[0m
+[31mrspec ./spec/features/group_dates/edit_spec.rb:44[0m [36m# Editing group dates is unsuccessful with not enough name[0m
+[31mrspec ./spec/features/group_dates/destroy_spec.rb:11[0m [36m# Deleting group dates is successful[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:52[0m [36m# Adding group dates displays an error with no place less then 2 characters long[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:30[0m [36m# Adding group dates displays an error with a name less then 2 characters long[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:41[0m [36m# Adding group dates displays an error with no place[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:19[0m [36m# Adding group dates displays an error with no name[0m
+
+Randomized with seed 29225
+
+/home/travis/.rvm/rubies/ruby-2.0.0-p353/bin/ruby -S rspec ./spec/controllers/group_dates_controller_spec.rb ./spec/controllers/group_members_controller_spec.rb ./spec/controllers/groups_controller_spec.rb ./spec/controllers/user_sessions_controller_spec.rb ./spec/controllers/users_controller_spec.rb ./spec/features/group_dates/create_spec.rb ./spec/features/group_dates/destroy_spec.rb ./spec/features/group_dates/edit_spec.rb ./spec/features/group_dates/index_spec.rb ./spec/features/group_members/create_spec.rb ./spec/features/group_members/destroy_spec.rb ./spec/features/group_members/edit_spec.rb ./spec/features/group_members/index_spec.rb ./spec/features/groups/edit_spec.rb ./spec/features/groups/index_spec.rb ./spec/features/users/authentication_spec.rb ./spec/features/users/registration_spec.rb ./spec/helpers/group_dates_helper_spec.rb ./spec/helpers/group_members_helper_spec.rb ./spec/helpers/groups_helper_spec.rb ./spec/helpers/user_sessions_helper_spec.rb ./spec/helpers/users_helper_spec.rb ./spec/models/group_date_spec.rb ./spec/models/group_members_spec.rb ./spec/models/group_spec.rb ./spec/models/user_spec.rb ./spec/routing/groups_routing_spec.rb ./spec/routing/users_routing_spec.rb ./spec/views/group_dates/index.html.erb_spec.rb ./spec/views/group_members/index.html.erb_spec.rb ./spec/views/groups/edit.html.erb_spec.rb ./spec/views/groups/show.html.erb_spec.rb ./spec/views/user_sessions/new.html.erb_spec.rb ./spec/views/users/edit.html.erb_spec.rb ./spec/views/users/new.html.erb_spec.rb ./spec/views/users/show.html.erb_spec.rb failed
+
+[31;1mThe command "bundle exec rake" exited with 1.[0m
+
+Done. Your build exited with 1.

@@ -1,0 +1,509 @@
+Using worker: worker-linux-5-2.bb.travis-ci.org:travis-linux-2
+
+travis_fold:start:git.1$ git clone --depth=50 --branch=vecka-5 git://github.com/mh222zr/funkardet.git mh222zr/funkardet
+Cloning into 'mh222zr/funkardet'...
+remote: Counting objects: 783, done.[K
+remote: Compressing objects:   0% (1/594)   [Kremote: Compressing objects:   1% (6/594)   [Kremote: Compressing objects:   2% (12/594)   [Kremote: Compressing objects:   3% (18/594)   [Kremote: Compressing objects:   4% (24/594)   [Kremote: Compressing objects:   5% (30/594)   [Kremote: Compressing objects:   6% (36/594)   [Kremote: Compressing objects:   7% (42/594)   [Kremote: Compressing objects:   8% (48/594)   [Kremote: Compressing objects:   9% (54/594)   [Kremote: Compressing objects:  10% (60/594)   [Kremote: Compressing objects:  11% (66/594)   [Kremote: Compressing objects:  12% (72/594)   [Kremote: Compressing objects:  13% (78/594)   [Kremote: Compressing objects:  14% (84/594)   [Kremote: Compressing objects:  15% (90/594)   [Kremote: Compressing objects:  16% (96/594)   [Kremote: Compressing objects:  17% (101/594)   [Kremote: Compressing objects:  18% (107/594)   [Kremote: Compressing objects:  19% (113/594)   [Kremote: Compressing objects:  20% (119/594)   [Kremote: Compressing objects:  21% (125/594)   [Kremote: Compressing objects:  22% (131/594)   [Kremote: Compressing objects:  23% (137/594)   [Kremote: Compressing objects:  24% (143/594)   [Kremote: Compressing objects:  25% (149/594)   [Kremote: Compressing objects:  26% (155/594)   [Kremote: Compressing objects:  27% (161/594)   [Kremote: Compressing objects:  28% (167/594)   [Kremote: Compressing objects:  29% (173/594)   [Kremote: Compressing objects:  30% (179/594)   [Kremote: Compressing objects:  31% (185/594)   [Kremote: Compressing objects:  32% (191/594)   [Kremote: Compressing objects:  33% (197/594)   [Kremote: Compressing objects:  34% (202/594)   [Kremote: Compressing objects:  35% (208/594)   [Kremote: Compressing objects:  36% (214/594)   [Kremote: Compressing objects:  37% (220/594)   [Kremote: Compressing objects:  38% (226/594)   [Kremote: Compressing objects:  39% (232/594)   [Kremote: Compressing objects:  40% (238/594)   [Kremote: Compressing objects:  41% (244/594)   [Kremote: Compressing objects:  42% (250/594)   [Kremote: Compressing objects:  43% (256/594)   [Kremote: Compressing objects:  44% (262/594)   [Kremote: Compressing objects:  45% (268/594)   [Kremote: Compressing objects:  46% (274/594)   [Kremote: Compressing objects:  47% (280/594)   [Kremote: Compressing objects:  48% (286/594)   [Kremote: Compressing objects:  49% (292/594)   [Kremote: Compressing objects:  50% (297/594)   [Kremote: Compressing objects:  51% (303/594)   [Kremote: Compressing objects:  52% (309/594)   [Kremote: Compressing objects:  53% (315/594)   [Kremote: Compressing objects:  54% (321/594)   [Kremote: Compressing objects:  55% (327/594)   [Kremote: Compressing objects:  56% (333/594)   [Kremote: Compressing objects:  57% (339/594)   [Kremote: Compressing objects:  58% (345/594)   [Kremote: Compressing objects:  59% (351/594)   [Kremote: Compressing objects:  60% (357/594)   [Kremote: Compressing objects:  61% (363/594)   [Kremote: Compressing objects:  62% (369/594)   [Kremote: Compressing objects:  63% (375/594)   [Kremote: Compressing objects:  64% (381/594)   [Kremote: Compressing objects:  65% (387/594)   [Kremote: Compressing objects:  66% (393/594)   [Kremote: Compressing objects:  67% (398/594)   [Kremote: Compressing objects:  68% (404/594)   [Kremote: Compressing objects:  69% (410/594)   [Kremote: Compressing objects:  70% (416/594)   [Kremote: Compressing objects:  71% (422/594)   [Kremote: Compressing objects:  72% (428/594)   [Kremote: Compressing objects:  73% (434/594)   [Kremote: Compressing objects:  74% (440/594)   [Kremote: Compressing objects:  75% (446/594)   [Kremote: Compressing objects:  76% (452/594)   [Kremote: Compressing objects:  77% (458/594)   [Kremote: Compressing objects:  78% (464/594)   [Kremote: Compressing objects:  79% (470/594)   [Kremote: Compressing objects:  80% (476/594)   [Kremote: Compressing objects:  81% (482/594)   [Kremote: Compressing objects:  82% (488/594)   [Kremote: Compressing objects:  83% (494/594)   [Kremote: Compressing objects:  84% (499/594)   [Kremote: Compressing objects:  85% (505/594)   [Kremote: Compressing objects:  86% (511/594)   [Kremote: Compressing objects:  87% (517/594)   [Kremote: Compressing objects:  88% (523/594)   [Kremote: Compressing objects:  89% (529/594)   [Kremote: Compressing objects:  90% (535/594)   [Kremote: Compressing objects:  91% (541/594)   [Kremote: Compressing objects:  92% (547/594)   [Kremote: Compressing objects:  93% (553/594)   [Kremote: Compressing objects:  94% (559/594)   [Kremote: Compressing objects:  95% (565/594)   [Kremote: Compressing objects:  96% (571/594)   [Kremote: Compressing objects:  97% (577/594)   [Kremote: Compressing objects:  98% (583/594)   [Kremote: Compressing objects:  99% (589/594)   [Kremote: Compressing objects: 100% (594/594)   [Kremote: Compressing objects: 100% (594/594), done.[K
+Receiving objects:   0% (1/783)   Receiving objects:   1% (8/783)   Receiving objects:   2% (16/783)   Receiving objects:   3% (24/783)   Receiving objects:   4% (32/783)   Receiving objects:   5% (40/783)   Receiving objects:   6% (47/783)   Receiving objects:   7% (55/783)   Receiving objects:   8% (63/783)   Receiving objects:   9% (71/783)   Receiving objects:  10% (79/783)   Receiving objects:  11% (87/783)   Receiving objects:  12% (94/783)   Receiving objects:  13% (102/783)   Receiving objects:  14% (110/783)   Receiving objects:  15% (118/783)   Receiving objects:  16% (126/783)   Receiving objects:  17% (134/783)   Receiving objects:  18% (141/783)   Receiving objects:  19% (149/783)   Receiving objects:  20% (157/783)   Receiving objects:  21% (165/783)   Receiving objects:  22% (173/783)   Receiving objects:  23% (181/783)   Receiving objects:  24% (188/783)   Receiving objects:  25% (196/783)   Receiving objects:  26% (204/783)   Receiving objects:  27% (212/783)   Receiving objects:  28% (220/783)   Receiving objects:  29% (228/783)   Receiving objects:  30% (235/783)   Receiving objects:  31% (243/783)   Receiving objects:  32% (251/783)   Receiving objects:  33% (259/783)   Receiving objects:  34% (267/783)   Receiving objects:  35% (275/783)   Receiving objects:  36% (282/783)   Receiving objects:  37% (290/783)   Receiving objects:  38% (298/783)   Receiving objects:  39% (306/783)   Receiving objects:  40% (314/783)   Receiving objects:  41% (322/783)   Receiving objects:  42% (329/783)   Receiving objects:  43% (337/783)   Receiving objects:  44% (345/783)   Receiving objects:  45% (353/783)   Receiving objects:  46% (361/783)   Receiving objects:  47% (369/783)   Receiving objects:  48% (376/783)   Receiving objects:  49% (384/783)   Receiving objects:  50% (392/783)   Receiving objects:  51% (400/783)   Receiving objects:  52% (408/783)   Receiving objects:  53% (415/783)   Receiving objects:  54% (423/783)   remote: Total 783 (delta 412), reused 327 (delta 136)[K
+Receiving objects:  55% (431/783)   Receiving objects:  56% (439/783)   Receiving objects:  57% (447/783)   Receiving objects:  58% (455/783)   Receiving objects:  59% (462/783)   Receiving objects:  60% (470/783)   Receiving objects:  61% (478/783)   Receiving objects:  62% (486/783)   Receiving objects:  63% (494/783)   Receiving objects:  64% (502/783)   Receiving objects:  65% (509/783)   Receiving objects:  66% (517/783)   Receiving objects:  67% (525/783)   Receiving objects:  68% (533/783)   Receiving objects:  69% (541/783)   Receiving objects:  70% (549/783)   Receiving objects:  71% (556/783)   Receiving objects:  72% (564/783)   Receiving objects:  73% (572/783)   Receiving objects:  74% (580/783)   Receiving objects:  75% (588/783)   Receiving objects:  76% (596/783)   Receiving objects:  77% (603/783)   Receiving objects:  78% (611/783)   Receiving objects:  79% (619/783)   Receiving objects:  80% (627/783)   Receiving objects:  81% (635/783)   Receiving objects:  82% (643/783)   Receiving objects:  83% (650/783)   Receiving objects:  84% (658/783)   Receiving objects:  85% (666/783)   Receiving objects:  86% (674/783)   Receiving objects:  87% (682/783)   Receiving objects:  88% (690/783)   Receiving objects:  89% (697/783)   Receiving objects:  90% (705/783)   Receiving objects:  91% (713/783)   Receiving objects:  92% (721/783)   Receiving objects:  93% (729/783)   Receiving objects:  94% (737/783)   Receiving objects:  95% (744/783)   Receiving objects:  96% (752/783)   Receiving objects:  97% (760/783)   Receiving objects:  98% (768/783)   Receiving objects:  99% (776/783)   Receiving objects: 100% (783/783)   Receiving objects: 100% (783/783), 90.71 KiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/412)   Resolving deltas:   4% (19/412)   Resolving deltas:  13% (54/412)   Resolving deltas:  14% (58/412)   Resolving deltas:  19% (81/412)   Resolving deltas:  20% (85/412)   Resolving deltas:  23% (96/412)   Resolving deltas:  24% (99/412)   Resolving deltas:  25% (107/412)   Resolving deltas:  28% (118/412)   Resolving deltas:  30% (125/412)   Resolving deltas:  32% (135/412)   Resolving deltas:  34% (143/412)   Resolving deltas:  35% (145/412)   Resolving deltas:  37% (153/412)   Resolving deltas:  38% (157/412)   Resolving deltas:  39% (164/412)   Resolving deltas:  40% (165/412)   Resolving deltas:  41% (173/412)   Resolving deltas:  44% (182/412)   Resolving deltas:  48% (198/412)   Resolving deltas:  49% (204/412)   Resolving deltas:  50% (208/412)   Resolving deltas:  51% (212/412)   Resolving deltas:  52% (217/412)   Resolving deltas:  53% (222/412)   Resolving deltas:  54% (224/412)   Resolving deltas:  55% (229/412)   Resolving deltas:  56% (234/412)   Resolving deltas:  57% (235/412)   Resolving deltas:  59% (245/412)   Resolving deltas:  61% (254/412)   Resolving deltas:  62% (256/412)   Resolving deltas:  63% (262/412)   Resolving deltas:  64% (266/412)   Resolving deltas:  66% (272/412)   Resolving deltas:  67% (280/412)   Resolving deltas:  69% (285/412)   Resolving deltas:  71% (294/412)   Resolving deltas:  72% (298/412)   Resolving deltas:  73% (302/412)   Resolving deltas:  74% (306/412)   Resolving deltas:  75% (311/412)   Resolving deltas:  77% (319/412)   Resolving deltas:  79% (327/412)   Resolving deltas:  80% (330/412)   Resolving deltas:  81% (334/412)   Resolving deltas:  82% (341/412)   Resolving deltas:  83% (343/412)   Resolving deltas:  84% (348/412)   Resolving deltas:  85% (352/412)   Resolving deltas:  86% (358/412)   Resolving deltas:  87% (359/412)   Resolving deltas:  88% (363/412)   Resolving deltas:  89% (367/412)   Resolving deltas:  90% (372/412)   Resolving deltas:  91% (375/412)   Resolving deltas:  92% (381/412)   Resolving deltas:  93% (384/412)   Resolving deltas:  94% (389/412)   Resolving deltas:  95% (394/412)   Resolving deltas:  96% (398/412)   Resolving deltas:  97% (400/412)   Resolving deltas:  98% (405/412)   Resolving deltas: 100% (412/412)   Resolving deltas: 100% (412/412), done.
+Checking connectivity... done.
+travis_fold:end:git.1$ cd mh222zr/funkardet
+travis_fold:start:git.3$ git checkout -qf db335154744a447c418df2c40921d42af071afe5
+travis_fold:end:git.3travis_fold:start:rvm.1$ rvm use 2.0.0-p353 --install --binary --fuzzy
+[33mruby-2.0.0-p353 is not installed - installing.[0m
+[32mSearching for binary rubies, this might take some time.[0m
+[32mFound remote file https://rvm.io/binaries/ubuntu/12.04/x86_64/ruby-2.0.0-p353.tar.bz2[0m
+[32mChecking requirements for ubuntu.[0m
+[32mRequirements installation successful.[0m
+[32mruby-2.0.0-p353 - #configure[0m
+[32mruby-2.0.0-p353 - #download[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 62 19.5M   62 12.2M    0     0  19.8M      0 --:--:-- --:--:-- --:--:-- 20.1M100 19.5M  100 19.5M    0     0  21.2M      0 --:--:-- --:--:-- --:--:-- 21.4M
+[32mruby-2.0.0-p353 - #validate archive[0m
+[32mruby-2.0.0-p353 - #extract[0m
+[32mruby-2.0.0-p353 - #validate binary[0m
+[32mruby-2.0.0-p353 - #setup[0m
+[32mruby-2.0.0-p353 - #making binaries executable[0m|/-\|/-\|.-\|/-\.
+[32mruby-2.0.0-p353 - #downloading rubygems-2.2.2[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  404k  100  404k    0     0   613k      0 --:--:-- --:--:-- --:--:--  692k
+[32mruby-2.0.0-p353 - #extracting rubygems-2.2.2[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.
+[32mruby-2.0.0-p353 - #removing old rubygems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-.
+[32mruby-2.0.0-p353 - #installing rubygems-2.2.2[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|..
+[32mruby-2.0.0-p353 - #gemset created /home/travis/.rvm/gems/ruby-2.0.0-p353@global[0m
+[32mruby-2.0.0-p353 - #importing gemset /home/travis/.rvm/gemsets/global.gems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|.
+[32mruby-2.0.0-p353 - #generating global wrappers[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-..
+[32mruby-2.0.0-p353 - #uninstalling gem rubygems-bundler-1.4.2[0m|.
+[32mruby-2.0.0-p353 - #gemset created /home/travis/.rvm/gems/ruby-2.0.0-p353[0m
+[32mruby-2.0.0-p353 - #importing gemset /home/travis/.rvm/gemsets/default.gems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+[32mruby-2.0.0-p353 - #generating default wrappers[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|.
+[32mUsing /home/travis/.rvm/gems/ruby-2.0.0-p353[0m
+travis_fold:end:rvm.1$ export BUNDLE_GEMFILE=$PWD/Gemfile
+$ ruby --version
+ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-linux]
+$ rvm --version
+
+rvm 1.25.25 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+
+$ gem --version
+2.2.2
+$ bundle --version
+Bundler version 1.6.2
+travis_fold:start:install$ bundle install --deployment
+Fetching gem metadata from https://rubygems.org/.........
+Fetching additional metadata from https://rubygems.org/..
+Installing rake 10.3.1
+Installing i18n 0.6.9
+Installing minitest 4.7.5
+Installing multi_json 1.10.0
+Installing thread_safe 0.3.3
+Installing tzinfo 0.3.39
+Installing activesupport 4.0.2
+Installing builder 3.1.4
+Installing erubis 2.7.0
+Installing rack 1.5.2
+Installing rack-test 0.6.2
+Installing actionpack 4.0.2
+Installing mime-types 1.25.1
+Installing polyglot 0.3.4
+Installing treetop 1.4.15
+Installing mail 2.5.4
+Installing actionmailer 4.0.2
+Installing activemodel 4.0.2
+Installing activerecord-deprecated_finders 1.0.3
+Installing arel 4.0.2
+Installing activerecord 4.0.2
+Installing bcrypt 3.1.7
+Installing bcrypt-ruby 3.1.5
+Installing mini_portile 0.5.3
+Installing nokogiri 1.6.1
+Installing xpath 2.0.0
+Installing capybara 2.1.0
+Installing coffee-script-source 1.7.0
+Installing execjs 2.0.2
+Installing coffee-script 2.2.0
+Installing thor 0.19.1
+Installing railties 4.0.2
+Installing coffee-rails 4.0.1
+Installing diff-lcs 1.2.5
+Installing factory_girl 4.4.0
+Installing factory_girl_rails 4.4.1
+Installing hike 1.2.3
+Installing jbuilder 1.5.3
+Installing jquery-rails 3.1.0
+Installing json 1.8.1
+Installing pg 0.17.1
+Using bundler 1.6.2
+Installing tilt 1.4.1
+Installing sprockets 2.11.0
+Installing sprockets-rails 2.0.1
+Installing rails 4.0.2
+Installing rails_serve_static_assets 0.0.2
+Installing rails_stdout_logging 0.0.3
+Installing rails_12factor 0.0.2
+Installing rdoc 4.1.1
+Installing rspec-core 2.14.8
+Installing rspec-expectations 2.14.5
+Installing rspec-mocks 2.14.6
+Installing rspec-rails 2.14.2
+Installing sass 3.2.19
+Installing sass-rails 4.0.3
+Installing sdoc 0.4.0
+Installing shoulda-matchers 2.6.1
+Installing turbolinks 2.2.2
+Installing uglifier 2.5.0
+Your bundle is complete!
+It was installed into ./vendor/bundle
+Post-install message from bcrypt-ruby:
+
+#######################################################
+
+The bcrypt-ruby gem has changed its name to just bcrypt.  Instead of
+installing `bcrypt-ruby`, you should install `bcrypt`.  Please update your
+dependencies accordingly.
+
+#######################################################
+
+Post-install message from capybara:
+IMPORTANT! Some of the defaults have changed in Capybara 2.1. If you're experiencing failures,
+please revert to the old behaviour by setting:
+
+    Capybara.configure do |config|
+      config.match = :one
+      config.exact_options = true
+      config.ignore_hidden_elements = true
+      config.visible_text_only = true
+    end
+
+If you're migrating from Capybara 1.x, try:
+
+    Capybara.configure do |config|
+      config.match = :prefer_exact
+      config.ignore_hidden_elements = false
+    end
+
+Details here: http://www.elabs.se/blog/60-introducing-capybara-2-1
+
+Post-install message from rdoc:
+Depending on your version of ruby, you may need to install ruby rdoc/ri data:
+
+<= 1.8.6 : unsupported
+ = 1.8.7 : gem install rdoc-data; rdoc-data --install
+ = 1.9.1 : gem install rdoc-data; rdoc-data --install
+>= 1.9.2 : nothing to do! Yay!
+travis_fold:end:install$ bundle exec rake
+/home/travis/.rvm/rubies/ruby-2.0.0-p353/bin/ruby -S rspec ./spec/controllers/group_dates_controller_spec.rb ./spec/controllers/group_members_controller_spec.rb ./spec/controllers/groups_controller_spec.rb ./spec/controllers/user_sessions_controller_spec.rb ./spec/controllers/users_controller_spec.rb ./spec/features/group_dates/create_spec.rb ./spec/features/group_dates/destroy_spec.rb ./spec/features/group_dates/edit_spec.rb ./spec/features/group_dates/index_spec.rb ./spec/features/group_members/create_spec.rb ./spec/features/group_members/destroy_spec.rb ./spec/features/group_members/edit_spec.rb ./spec/features/group_members/index_spec.rb ./spec/features/groups/create_spec.rb ./spec/features/groups/destroy_spec.rb ./spec/features/groups/edit_spec.rb ./spec/features/groups/index_spec.rb ./spec/features/users/authentication_spec.rb ./spec/features/users/registration_spec.rb ./spec/helpers/group_dates_helper_spec.rb ./spec/helpers/group_members_helper_spec.rb ./spec/helpers/groups_helper_spec.rb ./spec/helpers/user_sessions_helper_spec.rb ./spec/helpers/users_helper_spec.rb ./spec/models/group_date_spec.rb ./spec/models/group_members_spec.rb ./spec/models/group_spec.rb ./spec/models/user_spec.rb ./spec/routing/groups_routing_spec.rb ./spec/routing/users_routing_spec.rb ./spec/views/group_dates/index.html.erb_spec.rb ./spec/views/group_members/index.html.erb_spec.rb ./spec/views/groups/edit.html.erb_spec.rb ./spec/views/groups/index.html.erb_spec.rb ./spec/views/groups/new.html.erb_spec.rb ./spec/views/groups/show.html.erb_spec.rb ./spec/views/user_sessions/new.html.erb_spec.rb ./spec/views/users/edit.html.erb_spec.rb ./spec/views/users/new.html.erb_spec.rb ./spec/views/users/show.html.erb_spec.rb
+[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[31mF[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[31mF[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Failures:
+
+  1) User reletionships should have many groups
+     [31mFailure/Error:[0m [31mit { should have_many(:groups) }[0m
+       [31mExpected User to have a has_many association called groups (actual association type was has_and_belongs_to_many)[0m
+[36m     # ./spec/models/user_spec.rb:14:in `block (3 levels) in <top (required)>'[0m
+
+  2) Visiting group members displays the name of the group
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000005533478>[0m
+[36m     # ./spec/features/group_members/index_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  3) Visiting group members displays member content when a group has members
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000005627578>[0m
+[36m     # ./spec/features/group_members/index_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  4) Visiting group members displays no members when a group is empty
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000005887368>[0m
+[36m     # ./spec/features/group_members/index_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  5) Viewing group dates displays the name of the group
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000061de3a8>[0m
+[36m     # ./spec/features/group_dates/index_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  6) Viewing group dates displays date content when a group has dates
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000062058b8>[0m
+[36m     # ./spec/features/group_dates/index_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  7) Viewing group dates displays no items when a group date list is empty
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000006230db0>[0m
+[36m     # ./spec/features/group_dates/index_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  8) Group relationships should belong to user
+     [31mFailure/Error:[0m [31mit { should belong_to(:user) }[0m
+       [31mExpected Group to have a belongs_to association called user (actual association type was has_and_belongs_to_many)[0m
+[36m     # ./spec/models/group_spec.rb:7:in `block (3 levels) in <top (required)>'[0m
+
+  9) Deleting groups is successful when clicking the destroy link
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000062a02c8>[0m
+[36m     # ./spec/features/groups/destroy_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  10) Adding group dates is successful with valid name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000062d64e0>[0m
+[36m     # ./spec/features/group_members/create_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  11) Adding group dates displays an error with a name less then 2 characters long
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x0000000632a9c8>[0m
+[36m     # ./spec/features/group_members/create_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  12) Adding group dates displays an error with no place less then 2 characters long
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000063804b8>[0m
+[36m     # ./spec/features/group_members/create_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  13) Adding group dates displays an error with no email
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000063afa60>[0m
+[36m     # ./spec/features/group_members/create_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  14) Adding group dates displays an error with no name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000063d7128>[0m
+[36m     # ./spec/features/group_members/create_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  15) Editing group dates is successful with valid name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000064ad278>[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  16) Editing group dates is unsuccessful with not enough name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000064d06d8>[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  17) Editing group dates is unsuccessful with no name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000065026d8>[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  18) Adding group dates is successful with valid name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000005092f18>[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  19) Adding group dates displays an error with a name less then 2 characters long
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x0000000559ab28>[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  20) Adding group dates displays an error with no place less then 2 characters long
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x0000000567d9a0>[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  21) Adding group dates displays an error with no place
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000005a30638>[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  22) Adding group dates displays an error with no name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000005aefe98>[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  23) Editing members is successful with valid name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000005dc8688>[0m
+[36m     # ./spec/features/group_members/edit_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+[36m     # ./spec/features/group_members/edit_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  24) Editing members is unsuccessful with not enough name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000005ef9cf0>[0m
+[36m     # ./spec/features/group_members/edit_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+[36m     # ./spec/features/group_members/edit_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  25) Editing members is unsuccessful with no name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000005f3f8e0>[0m
+[36m     # ./spec/features/group_members/edit_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+[36m     # ./spec/features/group_members/edit_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  26) GroupsController GET index logged in assigns all groups as @groups
+     [31mFailure/Error:[0m [31mexpect(assigns(:groups).map(&:user)).to eq([user])[0m
+       [31m[0m
+       [31mexpected: [#<User id: 52, username: "user24@example.com", email: "user24@example.com", password_digest: "$2a$04$hg/8f2sjHW12q6FuO5T0R.EAP/jEq.4/ILGmSgjuTzUp...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>][0m
+       [31m     got: [#<ActiveRecord::Associations::CollectionProxy [#<User id: 52, username: "user24@example.com", email: "user24@example.com", password_digest: "$2a$04$hg/8f2sjHW12q6FuO5T0R.EAP/jEq.4/ILGmSgjuTzUp...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>]>][0m
+       [31m[0m
+       [31m(compared using ==)[0m
+       [31m[0m
+       [31mDiff:[0m
+       [31m[34m@@ -1,2 +1,2 @@[0m
+       [31m[0m[31m-[#<User id: 52, username: "user24@example.com", email: "user24@example.com", password_digest: "$2a$04$hg/8f2sjHW12q6FuO5T0R.EAP/jEq.4/ILGmSgjuTzUp...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>][0m
+       [31m[0m[32m+[[#<User id: 52, username: "user24@example.com", email: "user24@example.com", password_digest: "$2a$04$hg/8f2sjHW12q6FuO5T0R.EAP/jEq.4/ILGmSgjuTzUp...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>]][0m
+       [31m[0m[0m
+[36m     # ./spec/controllers/groups_controller_spec.rb:44:in `block (4 levels) in <top (required)>'[0m
+
+  27) GroupsController GET edit assigns the requested group as @group
+     [31mFailure/Error:[0m [31mexpect(assigns(:group).user).to eq(user)[0m
+       [31m[0m
+       [31mexpected: #<User id: 55, username: "user27@example.com", email: "user27@example.com", password_digest: "$2a$04$TAHCrqhXzEnTqeOByu0b0u0D05KrX8khxFLUq6AtE5VL...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>[0m
+       [31m     got: #<ActiveRecord::Associations::CollectionProxy [#<User id: 55, username: "user27@example.com", email: "user27@example.com", password_digest: "$2a$04$TAHCrqhXzEnTqeOByu0b0u0D05KrX8khxFLUq6AtE5VL...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>]>[0m
+       [31m[0m
+       [31m(compared using ==)[0m
+       [31m[0m
+       [31mDiff:[0m
+       [31m[34m@@ -1,2 +1,2 @@[0m
+       [31m[0m[31m-#<User id: 55, username: "user27@example.com", email: "user27@example.com", password_digest: "$2a$04$TAHCrqhXzEnTqeOByu0b0u0D05KrX8khxFLUq6AtE5VL...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>[0m
+       [31m[0m[32m+[#<User id: 55, username: "user27@example.com", email: "user27@example.com", password_digest: "$2a$04$TAHCrqhXzEnTqeOByu0b0u0D05KrX8khxFLUq6AtE5VL...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>][0m
+       [31m[0m[0m
+[36m     # ./spec/controllers/groups_controller_spec.rb:77:in `block (3 levels) in <top (required)>'[0m
+
+  28) GroupsController GET new assigns a new group as @group for the logged in user
+     [31mFailure/Error:[0m [31mexpect(assigns(:group).user).to eq(user)[0m
+       [31m[0m
+       [31mexpected: #<User id: 61, username: "user33@example.com", email: "user33@example.com", password_digest: "$2a$04$u85T8MreTgTL9L0XwaA4X.ZHkOQjkHqmF5hvABGdveTE...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>[0m
+       [31m     got: #<ActiveRecord::Associations::CollectionProxy []>[0m
+       [31m[0m
+       [31m(compared using ==)[0m
+       [31m[0m
+       [31mDiff:[0m
+       [31m[34m@@ -1,2 +1,2 @@[0m
+       [31m[0m[31m-#<User id: 61, username: "user33@example.com", email: "user33@example.com", password_digest: "$2a$04$u85T8MreTgTL9L0XwaA4X.ZHkOQjkHqmF5hvABGdveTE...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>[0m
+       [31m[0m[32m+[][0m
+       [31m[0m[0m
+[36m     # ./spec/controllers/groups_controller_spec.rb:68:in `block (3 levels) in <top (required)>'[0m
+
+  29) GroupsController POST create with valid params creates a group for the current user
+     [31mFailure/Error:[0m [31mexpect(group.user).to eq(user)[0m
+       [31m[0m
+       [31mexpected: #<User id: 63, username: "user35@example.com", email: "user35@example.com", password_digest: "$2a$04$G0uEcDu0OOZ.qUAdMk/tRu6rj4jCkJu5cqnR8s5KZTJS...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>[0m
+       [31m     got: #<ActiveRecord::Associations::CollectionProxy []>[0m
+       [31m[0m
+       [31m(compared using ==)[0m
+       [31m[0m
+       [31mDiff:[0m
+       [31m[34m@@ -1,2 +1,2 @@[0m
+       [31m[0m[31m-#<User id: 63, username: "user35@example.com", email: "user35@example.com", password_digest: "$2a$04$G0uEcDu0OOZ.qUAdMk/tRu6rj4jCkJu5cqnR8s5KZTJS...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>[0m
+       [31m[0m[32m+[][0m
+       [31m[0m[0m
+[36m     # ./spec/controllers/groups_controller_spec.rb:103:in `block (4 levels) in <top (required)>'[0m
+
+  30) GroupsController GET show assigns the requested group as @group for the logged in user
+     [31mFailure/Error:[0m [31mexpect(assigns(:group).user).to eq(user)[0m
+       [31m[0m
+       [31mexpected: #<User id: 68, username: "user40@example.com", email: "user40@example.com", password_digest: "$2a$04$7PND3TW1M2XkiYC0px11vuy62i7cgmTVM6pj1Ennr7kG...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>[0m
+       [31m     got: #<ActiveRecord::Associations::CollectionProxy [#<User id: 68, username: "user40@example.com", email: "user40@example.com", password_digest: "$2a$04$7PND3TW1M2XkiYC0px11vuy62i7cgmTVM6pj1Ennr7kG...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>]>[0m
+       [31m[0m
+       [31m(compared using ==)[0m
+       [31m[0m
+       [31mDiff:[0m
+       [31m[34m@@ -1,2 +1,2 @@[0m
+       [31m[0m[31m-#<User id: 68, username: "user40@example.com", email: "user40@example.com", password_digest: "$2a$04$7PND3TW1M2XkiYC0px11vuy62i7cgmTVM6pj1Ennr7kG...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>[0m
+       [31m[0m[32m+[#<User id: 68, username: "user40@example.com", email: "user40@example.com", password_digest: "$2a$04$7PND3TW1M2XkiYC0px11vuy62i7cgmTVM6pj1Ennr7kG...", created_at: "2014-05-14 21:05:29", updated_at: "2014-05-14 21:05:29", organizer: nil>][0m
+       [31m[0m[0m
+[36m     # ./spec/controllers/groups_controller_spec.rb:60:in `block (3 levels) in <top (required)>'[0m
+
+  31) Deleting group dates is successful
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000068ff808>[0m
+[36m     # ./spec/features/group_dates/destroy_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+[36m     # ./spec/features/group_dates/destroy_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  32) groups/show renders attributes in <p>
+     [31mFailure/Error:[0m [31mrender[0m
+     [31mActionView::Template::Error[0m:
+       [31mundefined method `name' for nil:NilClass[0m
+[36m     # ./app/views/groups/show.html.erb:2:in `_app_views_groups_show_html_erb___1950685308128767137_49932620'[0m
+[36m     # ./spec/views/groups/show.html.erb_spec.rb:11:in `block (2 levels) in <top (required)>'[0m
+
+  33) Creating groups redirects to the group list index page on success
+     [31mFailure/Error:[0m [31msign_in user, password: "treehouse1"[0m
+     [31mActionView::Template::Error[0m:
+       [31mundefined method `id' for nil:NilClass[0m
+[36m     # ./app/views/user_sessions/select_user.html.erb:4:in `block in _app_views_user_sessions_select_user_html_erb___1176172111280391906_50876800'[0m
+[36m     # ./app/views/user_sessions/select_user.html.erb:2:in `_app_views_user_sessions_select_user_html_erb___1176172111280391906_50876800'[0m
+[36m     # ./spec/support/authentication_helpers.rb:14:in `sign_in'[0m
+[36m     # ./spec/features/groups/create_spec.rb:7:in `block (2 levels) in <top (required)>'[0m
+
+  34) Creating groups displays an error when the group has a name less then 3 characters
+     [31mFailure/Error:[0m [31msign_in user, password: "treehouse1"[0m
+     [31mActionView::Template::Error[0m:
+       [31mundefined method `id' for nil:NilClass[0m
+[36m     # ./app/views/user_sessions/select_user.html.erb:4:in `block in _app_views_user_sessions_select_user_html_erb___1176172111280391906_50876800'[0m
+[36m     # ./app/views/user_sessions/select_user.html.erb:2:in `_app_views_user_sessions_select_user_html_erb___1176172111280391906_50876800'[0m
+[36m     # ./spec/support/authentication_helpers.rb:14:in `sign_in'[0m
+[36m     # ./spec/features/groups/create_spec.rb:7:in `block (2 levels) in <top (required)>'[0m
+
+  35) Creating groups displays an error when the group has no name
+     [31mFailure/Error:[0m [31msign_in user, password: "treehouse1"[0m
+     [31mActionView::Template::Error[0m:
+       [31mundefined method `id' for nil:NilClass[0m
+[36m     # ./app/views/user_sessions/select_user.html.erb:4:in `block in _app_views_user_sessions_select_user_html_erb___1176172111280391906_50876800'[0m
+[36m     # ./app/views/user_sessions/select_user.html.erb:2:in `_app_views_user_sessions_select_user_html_erb___1176172111280391906_50876800'[0m
+[36m     # ./spec/support/authentication_helpers.rb:14:in `sign_in'[0m
+[36m     # ./spec/features/groups/create_spec.rb:7:in `block (2 levels) in <top (required)>'[0m
+
+  36) Editing groups updates a group successfully with correct information
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000062e2c18>[0m
+[36m     # ./spec/features/groups/edit_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  37) Editing groups displays an error with too short a name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x00000006344760>[0m
+[36m     # ./spec/features/groups/edit_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  38) Editing groups displays an error with no name
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x0000000639a890>[0m
+[36m     # ./spec/features/groups/edit_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+  39) Deleting members is successful
+     [31mFailure/Error:[0m [31mlet!(:group) { create(:group) }[0m
+     [31mNoMethodError[0m:
+       [31mundefined method `each' for #<User:0x000000063c7ac0>[0m
+[36m     # ./spec/features/group_members/destroy_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+[36m     # ./spec/features/group_members/destroy_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 3.91 seconds
+[31m118 examples, 39 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/models/user_spec.rb:14[0m [36m# User reletionships should have many groups[0m
+[31mrspec ./spec/features/group_members/index_spec.rb:10[0m [36m# Visiting group members displays the name of the group[0m
+[31mrspec ./spec/features/group_members/index_spec.rb:22[0m [36m# Visiting group members displays member content when a group has members[0m
+[31mrspec ./spec/features/group_members/index_spec.rb:17[0m [36m# Visiting group members displays no members when a group is empty[0m
+[31mrspec ./spec/features/group_dates/index_spec.rb:10[0m [36m# Viewing group dates displays the name of the group[0m
+[31mrspec ./spec/features/group_dates/index_spec.rb:22[0m [36m# Viewing group dates displays date content when a group has dates[0m
+[31mrspec ./spec/features/group_dates/index_spec.rb:17[0m [36m# Viewing group dates displays no items when a group date list is empty[0m
+[31mrspec ./spec/models/group_spec.rb:7[0m [36m# Group relationships should belong to user[0m
+[31mrspec ./spec/features/groups/destroy_spec.rb:10[0m [36m# Deleting groups is successful when clicking the destroy link[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:8[0m [36m# Adding group dates is successful with valid name[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:30[0m [36m# Adding group dates displays an error with a name less then 2 characters long[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:52[0m [36m# Adding group dates displays an error with no place less then 2 characters long[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:41[0m [36m# Adding group dates displays an error with no email[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:19[0m [36m# Adding group dates displays an error with no name[0m
+[31mrspec ./spec/features/group_dates/edit_spec.rb:11[0m [36m# Editing group dates is successful with valid name[0m
+[31mrspec ./spec/features/group_dates/edit_spec.rb:44[0m [36m# Editing group dates is unsuccessful with not enough name[0m
+[31mrspec ./spec/features/group_dates/edit_spec.rb:27[0m [36m# Editing group dates is unsuccessful with no name[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:8[0m [36m# Adding group dates is successful with valid name[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:30[0m [36m# Adding group dates displays an error with a name less then 2 characters long[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:52[0m [36m# Adding group dates displays an error with no place less then 2 characters long[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:41[0m [36m# Adding group dates displays an error with no place[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:19[0m [36m# Adding group dates displays an error with no name[0m
+[31mrspec ./spec/features/group_members/edit_spec.rb:11[0m [36m# Editing members is successful with valid name[0m
+[31mrspec ./spec/features/group_members/edit_spec.rb:44[0m [36m# Editing members is unsuccessful with not enough name[0m
+[31mrspec ./spec/features/group_members/edit_spec.rb:27[0m [36m# Editing members is unsuccessful with no name[0m
+[31mrspec ./spec/controllers/groups_controller_spec.rb:40[0m [36m# GroupsController GET index logged in assigns all groups as @groups[0m
+[31mrspec ./spec/controllers/groups_controller_spec.rb:73[0m [36m# GroupsController GET edit assigns the requested group as @group[0m
+[31mrspec ./spec/controllers/groups_controller_spec.rb:65[0m [36m# GroupsController GET new assigns a new group as @group for the logged in user[0m
+[31mrspec ./spec/controllers/groups_controller_spec.rb:100[0m [36m# GroupsController POST create with valid params creates a group for the current user[0m
+[31mrspec ./spec/controllers/groups_controller_spec.rb:56[0m [36m# GroupsController GET show assigns the requested group as @group for the logged in user[0m
+[31mrspec ./spec/features/group_dates/destroy_spec.rb:11[0m [36m# Deleting group dates is successful[0m
+[31mrspec ./spec/views/groups/show.html.erb_spec.rb:10[0m [36m# groups/show renders attributes in <p>[0m
+[31mrspec ./spec/features/groups/create_spec.rb:10[0m [36m# Creating groups redirects to the group list index page on success[0m
+[31mrspec ./spec/features/groups/create_spec.rb:27[0m [36m# Creating groups displays an error when the group has a name less then 3 characters[0m
+[31mrspec ./spec/features/groups/create_spec.rb:15[0m [36m# Creating groups displays an error when the group has no name[0m
+[31mrspec ./spec/features/groups/edit_spec.rb:10[0m [36m# Editing groups updates a group successfully with correct information[0m
+[31mrspec ./spec/features/groups/edit_spec.rb:26[0m [36m# Editing groups displays an error with too short a name[0m
+[31mrspec ./spec/features/groups/edit_spec.rb:20[0m [36m# Editing groups displays an error with no name[0m
+[31mrspec ./spec/features/group_members/destroy_spec.rb:11[0m [36m# Deleting members is successful[0m
+
+Randomized with seed 9863
+
+/home/travis/.rvm/rubies/ruby-2.0.0-p353/bin/ruby -S rspec ./spec/controllers/group_dates_controller_spec.rb ./spec/controllers/group_members_controller_spec.rb ./spec/controllers/groups_controller_spec.rb ./spec/controllers/user_sessions_controller_spec.rb ./spec/controllers/users_controller_spec.rb ./spec/features/group_dates/create_spec.rb ./spec/features/group_dates/destroy_spec.rb ./spec/features/group_dates/edit_spec.rb ./spec/features/group_dates/index_spec.rb ./spec/features/group_members/create_spec.rb ./spec/features/group_members/destroy_spec.rb ./spec/features/group_members/edit_spec.rb ./spec/features/group_members/index_spec.rb ./spec/features/groups/create_spec.rb ./spec/features/groups/destroy_spec.rb ./spec/features/groups/edit_spec.rb ./spec/features/groups/index_spec.rb ./spec/features/users/authentication_spec.rb ./spec/features/users/registration_spec.rb ./spec/helpers/group_dates_helper_spec.rb ./spec/helpers/group_members_helper_spec.rb ./spec/helpers/groups_helper_spec.rb ./spec/helpers/user_sessions_helper_spec.rb ./spec/helpers/users_helper_spec.rb ./spec/models/group_date_spec.rb ./spec/models/group_members_spec.rb ./spec/models/group_spec.rb ./spec/models/user_spec.rb ./spec/routing/groups_routing_spec.rb ./spec/routing/users_routing_spec.rb ./spec/views/group_dates/index.html.erb_spec.rb ./spec/views/group_members/index.html.erb_spec.rb ./spec/views/groups/edit.html.erb_spec.rb ./spec/views/groups/index.html.erb_spec.rb ./spec/views/groups/new.html.erb_spec.rb ./spec/views/groups/show.html.erb_spec.rb ./spec/views/user_sessions/new.html.erb_spec.rb ./spec/views/users/edit.html.erb_spec.rb ./spec/views/users/new.html.erb_spec.rb ./spec/views/users/show.html.erb_spec.rb failed
+
+[31;1mThe command "bundle exec rake" exited with 1.[0m
+
+Done. Your build exited with 1.

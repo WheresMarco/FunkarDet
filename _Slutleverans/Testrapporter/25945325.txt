@@ -1,0 +1,331 @@
+Using worker: worker-linux-11-2.bb.travis-ci.org:travis-linux-10
+
+travis_fold:start:git.1$ git clone --depth=50 --branch=week-7 git://github.com/mh222zr/funkardet.git mh222zr/funkardet
+Cloning into 'mh222zr/funkardet'...
+remote: Reusing existing pack: 1018, done.[K
+remote: Counting objects: 63, done.[K
+remote: Compressing objects:   1% (1/62)   [Kremote: Compressing objects:   3% (2/62)   [Kremote: Compressing objects:   4% (3/62)   [Kremote: Compressing objects:   6% (4/62)   [Kremote: Compressing objects:   8% (5/62)   [Kremote: Compressing objects:   9% (6/62)   [Kremote: Compressing objects:  11% (7/62)   [Kremote: Compressing objects:  12% (8/62)   [Kremote: Compressing objects:  14% (9/62)   [Kremote: Compressing objects:  16% (10/62)   [Kremote: Compressing objects:  17% (11/62)   [Kremote: Compressing objects:  19% (12/62)   [Kremote: Compressing objects:  20% (13/62)   [Kremote: Compressing objects:  22% (14/62)   [Kremote: Compressing objects:  24% (15/62)   [Kremote: Compressing objects:  25% (16/62)   [Kremote: Compressing objects:  27% (17/62)   [Kremote: Compressing objects:  29% (18/62)   [Kremote: Compressing objects:  30% (19/62)   [Kremote: Compressing objects:  32% (20/62)   [Kremote: Compressing objects:  33% (21/62)   [Kremote: Compressing objects:  35% (22/62)   [Kremote: Compressing objects:  37% (23/62)   [Kremote: Compressing objects:  38% (24/62)   [Kremote: Compressing objects:  40% (25/62)   [Kremote: Compressing objects:  41% (26/62)   [Kremote: Compressing objects:  43% (27/62)   [Kremote: Compressing objects:  45% (28/62)   [Kremote: Compressing objects:  46% (29/62)   [Kremote: Compressing objects:  48% (30/62)   [Kremote: Compressing objects:  50% (31/62)   [Kremote: Compressing objects:  51% (32/62)   [Kremote: Compressing objects:  53% (33/62)   [Kremote: Compressing objects:  54% (34/62)   [Kremote: Compressing objects:  56% (35/62)   [Kremote: Compressing objects:  58% (36/62)   [Kremote: Compressing objects:  59% (37/62)   [Kremote: Compressing objects:  61% (38/62)   [Kremote: Compressing objects:  62% (39/62)   [Kremote: Compressing objects:  64% (40/62)   [Kremote: Compressing objects:  66% (41/62)   [Kremote: Compressing objects:  67% (42/62)   [Kremote: Compressing objects:  69% (43/62)   [Kremote: Compressing objects:  70% (44/62)   [Kremote: Compressing objects:  72% (45/62)   [Kremote: Compressing objects:  74% (46/62)   [Kremote: Compressing objects:  75% (47/62)   [Kremote: Compressing objects:  77% (48/62)   [Kremote: Compressing objects:  79% (49/62)   [Kremote: Compressing objects:  80% (50/62)   [Kremote: Compressing objects:  82% (51/62)   [Kremote: Compressing objects:  83% (52/62)   [Kremote: Compressing objects:  85% (53/62)   [Kremote: Compressing objects:  87% (54/62)   [Kremote: Compressing objects:  88% (55/62)   [Kremote: Compressing objects:  90% (56/62)   [Kremote: Compressing objects:  91% (57/62)   [Kremote: Compressing objects:  93% (58/62)   [Kremote: Compressing objects:  95% (59/62)   [Kremote: Compressing objects:  96% (60/62)   [Kremote: Compressing objects:  98% (61/62)   [Kremote: Compressing objects: 100% (62/62)   [Kremote: Compressing objects: 100% (62/62), done.[K
+Receiving objects:   0% (1/1081)   Receiving objects:   1% (11/1081)   Receiving objects:   2% (22/1081)   Receiving objects:   3% (33/1081)   Receiving objects:   4% (44/1081)   Receiving objects:   5% (55/1081)   Receiving objects:   6% (65/1081)   Receiving objects:   7% (76/1081)   Receiving objects:   8% (87/1081)   Receiving objects:   9% (98/1081)   Receiving objects:  10% (109/1081)   Receiving objects:  11% (119/1081)   Receiving objects:  12% (130/1081)   Receiving objects:  13% (141/1081)   Receiving objects:  14% (152/1081)   Receiving objects:  15% (163/1081)   Receiving objects:  16% (173/1081)   Receiving objects:  17% (184/1081)   Receiving objects:  18% (195/1081)   Receiving objects:  19% (206/1081)   Receiving objects:  20% (217/1081)   Receiving objects:  21% (228/1081)   Receiving objects:  22% (238/1081)   Receiving objects:  23% (249/1081)   Receiving objects:  24% (260/1081)   Receiving objects:  25% (271/1081)   Receiving objects:  26% (282/1081)   Receiving objects:  27% (292/1081)   Receiving objects:  28% (303/1081)   Receiving objects:  29% (314/1081)   Receiving objects:  30% (325/1081)   Receiving objects:  31% (336/1081)   remote: Total 1081 (delta 21), reused 0 (delta 0)[K
+Receiving objects:  32% (346/1081)   Receiving objects:  33% (357/1081)   Receiving objects:  34% (368/1081)   Receiving objects:  35% (379/1081)   Receiving objects:  36% (390/1081)   Receiving objects:  37% (400/1081)   Receiving objects:  38% (411/1081)   Receiving objects:  39% (422/1081)   Receiving objects:  40% (433/1081)   Receiving objects:  41% (444/1081)   Receiving objects:  42% (455/1081)   Receiving objects:  43% (465/1081)   Receiving objects:  44% (476/1081)   Receiving objects:  45% (487/1081)   Receiving objects:  46% (498/1081)   Receiving objects:  47% (509/1081)   Receiving objects:  48% (519/1081)   Receiving objects:  49% (530/1081)   Receiving objects:  50% (541/1081)   Receiving objects:  51% (552/1081)   Receiving objects:  52% (563/1081)   Receiving objects:  53% (573/1081)   Receiving objects:  54% (584/1081)   Receiving objects:  55% (595/1081)   Receiving objects:  56% (606/1081)   Receiving objects:  57% (617/1081)   Receiving objects:  58% (627/1081)   Receiving objects:  59% (638/1081)   Receiving objects:  60% (649/1081)   Receiving objects:  61% (660/1081)   Receiving objects:  62% (671/1081)   Receiving objects:  63% (682/1081)   Receiving objects:  64% (692/1081)   Receiving objects:  65% (703/1081)   Receiving objects:  66% (714/1081)   Receiving objects:  67% (725/1081)   Receiving objects:  68% (736/1081)   Receiving objects:  69% (746/1081)   Receiving objects:  70% (757/1081)   Receiving objects:  71% (768/1081)   Receiving objects:  72% (779/1081)   Receiving objects:  73% (790/1081)   Receiving objects:  74% (800/1081)   Receiving objects:  75% (811/1081)   Receiving objects:  76% (822/1081)   Receiving objects:  77% (833/1081)   Receiving objects:  78% (844/1081)   Receiving objects:  79% (854/1081)   Receiving objects:  80% (865/1081)   Receiving objects:  81% (876/1081)   Receiving objects:  82% (887/1081)   Receiving objects:  83% (898/1081)   Receiving objects:  84% (909/1081)   Receiving objects:  85% (919/1081)   Receiving objects:  86% (930/1081)   Receiving objects:  87% (941/1081)   Receiving objects:  88% (952/1081)   Receiving objects:  89% (963/1081)   Receiving objects:  90% (973/1081)   Receiving objects:  91% (984/1081)   Receiving objects:  92% (995/1081)   Receiving objects:  93% (1006/1081)   Receiving objects:  94% (1017/1081)   Receiving objects:  95% (1027/1081)   Receiving objects:  96% (1038/1081)   Receiving objects:  97% (1049/1081)   Receiving objects:  98% (1060/1081)   Receiving objects:  99% (1071/1081)   Receiving objects: 100% (1081/1081)   Receiving objects: 100% (1081/1081), 160.46 KiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/600)   Resolving deltas:   1% (6/600)   Resolving deltas:   3% (22/600)   Resolving deltas:   4% (27/600)   Resolving deltas:   5% (31/600)   Resolving deltas:   6% (38/600)   Resolving deltas:   7% (43/600)   Resolving deltas:  12% (76/600)   Resolving deltas:  17% (103/600)   Resolving deltas:  19% (116/600)   Resolving deltas:  21% (130/600)   Resolving deltas:  22% (135/600)   Resolving deltas:  23% (140/600)   Resolving deltas:  25% (150/600)   Resolving deltas:  26% (158/600)   Resolving deltas:  27% (165/600)   Resolving deltas:  28% (171/600)   Resolving deltas:  29% (174/600)   Resolving deltas:  30% (180/600)   Resolving deltas:  31% (187/600)   Resolving deltas:  36% (219/600)   Resolving deltas:  37% (224/600)   Resolving deltas:  38% (228/600)   Resolving deltas:  39% (236/600)   Resolving deltas:  40% (240/600)   Resolving deltas:  45% (270/600)   Resolving deltas:  46% (276/600)   Resolving deltas:  47% (283/600)   Resolving deltas:  50% (300/600)   Resolving deltas:  51% (307/600)   Resolving deltas:  52% (312/600)   Resolving deltas:  54% (327/600)   Resolving deltas:  55% (332/600)   Resolving deltas:  57% (345/600)   Resolving deltas:  58% (348/600)   Resolving deltas:  59% (357/600)   Resolving deltas:  60% (360/600)   Resolving deltas:  61% (367/600)   Resolving deltas:  62% (372/600)   Resolving deltas:  63% (381/600)   Resolving deltas:  64% (384/600)   Resolving deltas:  65% (392/600)   Resolving deltas:  66% (401/600)   Resolving deltas:  67% (406/600)   Resolving deltas:  68% (409/600)   Resolving deltas:  69% (414/600)   Resolving deltas:  70% (425/600)   Resolving deltas:  71% (427/600)   Resolving deltas:  72% (437/600)   Resolving deltas:  73% (439/600)   Resolving deltas:  76% (456/600)   Resolving deltas:  77% (463/600)   Resolving deltas:  78% (468/600)   Resolving deltas:  79% (476/600)   Resolving deltas:  80% (480/600)   Resolving deltas:  81% (487/600)   Resolving deltas:  82% (496/600)   Resolving deltas:  83% (498/600)   Resolving deltas:  84% (509/600)   Resolving deltas:  85% (515/600)   Resolving deltas:  86% (518/600)   Resolving deltas:  87% (524/600)   Resolving deltas:  88% (533/600)   Resolving deltas:  89% (535/600)   Resolving deltas:  91% (548/600)   Resolving deltas:  92% (554/600)   Resolving deltas:  93% (560/600)   Resolving deltas:  94% (565/600)   Resolving deltas:  95% (572/600)   Resolving deltas:  96% (579/600)   Resolving deltas:  97% (582/600)   Resolving deltas: 100% (600/600)   Resolving deltas: 100% (600/600), done.
+Checking connectivity... done.
+travis_fold:end:git.1$ cd mh222zr/funkardet
+travis_fold:start:git.3$ git checkout -qf a60fb3a0271a31ff7dc726afee3d0592db1791c6
+travis_fold:end:git.3travis_fold:start:rvm.1$ rvm use 2.0.0-p353 --install --binary --fuzzy
+[33mruby-2.0.0-p353 is not installed - installing.[0m
+[32mSearching for binary rubies, this might take some time.[0m
+[32mFound remote file https://rvm.io/binaries/ubuntu/12.04/x86_64/ruby-2.0.0-p353.tar.bz2[0m
+[32mChecking requirements for ubuntu.[0m
+[32mRequirements installation successful.[0m
+[32mruby-2.0.0-p353 - #configure[0m
+[32mruby-2.0.0-p353 - #download[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 26 19.5M   26 5359k    0     0  20.2M      0 --:--:-- --:--:-- --:--:-- 21.0M100 19.5M  100 19.5M    0     0  25.5M      0 --:--:-- --:--:-- --:--:-- 25.9M
+[32mruby-2.0.0-p353 - #validate archive[0m
+[32mruby-2.0.0-p353 - #extract[0m
+[32mruby-2.0.0-p353 - #validate binary[0m
+[32mruby-2.0.0-p353 - #setup[0m
+[32mruby-2.0.0-p353 - #making binaries executable[0m|/-\|/-\|.-\|/-\.
+[32mruby-2.0.0-p353 - #downloading rubygems-2.2.2[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  404k  100  404k    0     0  2361k      0 --:--:-- --:--:-- --:--:-- 2696k
+[32mruby-2.0.0-p353 - #extracting rubygems-2.2.2[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.
+[32mruby-2.0.0-p353 - #removing old rubygems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-.
+[32mruby-2.0.0-p353 - #installing rubygems-2.2.2[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|..
+[32mruby-2.0.0-p353 - #gemset created /home/travis/.rvm/gems/ruby-2.0.0-p353@global[0m
+[32mruby-2.0.0-p353 - #importing gemset /home/travis/.rvm/gemsets/global.gems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|.
+[32mruby-2.0.0-p353 - #generating global wrappers[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-..
+[32mruby-2.0.0-p353 - #uninstalling gem rubygems-bundler-1.4.2[0m|.
+[32mruby-2.0.0-p353 - #gemset created /home/travis/.rvm/gems/ruby-2.0.0-p353[0m
+[32mruby-2.0.0-p353 - #importing gemset /home/travis/.rvm/gemsets/default.gems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+[32mruby-2.0.0-p353 - #generating default wrappers[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|.
+[32mUsing /home/travis/.rvm/gems/ruby-2.0.0-p353[0m
+travis_fold:end:rvm.1$ export BUNDLE_GEMFILE=$PWD/Gemfile
+$ ruby --version
+ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-linux]
+$ rvm --version
+
+rvm 1.25.25 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+
+$ gem --version
+2.2.2
+$ bundle --version
+Bundler version 1.6.2
+travis_fold:start:install$ bundle install --deployment
+Fetching gem metadata from https://rubygems.org/.........
+Fetching additional metadata from https://rubygems.org/..
+Installing rake 10.3.1
+Installing i18n 0.6.9
+Installing minitest 4.7.5
+Installing multi_json 1.10.0
+Installing thread_safe 0.3.3
+Installing tzinfo 0.3.39
+Installing activesupport 4.0.2
+Installing builder 3.1.4
+Installing erubis 2.7.0
+Installing rack 1.5.2
+Installing rack-test 0.6.2
+Installing actionpack 4.0.2
+Installing mime-types 1.25.1
+Installing polyglot 0.3.4
+Installing treetop 1.4.15
+Installing mail 2.5.4
+Installing actionmailer 4.0.2
+Installing activemodel 4.0.2
+Installing activerecord-deprecated_finders 1.0.3
+Installing arel 4.0.2
+Installing activerecord 4.0.2
+Installing bcrypt 3.1.7
+Installing bcrypt-ruby 3.1.5
+Installing bootstrap_form 2.1.1
+Installing mini_portile 0.5.3
+Installing nokogiri 1.6.1
+Installing xpath 2.0.0
+Installing capybara 2.1.0
+Installing coffee-script-source 1.7.0
+Installing execjs 2.0.2
+Installing coffee-script 2.2.0
+Installing thor 0.19.1
+Installing railties 4.0.2
+Installing coffee-rails 4.0.1
+Installing diff-lcs 1.2.5
+Installing factory_girl 4.4.0
+Installing factory_girl_rails 4.4.1
+Installing hike 1.2.3
+Installing jbuilder 1.5.3
+Installing jquery-rails 3.1.0
+Installing json 1.8.1
+Installing pg 0.17.1
+Using bundler 1.6.2
+Installing tilt 1.4.1
+Installing sprockets 2.11.0
+Installing sprockets-rails 2.0.1
+Installing rails 4.0.2
+Installing rails_serve_static_assets 0.0.2
+Installing rails_stdout_logging 0.0.3
+Installing rails_12factor 0.0.2
+Installing rdoc 4.1.1
+Installing rspec-core 2.14.8
+Installing rspec-expectations 2.14.5
+Installing rspec-mocks 2.14.6
+Installing rspec-rails 2.14.2
+Installing sass 3.2.19
+Installing sass-rails 4.0.3
+Installing sdoc 0.4.0
+Installing shoulda-matchers 2.6.1
+Installing turbolinks 2.2.2
+Installing uglifier 2.5.0
+Your bundle is complete!
+It was installed into ./vendor/bundle
+Post-install message from bcrypt-ruby:
+
+#######################################################
+
+The bcrypt-ruby gem has changed its name to just bcrypt.  Instead of
+installing `bcrypt-ruby`, you should install `bcrypt`.  Please update your
+dependencies accordingly.
+
+#######################################################
+
+Post-install message from capybara:
+IMPORTANT! Some of the defaults have changed in Capybara 2.1. If you're experiencing failures,
+please revert to the old behaviour by setting:
+
+    Capybara.configure do |config|
+      config.match = :one
+      config.exact_options = true
+      config.ignore_hidden_elements = true
+      config.visible_text_only = true
+    end
+
+If you're migrating from Capybara 1.x, try:
+
+    Capybara.configure do |config|
+      config.match = :prefer_exact
+      config.ignore_hidden_elements = false
+    end
+
+Details here: http://www.elabs.se/blog/60-introducing-capybara-2-1
+
+Post-install message from rdoc:
+Depending on your version of ruby, you may need to install ruby rdoc/ri data:
+
+<= 1.8.6 : unsupported
+ = 1.8.7 : gem install rdoc-data; rdoc-data --install
+ = 1.9.1 : gem install rdoc-data; rdoc-data --install
+>= 1.9.2 : nothing to do! Yay!
+travis_fold:end:install$ bundle exec rake
+/home/travis/.rvm/rubies/ruby-2.0.0-p353/bin/ruby -S rspec ./spec/controllers/group_dates_controller_spec.rb ./spec/controllers/group_members_controller_spec.rb ./spec/controllers/groups_controller_spec.rb ./spec/controllers/user_sessions_controller_spec.rb ./spec/controllers/users_controller_spec.rb ./spec/features/group_dates/create_spec.rb ./spec/features/group_dates/destroy_spec.rb ./spec/features/group_dates/edit_spec.rb ./spec/features/group_dates/index_spec.rb ./spec/features/group_members/create_spec.rb ./spec/features/group_members/destroy_spec.rb ./spec/features/group_members/edit_spec.rb ./spec/features/group_members/index_spec.rb ./spec/features/groups/edit_spec.rb ./spec/features/groups/index_spec.rb ./spec/features/users/authentication_spec.rb ./spec/features/users/registration_spec.rb ./spec/helpers/group_dates_helper_spec.rb ./spec/helpers/group_members_helper_spec.rb ./spec/helpers/groups_helper_spec.rb ./spec/helpers/user_sessions_helper_spec.rb ./spec/helpers/users_helper_spec.rb ./spec/models/group_date_spec.rb ./spec/models/group_members_spec.rb ./spec/models/group_spec.rb ./spec/models/user_spec.rb ./spec/routing/groups_routing_spec.rb ./spec/routing/users_routing_spec.rb ./spec/views/group_dates/index.html.erb_spec.rb ./spec/views/group_members/index.html.erb_spec.rb ./spec/views/groups/edit.html.erb_spec.rb ./spec/views/groups/show.html.erb_spec.rb ./spec/views/user_sessions/new.html.erb_spec.rb ./spec/views/users/edit.html.erb_spec.rb ./spec/views/users/new.html.erb_spec.rb ./spec/views/users/show.html.erb_spec.rb
+[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m
+
+Failures:
+
+  1) Editing groups displays an error with too short a name
+     [31mFailure/Error:[0m [31mupdate_group group: group,[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "Edit Group"[0m
+[36m     # ./spec/support/group_helpers.rb:8:in `update_group'[0m
+[36m     # ./spec/features/groups/edit_spec.rb:27:in `block (2 levels) in <top (required)>'[0m
+
+  2) Editing groups displays an error with no name
+     [31mFailure/Error:[0m [31mupdate_group group: group,[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "Edit Group"[0m
+[36m     # ./spec/support/group_helpers.rb:8:in `update_group'[0m
+[36m     # ./spec/features/groups/edit_spec.rb:21:in `block (2 levels) in <top (required)>'[0m
+
+  3) Editing groups updates a group successfully with correct information
+     [31mFailure/Error:[0m [31mupdate_group group: group,[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "Edit Group"[0m
+[36m     # ./spec/support/group_helpers.rb:8:in `update_group'[0m
+[36m     # ./spec/features/groups/edit_spec.rb:11:in `block (2 levels) in <top (required)>'[0m
+
+  4) Logging in displays the email adress in the event of a faild login
+     [31mFailure/Error:[0m [31mexpect(page).to have_field("Username", with: "Jason")[0m
+     [31mCapybara::ExpectationNotMet[0m:
+       [31mexpected to find field "Username" but there were no matches. Also found "", which matched the selector but not all filters.[0m
+[36m     # ./spec/features/users/authentication_spec.rb:24:in `block (2 levels) in <top (required)>'[0m
+
+  5) Visiting group members displays member content when a group has members
+     [31mFailure/Error:[0m [31mexpect(page.all("ul.group_members li").size).to eq(1)[0m
+       [31m[0m
+       [31mexpected: 1[0m
+       [31m     got: 0[0m
+       [31m[0m
+       [31m(compared using ==)[0m
+[36m     # ./spec/features/group_members/index_spec.rb:27:in `block (2 levels) in <top (required)>'[0m
+
+  6) Deleting members is successful
+     [31mFailure/Error:[0m [31mclick_link "Delete"[0m
+     [31mActionView::MissingTemplate[0m:
+       [31mMissing template group_members/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:[0m
+       [31m  * "/home/travis/build/mh222zr/funkardet/app/views"[0m
+[36m     # ./spec/features/group_members/destroy_spec.rb:15:in `block (3 levels) in <top (required)>'[0m
+[36m     # ./spec/features/group_members/destroy_spec.rb:14:in `block (2 levels) in <top (required)>'[0m
+
+  7) Editing members is unsuccessful with not enough name
+     [31mFailure/Error:[0m [31mexpect(page).to have_content("Name is too short")[0m
+       [31mexpected to find text "Name is too short" in "Toggle navigation Groupname New date New member Edit group Log out ×Close That member could not be saved. Editing member Nameis too short (minimum is 2 characters) Email"[0m
+[36m     # ./spec/features/group_members/edit_spec.rb:55:in `block (2 levels) in <top (required)>'[0m
+
+  8) Editing members is unsuccessful with no name
+     [31mFailure/Error:[0m [31mexpect(page).to have_content("Name can't be blank")[0m
+       [31mexpected to find text "Name can't be blank" in "Toggle navigation Groupname New date New member Edit group Log out ×Close That member could not be saved. Editing member Namecan't be blank, is too short (minimum is 2 characters) Email"[0m
+[36m     # ./spec/features/group_members/edit_spec.rb:38:in `block (2 levels) in <top (required)>'[0m
+
+  9) Adding group dates displays an error with no place less then 2 characters long
+     [31mFailure/Error:[0m [31mcreate_group_date place: "1"[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "New Group Date"[0m
+[36m     # ./spec/support/group_date_helpers.rb:13:in `create_group_date'[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:54:in `block (2 levels) in <top (required)>'[0m
+
+  10) Adding group dates displays an error with no place
+     [31mFailure/Error:[0m [31mcreate_group_date place: ""[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "New Group Date"[0m
+[36m     # ./spec/support/group_date_helpers.rb:13:in `create_group_date'[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:43:in `block (2 levels) in <top (required)>'[0m
+
+  11) Adding group dates displays an error with a name less then 2 characters long
+     [31mFailure/Error:[0m [31mcreate_group_date name: "1"[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "New Group Date"[0m
+[36m     # ./spec/support/group_date_helpers.rb:13:in `create_group_date'[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:32:in `block (2 levels) in <top (required)>'[0m
+
+  12) Adding group dates displays an error with no name
+     [31mFailure/Error:[0m [31mcreate_group_date name: ""[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "New Group Date"[0m
+[36m     # ./spec/support/group_date_helpers.rb:13:in `create_group_date'[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:21:in `block (2 levels) in <top (required)>'[0m
+
+  13) Adding group dates is successful with valid name
+     [31mFailure/Error:[0m [31mcreate_group_date name: "Testdate"[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "New Group Date"[0m
+[36m     # ./spec/support/group_date_helpers.rb:13:in `create_group_date'[0m
+[36m     # ./spec/features/group_dates/create_spec.rb:10:in `block (2 levels) in <top (required)>'[0m
+
+  14) Editing group dates is unsuccessful with not enough name
+     [31mFailure/Error:[0m [31mexpect(page).to have_content("Name is too short")[0m
+       [31mexpected to find text "Name is too short" in "Toggle navigation Groupname New date New member Edit group Log out ×Close That grup date could not be saved. Edit date Nameis too short (minimum is 2 characters) Place From date20092010201120122013201420152016201720182019JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember12345678910111213141516171819202122232425262728293031 — 000102030405060708091011121314151617181920212223 : 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859 To date20092010201120122013201420152016201720182019JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember12345678910111213141516171819202122232425262728293031 — 000102030405060708091011121314151617181920212223 : 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859 Description A new sample text."[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:55:in `block (2 levels) in <top (required)>'[0m
+
+  15) Editing group dates is unsuccessful with no name
+     [31mFailure/Error:[0m [31mexpect(page).to have_content("Name can't be blank")[0m
+       [31mexpected to find text "Name can't be blank" in "Toggle navigation Groupname New date New member Edit group Log out ×Close That grup date could not be saved. Edit date Namecan't be blank, is too short (minimum is 2 characters) Place From date20092010201120122013201420152016201720182019JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember12345678910111213141516171819202122232425262728293031 — 000102030405060708091011121314151617181920212223 : 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859 To date20092010201120122013201420152016201720182019JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember12345678910111213141516171819202122232425262728293031 — 000102030405060708091011121314151617181920212223 : 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859 Description A new sample text."[0m
+[36m     # ./spec/features/group_dates/edit_spec.rb:38:in `block (2 levels) in <top (required)>'[0m
+
+  16) Adding group dates displays an error with no place less then 2 characters long
+     [31mFailure/Error:[0m [31mcreate_group_member email: "1"[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "New Member"[0m
+[36m     # ./spec/support/group_member_helpers.rb:10:in `create_group_member'[0m
+[36m     # ./spec/features/group_members/create_spec.rb:54:in `block (2 levels) in <top (required)>'[0m
+
+  17) Adding group dates displays an error with no email
+     [31mFailure/Error:[0m [31mcreate_group_member email: ""[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "New Member"[0m
+[36m     # ./spec/support/group_member_helpers.rb:10:in `create_group_member'[0m
+[36m     # ./spec/features/group_members/create_spec.rb:43:in `block (2 levels) in <top (required)>'[0m
+
+  18) Adding group dates displays an error with a name less then 2 characters long
+     [31mFailure/Error:[0m [31mcreate_group_member name: "1"[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "New Member"[0m
+[36m     # ./spec/support/group_member_helpers.rb:10:in `create_group_member'[0m
+[36m     # ./spec/features/group_members/create_spec.rb:32:in `block (2 levels) in <top (required)>'[0m
+
+  19) Adding group dates displays an error with no name
+     [31mFailure/Error:[0m [31mcreate_group_member name: ""[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "New Member"[0m
+[36m     # ./spec/support/group_member_helpers.rb:10:in `create_group_member'[0m
+[36m     # ./spec/features/group_members/create_spec.rb:21:in `block (2 levels) in <top (required)>'[0m
+
+  20) Adding group dates is successful with valid name
+     [31mFailure/Error:[0m [31mcreate_group_member name: "Test"[0m
+     [31mCapybara::ElementNotFound[0m:
+       [31mUnable to find link "New Member"[0m
+[36m     # ./spec/support/group_member_helpers.rb:10:in `create_group_member'[0m
+[36m     # ./spec/features/group_members/create_spec.rb:10:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 7.6 seconds
+[31m101 examples, 20 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/features/groups/edit_spec.rb:26[0m [36m# Editing groups displays an error with too short a name[0m
+[31mrspec ./spec/features/groups/edit_spec.rb:20[0m [36m# Editing groups displays an error with no name[0m
+[31mrspec ./spec/features/groups/edit_spec.rb:10[0m [36m# Editing groups updates a group successfully with correct information[0m
+[31mrspec ./spec/features/users/authentication_spec.rb:17[0m [36m# Logging in displays the email adress in the event of a faild login[0m
+[31mrspec ./spec/features/group_members/index_spec.rb:22[0m [36m# Visiting group members displays member content when a group has members[0m
+[31mrspec ./spec/features/group_members/destroy_spec.rb:11[0m [36m# Deleting members is successful[0m
+[31mrspec ./spec/features/group_members/edit_spec.rb:44[0m [36m# Editing members is unsuccessful with not enough name[0m
+[31mrspec ./spec/features/group_members/edit_spec.rb:27[0m [36m# Editing members is unsuccessful with no name[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:52[0m [36m# Adding group dates displays an error with no place less then 2 characters long[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:41[0m [36m# Adding group dates displays an error with no place[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:30[0m [36m# Adding group dates displays an error with a name less then 2 characters long[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:19[0m [36m# Adding group dates displays an error with no name[0m
+[31mrspec ./spec/features/group_dates/create_spec.rb:8[0m [36m# Adding group dates is successful with valid name[0m
+[31mrspec ./spec/features/group_dates/edit_spec.rb:44[0m [36m# Editing group dates is unsuccessful with not enough name[0m
+[31mrspec ./spec/features/group_dates/edit_spec.rb:27[0m [36m# Editing group dates is unsuccessful with no name[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:52[0m [36m# Adding group dates displays an error with no place less then 2 characters long[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:41[0m [36m# Adding group dates displays an error with no email[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:30[0m [36m# Adding group dates displays an error with a name less then 2 characters long[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:19[0m [36m# Adding group dates displays an error with no name[0m
+[31mrspec ./spec/features/group_members/create_spec.rb:8[0m [36m# Adding group dates is successful with valid name[0m
+
+Randomized with seed 39332
+
+/home/travis/.rvm/rubies/ruby-2.0.0-p353/bin/ruby -S rspec ./spec/controllers/group_dates_controller_spec.rb ./spec/controllers/group_members_controller_spec.rb ./spec/controllers/groups_controller_spec.rb ./spec/controllers/user_sessions_controller_spec.rb ./spec/controllers/users_controller_spec.rb ./spec/features/group_dates/create_spec.rb ./spec/features/group_dates/destroy_spec.rb ./spec/features/group_dates/edit_spec.rb ./spec/features/group_dates/index_spec.rb ./spec/features/group_members/create_spec.rb ./spec/features/group_members/destroy_spec.rb ./spec/features/group_members/edit_spec.rb ./spec/features/group_members/index_spec.rb ./spec/features/groups/edit_spec.rb ./spec/features/groups/index_spec.rb ./spec/features/users/authentication_spec.rb ./spec/features/users/registration_spec.rb ./spec/helpers/group_dates_helper_spec.rb ./spec/helpers/group_members_helper_spec.rb ./spec/helpers/groups_helper_spec.rb ./spec/helpers/user_sessions_helper_spec.rb ./spec/helpers/users_helper_spec.rb ./spec/models/group_date_spec.rb ./spec/models/group_members_spec.rb ./spec/models/group_spec.rb ./spec/models/user_spec.rb ./spec/routing/groups_routing_spec.rb ./spec/routing/users_routing_spec.rb ./spec/views/group_dates/index.html.erb_spec.rb ./spec/views/group_members/index.html.erb_spec.rb ./spec/views/groups/edit.html.erb_spec.rb ./spec/views/groups/show.html.erb_spec.rb ./spec/views/user_sessions/new.html.erb_spec.rb ./spec/views/users/edit.html.erb_spec.rb ./spec/views/users/new.html.erb_spec.rb ./spec/views/users/show.html.erb_spec.rb failed
+
+[31;1mThe command "bundle exec rake" exited with 1.[0m
+
+Done. Your build exited with 1.
