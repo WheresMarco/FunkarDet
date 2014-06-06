@@ -2,6 +2,10 @@ sv:
   flash:
     close: "Stäng"
     logged-in-required: "Du måste vara inloggad för att se den sidan."
+
+    signup:
+      added: "Tack för att du har registrerat dig"
+      
     group:
       added-date: "Lade till datum."
       added-date-error: "Ett fel uppstod när datumet skulle sparas."
@@ -104,7 +108,7 @@ sv:
 
     organizer:
       answerd:
-        attending: "Närvarande"
+        attending: "Dessa har svarat:"
         delete: "Radera"
         delete-text: "Är du säker?"
         edit: "Redigera"

@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def create
     params[:user][:organizer] = true
     params[:group][:email] = "none@email.com"
-    
+
     @user = User.new(user_params)
     @group_user = User.new(group_user_params)
 
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
         @group_member = GroupsUsers.new(group_id: @group.group_id, user_id: @group_user.id)
         @group_member.save
 
-        format.html { redirect_to groups_path, success: 'Thanks for signing up!' }
+        format.html { redirect_to groups_path, success: t('flash.signup.added') }
         format.json { render action: 'show', status: :created, location: @user }
       else
         format.html { render action: 'new' }

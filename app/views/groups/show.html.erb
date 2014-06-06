@@ -74,7 +74,7 @@
       <div class="col-md-3 col-sm-4 group-date" id="<%= dom_id(group_date) %>">
         <h4><%= group_date.name %> <small><%= group_date.from_date.strftime("%d/%m - %H:%M:%S") %></small></h4>
         <p><%= group_date.description %></p>
-      
+
         <h5><%=t 'group.organizer.answerd.attending' %></h5>
         <ul>
           <% group_date.group_date_attendances.each do |answer| %>
@@ -115,9 +115,9 @@
                   <td><%= group_member.email %></td>
                   <td>
                     <span class="pull-right">
-                      <%= link_to raw('<span class="glyphicon glyphicon-pencil"></span> '), edit_group_group_member_path(@group, group_member) %>
-                      <%= link_to raw('<span class="glyphicon glyphicon-remove"></span> '), group_group_member_path(@group, group_member), method: :delete,
-                          data: { confirm: t('group.organizer.members.delete-text') } %>
+                      <%= link_to t('group.organizer.members.edit'), edit_group_group_member_path(@group, group_member) %> |
+                      <%= link_to t('group.organizer.members.delete'), group_group_member_path(@group, group_member), method: :delete,
+                        data: { confirm: t('group.organizer.members.delete-text') } %>
                     </span>
                   </td>
                 </tr>
