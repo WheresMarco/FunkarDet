@@ -2,6 +2,10 @@ en:
   flash:
     close: "Close"
     logged-in-required: "You must be logged in to access that page."
+
+    signup:
+      added: "Thanks for signing up"
+
     group:
       added-date: "Added date."
       added-date-error: "Threre was a problem adding that date."
@@ -41,6 +45,10 @@ en:
       log-out: "Log out"
       sign-up: "Sign Up"
       sign-in: "Sign In"
+
+    footer:
+      change-lang: "Change language to Swedish"
+      text: "* The application is under development and Funkar det takes no responsibility for data loss."
 
   signup:
     signup-box:
@@ -84,7 +92,7 @@ en:
     user:
       unanswerd:
         title:
-          html: "Hi! You have <strong>%{number_of_group_dates_unanswerd}</strong> unanswered %{date_text}"
+          html: "Hi! You have <strong>%{number_of_group_dates_unanswerd}</strong> unanswered dates"
         confirm: "Yes"
         maybe: "Maybe"
         decline: "No"
@@ -100,7 +108,7 @@ en:
 
     organizer:
       answerd:
-        attending: "Attending"
+        attending: "These people have answered:"
         delete: "Delete"
         delete-text: "Are you sure?"
         edit: "Edit"

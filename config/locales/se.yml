@@ -2,6 +2,10 @@ sv:
   flash:
     close: "Stäng"
     logged-in-required: "Du måste vara inloggad för att se den sidan."
+
+    signup:
+      added: "Tack för att du har registrerat dig"
+      
     group:
       added-date: "Lade till datum."
       added-date-error: "Ett fel uppstod när datumet skulle sparas."
@@ -41,6 +45,10 @@ sv:
       log-out: "Logga ut"
       sign-up: "Registrera"
       sign-in: "Logga in"
+
+    footer:
+      change-lang: "Byt språk till Engelska"
+      text: "* Applikationen är under uppbyggad och Funkar det tar inget ansvar för förlorad data."
 
   signup:
     signup-box:
@@ -84,7 +92,7 @@ sv:
     user:
       unanswerd:
         title:
-          html: "Hej! Du har <strong>%{number_of_group_dates_unanswerd}</strong> osparade %{date_text}"
+          html: "Hej! Du har <strong>%{number_of_group_dates_unanswerd}</strong> osparade datum"
         confirm: "Ja"
         maybe: "Kanske"
         decline: "Nej"
@@ -100,7 +108,7 @@ sv:
 
     organizer:
       answerd:
-        attending: "Närvarande"
+        attending: "Dessa har svarat:"
         delete: "Radera"
         delete-text: "Är du säker?"
         edit: "Redigera"
@@ -123,8 +131,8 @@ sv:
       title: "Nytt datum"
       name: "Namn"
       place: "Plats"
-      from-date: "Från"
-      to-date: "Till"
+      from-date: "Från-datum"
+      to-date: "Till-datum"
       description: "Beskrivning"
       submit: "Lägg till datum"
 
