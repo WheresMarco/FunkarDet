@@ -1,169 +1,0 @@
-Using worker: worker-linux-5-1.bb.travis-ci.org:travis-linux-15
-
-travis_fold:start:git.1$ git clone --depth=50 --branch=vecka_4 git://github.com/mh222zr/funkardet.git mh222zr/funkardet
-Cloning into 'mh222zr/funkardet'...
-remote: Counting objects: 638, done.[K
-remote: Compressing objects:   0% (1/455)   [Kremote: Compressing objects:   1% (5/455)   [Kremote: Compressing objects:   2% (10/455)   [Kremote: Compressing objects:   3% (14/455)   [Kremote: Compressing objects:   4% (19/455)   [Kremote: Compressing objects:   5% (23/455)   [Kremote: Compressing objects:   6% (28/455)   [Kremote: Compressing objects:   7% (32/455)   [Kremote: Compressing objects:   8% (37/455)   [Kremote: Compressing objects:   9% (41/455)   [Kremote: Compressing objects:  10% (46/455)   [Kremote: Compressing objects:  11% (51/455)   [Kremote: Compressing objects:  12% (55/455)   [Kremote: Compressing objects:  13% (60/455)   [Kremote: Compressing objects:  14% (64/455)   [Kremote: Compressing objects:  15% (69/455)   [Kremote: Compressing objects:  16% (73/455)   [Kremote: Compressing objects:  17% (78/455)   [Kremote: Compressing objects:  18% (82/455)   [Kremote: Compressing objects:  19% (87/455)   [Kremote: Compressing objects:  20% (91/455)   [Kremote: Compressing objects:  21% (96/455)   [Kremote: Compressing objects:  22% (101/455)   [Kremote: Compressing objects:  23% (105/455)   [Kremote: Compressing objects:  24% (110/455)   [Kremote: Compressing objects:  25% (114/455)   [Kremote: Compressing objects:  26% (119/455)   [Kremote: Compressing objects:  27% (123/455)   [Kremote: Compressing objects:  28% (128/455)   [Kremote: Compressing objects:  29% (132/455)   [Kremote: Compressing objects:  30% (137/455)   [Kremote: Compressing objects:  31% (142/455)   [Kremote: Compressing objects:  32% (146/455)   [Kremote: Compressing objects:  33% (151/455)   [Kremote: Compressing objects:  34% (155/455)   [Kremote: Compressing objects:  35% (160/455)   [Kremote: Compressing objects:  36% (164/455)   [Kremote: Compressing objects:  37% (169/455)   [Kremote: Compressing objects:  38% (173/455)   [Kremote: Compressing objects:  39% (178/455)   [Kremote: Compressing objects:  40% (182/455)   [Kremote: Compressing objects:  41% (187/455)   [Kremote: Compressing objects:  42% (192/455)   [Kremote: Compressing objects:  43% (196/455)   [Kremote: Compressing objects:  44% (201/455)   [Kremote: Compressing objects:  45% (205/455)   [Kremote: Compressing objects:  46% (210/455)   [Kremote: Compressing objects:  47% (214/455)   [Kremote: Compressing objects:  48% (219/455)   [Kremote: Compressing objects:  49% (223/455)   [Kremote: Compressing objects:  50% (228/455)   [Kremote: Compressing objects:  51% (233/455)   [Kremote: Compressing objects:  52% (237/455)   [Kremote: Compressing objects:  53% (242/455)   [Kremote: Compressing objects:  54% (246/455)   [Kremote: Compressing objects:  55% (251/455)   [Kremote: Compressing objects:  56% (255/455)   [Kremote: Compressing objects:  57% (260/455)   [Kremote: Compressing objects:  58% (264/455)   [Kremote: Compressing objects:  59% (269/455)   [Kremote: Compressing objects:  60% (273/455)   [Kremote: Compressing objects:  61% (278/455)   [Kremote: Compressing objects:  62% (283/455)   [Kremote: Compressing objects:  63% (287/455)   [Kremote: Compressing objects:  64% (292/455)   [Kremote: Compressing objects:  65% (296/455)   [Kremote: Compressing objects:  66% (301/455)   [Kremote: Compressing objects:  67% (305/455)   [Kremote: Compressing objects:  68% (310/455)   [Kremote: Compressing objects:  69% (314/455)   [Kremote: Compressing objects:  70% (319/455)   [Kremote: Compressing objects:  71% (324/455)   [Kremote: Compressing objects:  72% (328/455)   [Kremote: Compressing objects:  73% (333/455)   [Kremote: Compressing objects:  74% (337/455)   [Kremote: Compressing objects:  75% (342/455)   [Kremote: Compressing objects:  76% (346/455)   [Kremote: Compressing objects:  77% (351/455)   [Kremote: Compressing objects:  78% (355/455)   [Kremote: Compressing objects:  79% (360/455)   [Kremote: Compressing objects:  80% (364/455)   [Kremote: Compressing objects:  81% (369/455)   [Kremote: Compressing objects:  82% (374/455)   [Kremote: Compressing objects:  83% (378/455)   [Kremote: Compressing objects:  84% (383/455)   [Kremote: Compressing objects:  85% (387/455)   [Kremote: Compressing objects:  86% (392/455)   [Kremote: Compressing objects:  87% (396/455)   [Kremote: Compressing objects:  88% (401/455)   [Kremote: Compressing objects:  89% (405/455)   [Kremote: Compressing objects:  90% (410/455)   [Kremote: Compressing objects:  91% (415/455)   [Kremote: Compressing objects:  92% (419/455)   [Kremote: Compressing objects:  93% (424/455)   [Kremote: Compressing objects:  94% (428/455)   [Kremote: Compressing objects:  95% (433/455)   [Kremote: Compressing objects:  96% (437/455)   [Kremote: Compressing objects:  97% (442/455)   [Kremote: Compressing objects:  98% (446/455)   [Kremote: Compressing objects:  99% (451/455)   [Kremote: Compressing objects: 100% (455/455)   [Kremote: Compressing objects: 100% (455/455), done.[K
-Receiving objects:   0% (1/638)   Receiving objects:   1% (7/638)   Receiving objects:   2% (13/638)   Receiving objects:   3% (20/638)   Receiving objects:   4% (26/638)   Receiving objects:   5% (32/638)   Receiving objects:   6% (39/638)   Receiving objects:   7% (45/638)   Receiving objects:   8% (52/638)   Receiving objects:   9% (58/638)   Receiving objects:  10% (64/638)   Receiving objects:  11% (71/638)   Receiving objects:  12% (77/638)   Receiving objects:  13% (83/638)   Receiving objects:  14% (90/638)   remote: Total 638 (delta 311), reused 334 (delta 136)[K
-Receiving objects:  15% (96/638)   Receiving objects:  16% (103/638)   Receiving objects:  17% (109/638)   Receiving objects:  18% (115/638)   Receiving objects:  19% (122/638)   Receiving objects:  20% (128/638)   Receiving objects:  21% (134/638)   Receiving objects:  22% (141/638)   Receiving objects:  23% (147/638)   Receiving objects:  24% (154/638)   Receiving objects:  25% (160/638)   Receiving objects:  26% (166/638)   Receiving objects:  27% (173/638)   Receiving objects:  28% (179/638)   Receiving objects:  29% (186/638)   Receiving objects:  30% (192/638)   Receiving objects:  31% (198/638)   Receiving objects:  32% (205/638)   Receiving objects:  33% (211/638)   Receiving objects:  34% (217/638)   Receiving objects:  35% (224/638)   Receiving objects:  36% (230/638)   Receiving objects:  37% (237/638)   Receiving objects:  38% (243/638)   Receiving objects:  39% (249/638)   Receiving objects:  40% (256/638)   Receiving objects:  41% (262/638)   Receiving objects:  42% (268/638)   Receiving objects:  43% (275/638)   Receiving objects:  44% (281/638)   Receiving objects:  45% (288/638)   Receiving objects:  46% (294/638)   Receiving objects:  47% (300/638)   Receiving objects:  48% (307/638)   Receiving objects:  49% (313/638)   Receiving objects:  50% (319/638)   Receiving objects:  51% (326/638)   Receiving objects:  52% (332/638)   Receiving objects:  53% (339/638)   Receiving objects:  54% (345/638)   Receiving objects:  55% (351/638)   Receiving objects:  56% (358/638)   Receiving objects:  57% (364/638)   Receiving objects:  58% (371/638)   Receiving objects:  59% (377/638)   Receiving objects:  60% (383/638)   Receiving objects:  61% (390/638)   Receiving objects:  62% (396/638)   Receiving objects:  63% (402/638)   Receiving objects:  64% (409/638)   Receiving objects:  65% (415/638)   Receiving objects:  66% (422/638)   Receiving objects:  67% (428/638)   Receiving objects:  68% (434/638)   Receiving objects:  69% (441/638)   Receiving objects:  70% (447/638)   Receiving objects:  71% (453/638)   Receiving objects:  72% (460/638)   Receiving objects:  73% (466/638)   Receiving objects:  74% (473/638)   Receiving objects:  75% (479/638)   Receiving objects:  76% (485/638)   Receiving objects:  77% (492/638)   Receiving objects:  78% (498/638)   Receiving objects:  79% (505/638)   Receiving objects:  80% (511/638)   Receiving objects:  81% (517/638)   Receiving objects:  82% (524/638)   Receiving objects:  83% (530/638)   Receiving objects:  84% (536/638)   Receiving objects:  85% (543/638)   Receiving objects:  86% (549/638)   Receiving objects:  87% (556/638)   Receiving objects:  88% (562/638)   Receiving objects:  89% (568/638)   Receiving objects:  90% (575/638)   Receiving objects:  91% (581/638)   Receiving objects:  92% (587/638)   Receiving objects:  93% (594/638)   Receiving objects:  94% (600/638)   Receiving objects:  95% (607/638)   Receiving objects:  96% (613/638)   Receiving objects:  97% (619/638)   Receiving objects:  98% (626/638)   Receiving objects:  99% (632/638)   Receiving objects: 100% (638/638)   Receiving objects: 100% (638/638), 77.69 KiB | 0 bytes/s, done.
-Resolving deltas:   0% (0/311)   Resolving deltas:   1% (6/311)   Resolving deltas:   2% (7/311)   Resolving deltas:   7% (23/311)   Resolving deltas:   8% (26/311)   Resolving deltas:  11% (35/311)   Resolving deltas:  12% (38/311)   Resolving deltas:  13% (43/311)   Resolving deltas:  17% (53/311)   Resolving deltas:  18% (59/311)   Resolving deltas:  22% (69/311)   Resolving deltas:  24% (75/311)   Resolving deltas:  25% (78/311)   Resolving deltas:  26% (83/311)   Resolving deltas:  27% (85/311)   Resolving deltas:  28% (90/311)   Resolving deltas:  30% (96/311)   Resolving deltas:  33% (104/311)   Resolving deltas:  36% (113/311)   Resolving deltas:  39% (124/311)   Resolving deltas:  41% (129/311)   Resolving deltas:  42% (132/311)   Resolving deltas:  43% (134/311)   Resolving deltas:  44% (137/311)   Resolving deltas:  45% (140/311)   Resolving deltas:  46% (146/311)   Resolving deltas:  47% (147/311)   Resolving deltas:  48% (150/311)   Resolving deltas:  49% (153/311)   Resolving deltas:  51% (160/311)   Resolving deltas:  54% (168/311)   Resolving deltas:  55% (174/311)   Resolving deltas:  57% (178/311)   Resolving deltas:  58% (182/311)   Resolving deltas:  61% (190/311)   Resolving deltas:  62% (193/311)   Resolving deltas:  63% (199/311)   Resolving deltas:  64% (202/311)   Resolving deltas:  66% (206/311)   Resolving deltas:  67% (210/311)   Resolving deltas:  68% (214/311)   Resolving deltas:  69% (215/311)   Resolving deltas:  71% (223/311)   Resolving deltas:  72% (224/311)   Resolving deltas:  73% (228/311)   Resolving deltas:  74% (231/311)   Resolving deltas:  76% (237/311)   Resolving deltas:  77% (241/311)   Resolving deltas:  78% (243/311)   Resolving deltas:  79% (247/311)   Resolving deltas:  80% (249/311)   Resolving deltas:  81% (254/311)   Resolving deltas:  82% (258/311)   Resolving deltas:  83% (259/311)   Resolving deltas:  84% (262/311)   Resolving deltas:  85% (265/311)   Resolving deltas: 100% (311/311)   Resolving deltas: 100% (311/311), done.
-Checking connectivity... done.
-travis_fold:end:git.1$ cd mh222zr/funkardet
-travis_fold:start:git.3$ git checkout -qf 61840a2fd1e4352257b7a844b55129b791cf036a
-travis_fold:end:git.3travis_fold:start:rvm.1$ rvm use 2.0.0-p353 --install --binary --fuzzy
-[33mruby-2.0.0-p353 is not installed - installing.[0m
-[32mSearching for binary rubies, this might take some time.[0m
-[32mFound remote file https://rvm.io/binaries/ubuntu/12.04/x86_64/ruby-2.0.0-p353.tar.bz2[0m
-[32mChecking requirements for ubuntu.[0m
-[32mRequirements installation successful.[0m
-[32mruby-2.0.0-p353 - #configure[0m
-[32mruby-2.0.0-p353 - #download[0m
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 46 19.5M   46 9327k    0     0  17.4M      0  0:00:01 --:--:--  0:00:01 17.8M100 19.5M  100 19.5M    0     0  21.6M      0 --:--:-- --:--:-- --:--:-- 21.8M
-[32mruby-2.0.0-p353 - #validate archive[0m
-[32mruby-2.0.0-p353 - #extract[0m
-[32mruby-2.0.0-p353 - #validate binary[0m
-[32mruby-2.0.0-p353 - #setup[0m
-[32mruby-2.0.0-p353 - #making binaries executable[0m|/-\|/-\|.-\|/-\.
-[32mruby-2.0.0-p353 - #downloading rubygems-2.2.2[0m
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100  404k  100  404k    0     0   199k      0  0:00:02  0:00:02 --:--:--  747k
-[32mruby-2.0.0-p353 - #extracting rubygems-2.2.2[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.
-[32mruby-2.0.0-p353 - #removing old rubygems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-.
-[32mruby-2.0.0-p353 - #installing rubygems-2.2.2[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|..
-[32mruby-2.0.0-p353 - #gemset created /home/travis/.rvm/gems/ruby-2.0.0-p353@global[0m
-[32mruby-2.0.0-p353 - #importing gemset /home/travis/.rvm/gemsets/global.gems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|.
-[32mruby-2.0.0-p353 - #generating global wrappers[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-..
-[32mruby-2.0.0-p353 - #uninstalling gem rubygems-bundler-1.4.2[0m|.
-[32mruby-2.0.0-p353 - #gemset created /home/travis/.rvm/gems/ruby-2.0.0-p353[0m
-[32mruby-2.0.0-p353 - #importing gemset /home/travis/.rvm/gemsets/default.gems[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
-[32mruby-2.0.0-p353 - #generating default wrappers[0m|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|.
-[32mUsing /home/travis/.rvm/gems/ruby-2.0.0-p353[0m
-travis_fold:end:rvm.1$ export BUNDLE_GEMFILE=$PWD/Gemfile
-$ ruby --version
-ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-linux]
-$ rvm --version
-
-rvm 1.25.25 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
-
-$ gem --version
-2.2.2
-$ bundle --version
-Bundler version 1.6.2
-travis_fold:start:install$ bundle install --deployment
-Fetching gem metadata from https://rubygems.org/.........
-Fetching additional metadata from https://rubygems.org/..
-Installing rake 10.3.1
-Installing i18n 0.6.9
-Installing minitest 4.7.5
-Installing multi_json 1.10.0
-Installing thread_safe 0.3.3
-Installing tzinfo 0.3.39
-Installing activesupport 4.0.2
-Installing builder 3.1.4
-Installing erubis 2.7.0
-Installing rack 1.5.2
-Installing rack-test 0.6.2
-Installing actionpack 4.0.2
-Installing mime-types 1.25.1
-Installing polyglot 0.3.4
-Installing treetop 1.4.15
-Installing mail 2.5.4
-Installing actionmailer 4.0.2
-Installing activemodel 4.0.2
-Installing activerecord-deprecated_finders 1.0.3
-Installing arel 4.0.2
-Installing activerecord 4.0.2
-Installing bcrypt 3.1.7
-Installing bcrypt-ruby 3.1.5
-Installing mini_portile 0.5.3
-Installing nokogiri 1.6.1
-Installing xpath 2.0.0
-Installing capybara 2.1.0
-Installing coffee-script-source 1.7.0
-Installing execjs 2.0.2
-Installing coffee-script 2.2.0
-Installing thor 0.19.1
-Installing railties 4.0.2
-Installing coffee-rails 4.0.1
-Installing diff-lcs 1.2.5
-Installing factory_girl 4.4.0
-Installing factory_girl_rails 4.4.1
-Installing hike 1.2.3
-Installing jbuilder 1.5.3
-Installing jquery-rails 3.1.0
-Installing json 1.8.1
-Installing pg 0.17.1
-Using bundler 1.6.2
-Installing tilt 1.4.1
-Installing sprockets 2.11.0
-Installing sprockets-rails 2.0.1
-Installing rails 4.0.2
-Installing rails_serve_static_assets 0.0.2
-Installing rails_stdout_logging 0.0.3
-Installing rails_12factor 0.0.2
-Installing rdoc 4.1.1
-Installing rspec-core 2.14.8
-Installing rspec-expectations 2.14.5
-Installing rspec-mocks 2.14.6
-Installing rspec-rails 2.14.2
-Installing sass 3.2.19
-Installing sass-rails 4.0.3
-Installing sdoc 0.4.0
-Installing shoulda-matchers 2.6.1
-Installing turbolinks 2.2.2
-Installing uglifier 2.5.0
-Your bundle is complete!
-It was installed into ./vendor/bundle
-Post-install message from bcrypt-ruby:
-
-#######################################################
-
-The bcrypt-ruby gem has changed its name to just bcrypt.  Instead of
-installing `bcrypt-ruby`, you should install `bcrypt`.  Please update your
-dependencies accordingly.
-
-#######################################################
-
-Post-install message from capybara:
-IMPORTANT! Some of the defaults have changed in Capybara 2.1. If you're experiencing failures,
-please revert to the old behaviour by setting:
-
-    Capybara.configure do |config|
-      config.match = :one
-      config.exact_options = true
-      config.ignore_hidden_elements = true
-      config.visible_text_only = true
-    end
-
-If you're migrating from Capybara 1.x, try:
-
-    Capybara.configure do |config|
-      config.match = :prefer_exact
-      config.ignore_hidden_elements = false
-    end
-
-Details here: http://www.elabs.se/blog/60-introducing-capybara-2-1
-
-Post-install message from rdoc:
-Depending on your version of ruby, you may need to install ruby rdoc/ri data:
-
-<= 1.8.6 : unsupported
- = 1.8.7 : gem install rdoc-data; rdoc-data --install
- = 1.9.1 : gem install rdoc-data; rdoc-data --install
->= 1.9.2 : nothing to do! Yay!
-travis_fold:end:install$ bundle exec rake
-/home/travis/.rvm/rubies/ruby-2.0.0-p353/bin/ruby -S rspec ./spec/controllers/group_dates_controller_spec.rb ./spec/controllers/groups_controller_spec.rb ./spec/controllers/user_sessions_controller_spec.rb ./spec/controllers/users_controller_spec.rb ./spec/features/group_dates/create_spec.rb ./spec/features/group_dates/destroy_spec.rb ./spec/features/group_dates/edit_spec.rb ./spec/features/group_dates/index_spec.rb ./spec/features/groups/create_spec.rb ./spec/features/groups/destroy_spec.rb ./spec/features/groups/edit_spec.rb ./spec/features/groups/index_spec.rb ./spec/features/users/authentication_spec.rb ./spec/features/users/registration_spec.rb ./spec/helpers/group_dates_helper_spec.rb ./spec/helpers/groups_helper_spec.rb ./spec/helpers/user_sessions_helper_spec.rb ./spec/helpers/users_helper_spec.rb ./spec/models/group_date_spec.rb ./spec/models/group_members_spec.rb ./spec/models/group_spec.rb ./spec/models/user_spec.rb ./spec/routing/groups_routing_spec.rb ./spec/routing/users_routing_spec.rb ./spec/views/group_dates/index.html.erb_spec.rb ./spec/views/groups/edit.html.erb_spec.rb ./spec/views/groups/index.html.erb_spec.rb ./spec/views/groups/new.html.erb_spec.rb ./spec/views/groups/show.html.erb_spec.rb ./spec/views/user_sessions/new.html.erb_spec.rb ./spec/views/users/edit.html.erb_spec.rb ./spec/views/users/new.html.erb_spec.rb ./spec/views/users/show.html.erb_spec.rb
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
-
-Finished in 6.94 seconds
-[32m106 examples, 0 failures[0m
-
-Randomized with seed 22433
-
-
-[32;1mThe command "bundle exec rake" exited with 0.[0m
-
-Done. Your build exited with 0.
