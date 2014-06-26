@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/mh222zr/funkardet.svg?branch=master)](https://travis-ci.org/mh222zr/funkardet)
+[![Build Status](https://travis-ci.org/mh222zr/funkardet.svg?branch=master)](https://travis-ci.org/mh222zr/funkardet) [![Code Climate](https://codeclimate.com/github/mh222zr/funkardet.png)](https://codeclimate.com/github/mh222zr/funkardet)
