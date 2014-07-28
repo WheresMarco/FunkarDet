@@ -31,8 +31,8 @@
 }
 
 /* Colors */
-$background: #F2F2F2;
-$topbar: #3A315C;
+$background: #EFEAE8;
+$topbar: #F36C3D;
 
 /* Main */
 @import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700");
@@ -42,7 +42,7 @@ body {
   line-height:1.2;
   background-color: $background;
   -webkit-font-smoothing: antialiased;
-  padding-top: 70px;
+  padding-top: 20px;
 }
 
 .pull-right {
@@ -63,7 +63,7 @@ body {
   }
 
   a {
-    color: #fff;
+    color: #fff !important;
 
     &:hover, &:focus {
       background-color: #2F284A !important;
