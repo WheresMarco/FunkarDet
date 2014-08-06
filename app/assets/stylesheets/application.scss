@@ -32,7 +32,10 @@
 
 /* Colors */
 $background: #EFEAE8;
-$topbar: #F36C3D;
+$primary: #F36C3D;
+$primary-light: #F48963;
+$secondary: #E9F2F7;
+$grey: #79878e;
 
 /* Main */
 @import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700");
@@ -54,7 +57,7 @@ body {
 }
 
 .navbar {
-  background-color: $topbar;
+  background-color: $primary;
   font-weight: bold;
 
   .glyphicon {
@@ -66,7 +69,7 @@ body {
     color: #fff !important;
 
     &:hover, &:focus {
-      background-color: #2F284A !important;
+      background-color: $primary-light !important;
     }
   }
 
@@ -81,7 +84,7 @@ body {
 
 .welcome-box {
   .glyphicon {
-    color: #3A315C;
+    color: $primary-light;
     font-size: 140px;
     float: right;
   }
@@ -196,7 +199,12 @@ body {
 }
 
 .footer {
-  color: #CCCCCC;
+  color: $grey;
+
+  a {
+    color: $grey;
+    font-weight: bold;
+  }
 
   .footer-change-lang {
     float: right;
